@@ -1,4 +1,4 @@
 ardetem_sfere:
     resource: "@ArdetemSfereBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /sfere
 
