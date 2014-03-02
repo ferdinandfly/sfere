@@ -1,0 +1,7 @@
+parameters:
+#    ardetem_sfere.example.class: Ardetem\SfereBundle\Example
+
+services:
+#    ardetem_sfere.example:
+#        class: %ardetem_sfere.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
