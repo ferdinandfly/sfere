@@ -1,0 +1,47 @@
+
+# Doctrine Configuration
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    ApplicationSonataUserBundle: ~
+                    SonataUserBundle: ~
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                host:     %database_host%
+                port:     %database_port%
+                dbname:   %database_name%
+                user:     %database_user%
+                password: %database_password%
+                driver:   %database_driver%
+                charset:  UTF8
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+
+fos_user:
+    db_driver:      orm # can be orm or odm
+    firewall_name:  main
+    user_class:     Application\Sonata\UserBundle\Entity\User
+
+
+    group:
+        group_class:   Application\Sonata\UserBundle\Entity\Group
+        group_manager: sonata.user.orm.group_manager                    # If you're using doctrine orm
+
+    service:
+        user_manager: sonata.user.orm.user_manager
+
+sonata_user:
+    security_acl: true
+    manager_type: orm # can be orm or mongodb
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # Enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        # Your other blocks

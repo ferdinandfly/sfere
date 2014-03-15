@@ -3,7 +3,7 @@ parameters:
     database_driver: pdo_mysql
     database_host: 127.0.0.1
     database_port: null
-    database_name: symfony_sefere
+    database_name: sefere
     database_user: sefere
     database_password: kxkvi1
     mailer_transport: smtp
@@ -12,5 +12,3 @@ parameters:
     mailer_password: null
     locale: en
     secret: 65493241453985c1e7e6005c4d26f9bcb0e3d98e
-    database_path: null
-

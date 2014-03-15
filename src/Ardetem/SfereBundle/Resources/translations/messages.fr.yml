@@ -1,0 +1,29 @@
+intro:
+    company:
+        name: Entreprise
+        info:
+          title: PRESENTATION
+          text: >
+            <p>SFERE est spécialisée dans l'étude et la construction de modules électroniques pour la mesure et le contrôle de process industriels et réseaux électriques.</p>
+            <p>SFERE c'est également la compétence d'un constructeur, une équipe de spécialistes, ingénieurs et techniciens, motivés par la recherche et l'innovation..</p>
+
+        where:
+          title: OU NOUS TROUVER
+          text: >
+            SFERE<br />
+            Parc d’activité ARBORA N°2<br />
+            69510 SOUCIEU EN JARREST<br />
+            Tel:<br/>
+            Fax:<br/>
+            Email: info@sfere-net.com<br/>
+    category:
+        name: Produits
+        electronic: TRANSMETTEURS DE MESURES ELECTRIQUES
+        atex: GAMME SECURITE INTRINSEQUE ATEX
+        digital_meter: NDICATEURS NUMÉRIQUES & BARGRAPHS
+        digital_converter: CONVERTISSEURS NUMERIQUES PROGRAMMABLES
+        detector: DETECTEURS DE SEUILS PROGRAMMABLES
+        converter: CONVERTISSEURS ANALOGIQUES
+        others: DIVERS
+        tools: OUTILS DE PROGRAMMATION
+see_more:  Voir plus

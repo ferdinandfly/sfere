@@ -18,7 +18,14 @@
         "sensio/distribution-bundle": "~2.3",
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "leafo/lessphp": "0.4.0",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "knplabs/doctrine-behaviors": "dev-master",
+        "sonata-project/admin-bundle": "dev-master",
+        "sonata-project/doctrine-orm-admin-bundle": "dev-master",
+        "sonata-project/user-bundle": "dev-master",
+        "sonata-project/easy-extends-bundle": "dev-master",
+        "a2lix/translation-form-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

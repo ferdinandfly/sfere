@@ -1,3 +1,12 @@
-ardetem_sfere_homepage:
-    pattern:  /home
-    defaults: { _controller: ArdetemSfereBundle:Default:index }
+ardetem_sfere:
+    resource: "@ArdetemSfereBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /
+ardetem_sfere_category:
+    resource: "@ArdetemSfereBundle/Controller/CategoryController.php"
+    type:     annotation
+    prefix:   /category
+ardetem_sfere_subcategory:
+    resource: "@ArdetemSfereBundle/Controller/SubCategoryController.php"
+    type:     annotation
+    prefix:   /subcategory

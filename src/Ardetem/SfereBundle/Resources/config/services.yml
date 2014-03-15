@@ -1,7 +1,21 @@
-parameters:
-#    ardetem_sfere.example.class: Ardetem\SfereBundle\Example
-
 services:
-#    ardetem_sfere.example:
-#        class: %ardetem_sfere.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+   kernel_request.listener:
+       class: Ardetem\SfereBundle\Listener\KernelRequestListener
+       tags:
+           - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+   ardetem.sfere.admin.category:
+      class: Ardetem\SfereBundle\Admin\CategoryAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: category, label: Category }
+      arguments:
+        - ~
+        - Ardetem\SfereBundle\Entity\Category
+        - ~ #ArdetemSfereBundle:CategoryAdmin
+   ardetem.sfere.admin.subcategory:
+      class: Ardetem\SfereBundle\Admin\SubCategoryAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: category, label: Sub Category }
+      arguments:
+        - ~
+        - Ardetem\SfereBundle\Entity\SubCategory
+        - ~ #ArdetemSfereBundle:SubCategoryAdmin
