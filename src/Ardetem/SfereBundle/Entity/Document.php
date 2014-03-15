@@ -10,6 +10,7 @@ namespace Ardetem\SfereBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Table(name="document")
@@ -17,7 +18,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  * @ORM\HasLifecycleCallbacks
  */
 class Document {
-    use ORMBehaviors\Translatable\Timestampable;
+    use ORMBehaviors\Timestampable\Timestampable;
     private $temp;
 
     /**
