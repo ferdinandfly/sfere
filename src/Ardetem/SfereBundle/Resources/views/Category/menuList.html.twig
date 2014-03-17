@@ -6,7 +6,7 @@
             {% for category in categories %}
             <li>
                 <a href="{{ path('sfere_category_detail',{'id':category.id}) }}">
-                    <span class="icon_products" id="icon_analogica"></span>
+                    <span class="icon_products" id="icon_analogica"></span></a>
                 <ul>
                 {% for subcategory in category.subCategories %}
                     <li><a href="{{ path('sfere_subcategory_detail',{'id': subcategory.id}) }}">{{ subcategory.name }}</a></li>
@@ -14,61 +14,6 @@
                 </ul>
             </li>
             {% endfor %}
-
-                <a href="{{ path('sfere_product',{'category': 'electronic'}) }}">{{ 'intro.product.electronic'|trans }}</a>
-
-
-                    <li><a href="http://www.visiotech.es/fr/produits/camera-analogique/cameras-dome">Caméras Dôme</a>
-                    </li>
-                    <li><a href="http://www.visiotech.es/fr/produits/camera-analogique/domes-motorises">Dômes
-                            Motorisés</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/camera-analogique/mini-cameras">Mini Caméras</a>
-                    </li>
-                    <li><a href="http://www.visiotech.es/fr/produits/camera-analogique/cameras-dissimulees">Caméras
-                            Dissimulées</a></li>
-
-
-            <li><a href="{{ path('sfere_product',{'category': 'atex'}) }}">{{ 'intro.product.atex'|trans }}</a><span class="icon_products"
-                                                                                                                     id="icon_dvr"></span>
-                <ul>
-                    <li><a href="http://www.visiotech.es/fr/produits/dvr/h-series">H-SERIES</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/dvr/cpplus">CPPLUS</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/dvr/videograbadores-avtech">AVTECH</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/dvr/kits-economiques">KITS économiques</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/dvr/cartes-d-acquisition-video">Cartes d
-                            Acquisition Vidéo</a></li>
-                </ul>
-            </li>
-            <li><a href="http://www.visiotech.es/fr/produits/cameras-ip">IP</a><span class="icon_products"
-                                                                                     id="icon_ip"></span>
-                <ul>
-                    <li><a href="http://www.visiotech.es/fr/produits/cameras-ip/h-series">H-SERIES</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/cameras-ip/cpplus">CPPLUS</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/cameras-ip/avtech">AVTECH</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/cameras-ip/apexis">APEXIS</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/cameras-ip/easyn">EASYN</a></li>
-                </ul>
-            </li>
-            <li><a href="http://www.visiotech.es/fr/produits/camaras-hd-sdi">HD-SDI</a><span class="icon_products"
-                                                                                             id="icon_hdsdi"></span>
-                <ul>
-                    <li><a href="http://www.visiotech.es/fr/produits/camaras-hd-sdi/cameras">Caméras</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/camaras-hd-sdi/enregistreurs">Enregistreurs</a>
-                    </li>
-                    <li><a href="http://www.visiotech.es/fr/produits/camaras-hd-sdi/cartes-d-acquisition">Cartes d
-                            Acquisition</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/camaras-hd-sdi/accessoires-hd-sdi">Accessoires</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="http://www.visiotech.es/fr/produits/alarme">Alarme</a><span class="icon_products"
-                                                                                     id="icon_alarma"></span>
-                <ul>
-                    <li><a href="http://www.visiotech.es/fr/produits/alarme/g5">G5</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/alarme/accessoires">Accessoires</a></li>
-                    <li><a href="http://www.visiotech.es/fr/produits/alarme/accesorios">Accesorios</a></li>
-                </ul>
-            </li>
         </ul>
         <ul class="list_submenu list_bottom">
             <li><a href="http://www.visiotech.es/fr/produits/accessoires">Accessoires</a><span class="icon_products"

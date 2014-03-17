@@ -3,3 +3,4 @@ app/cache
 .idea
 vendor/*
 web/bundles
+web/uploads

@@ -30,7 +30,7 @@ class CategoryController extends Controller {
     }
 
     /**
-     * @Route("/detail/{id}",requirements={"id"="\d+"}, name="sfere_category_menu" ,options={"expose"=true})
+     * @Route("/detail/{id}",requirements={"id"="\d+"}, name="sfere_category_detail" ,options={"expose"=true})
      * @Template()
      */
     public function detailAction($id)
