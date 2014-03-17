@@ -67,7 +67,7 @@ class SubCategory {
      *
      */
     public function __construct(){
-        $this->$products = new ArrayCollection();
+        $this->products = new ArrayCollection();
     }
 
     /**
@@ -185,5 +185,9 @@ class SubCategory {
     public function __call($method, $arguments)
     {
         return $this->proxyCurrentLocaleTranslation($method, $arguments);
+    }
+
+    public function __toString(){
+        return $this->name;
     }
 } 

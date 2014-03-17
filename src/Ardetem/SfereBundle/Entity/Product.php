@@ -59,7 +59,7 @@ class Product {
     protected  $document;
 
     /**
-     * @var Category
+     * @var SubCategory
      *
      * @ORM\ManyToOne(targetEntity="SubCategory")
      * @ORM\JoinColumns({
@@ -164,5 +164,9 @@ class Product {
      */
     public function getDocument(){
         return $this->document;
+    }
+
+    public function __toString(){
+        return $this->name;
     }
 }

@@ -2,11 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: ferdinandfly
- * Date: 3/15/14
- * Time: 3:56 PM
+ * Date: 3/16/14
+ * Time: 10:11 AM
  */
 
 namespace Ardetem\SfereBundle\Admin;
+
 use Ardetem\SfereBundle\Lib\GlobalParameter;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -14,9 +15,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-use Knp\Menu\ItemInterface as MenuItemInterface;
-
-class CategoryAdmin extends Admin{
+class DocumentAdmin extends  Admin{
     /**
      * @param \Sonata\AdminBundle\Show\ShowMapper $showMapper
      *
@@ -25,9 +24,7 @@ class CategoryAdmin extends Admin{
     protected function configureShowField(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('name')
-            ->add('slug')
-            ->add('description')
+            ->add('path')
         ;
     }
 
@@ -39,11 +36,7 @@ class CategoryAdmin extends Admin{
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name', null, array('required' => true))
-            ->add('slug',null, array('required' => true))
-            ->add('description',null, array('required' => false))
-            //->add('locales', 'a2lix_translationsLocalesSelector')
-            //->add('translations', 'a2lix_translations')
+            ->add('file', 'file', array('required' => false))
             ->end()
         ;
     }
@@ -56,9 +49,7 @@ class CategoryAdmin extends Admin{
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name')
-            ->add('slug')
-            ->add('description')
+            ->addIdentifier('path')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),
@@ -77,27 +68,34 @@ class CategoryAdmin extends Admin{
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('name')
-            ->add('description')
+            ->add('path')
         ;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function prePersist($object)
+    public function prePersist($doc)
     {
-        $this->preUpdate($object);
+        $doc->setCreatedAt(new \DateTime());
+        $this->preUpdate($doc);
     }
+
 
     /**
      * {@inheritdoc}
      */
-    public function preUpdate($object)
+    public function preUpdate($doc)
     {
+        $this->manageFileUpload($doc);
         $locale=GlobalParameter::getLocale();
-        $object->translate($locale)->setName($object->getName());
-        $object->translate($locale)->setDescription($object->getDescription());
-        $object->mergeNewTranslations();
+        $doc->translate($locale)->setPath($doc->getPath());
+        $doc->mergeNewTranslations();
     }
-}
+
+    private function manageFileUpload($doc) {
+        if ($doc->getFile()) {
+            $doc->setUpdatedAt(new \DateTime());
+        }
+    }
+} 

@@ -9,6 +9,7 @@
 namespace Ardetem\SfereBundle\Admin;
 
 
+use Ardetem\SfereBundle\Lib\GlobalParameter;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -17,7 +18,8 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 use Knp\Menu\ItemInterface as MenuItemInterface;
 
-class SubCategoryAdmin extends  Admin {
+class SubCategoryAdmin extends Admin
+{
     /**
      * @param \Sonata\AdminBundle\Show\ShowMapper $showMapper
      *
@@ -28,8 +30,7 @@ class SubCategoryAdmin extends  Admin {
         $showMapper
             ->add('name')
             ->add('slug')
-            ->add('description')
-        ;
+            ->add('description');
     }
 
     /**
@@ -41,10 +42,14 @@ class SubCategoryAdmin extends  Admin {
     {
         $formMapper
             ->add('name', null, array('required' => true))
-            ->add('slug',null, array('required' => true))
-            ->add('description', array('required' => false))
-            ->end()
-        ;
+            ->add('slug', null, array('required' => true))
+            ->add('category', 'sonata_type_model')
+            ->add('products', 'sonata_type_collection', array('required' => false), array(
+                'edit' => 'inline',
+                'inline' => 'table',
+            ))
+            ->add('description', null, array('required' => false))
+            ->end();
     }
 
     /**
@@ -64,20 +69,37 @@ class SubCategoryAdmin extends  Admin {
                     'edit' => array(),
                     'delete' => array(),
                 )
-            ))
-        ;
+            ));
     }
 
-/**
- * @param \Sonata\AdminBundle\Datagrid\DatagridMapper $datagridMapper
- *
- * @return void
- */
-protected function configureDatagridFilters(DatagridMapper $datagridMapper)
-{
-    $datagridMapper
-        ->add('name')
-        ->add('description')
-    ;
-}
+    /**
+     * @param \Sonata\AdminBundle\Datagrid\DatagridMapper $datagridMapper
+     *
+     * @return void
+     */
+    protected function configureDatagridFilters(DatagridMapper $datagridMapper)
+    {
+        $datagridMapper
+            ->add('name');
+    }
+
+
+    /**
+     * {@inheritdoc}
+     */
+    public function prePersist($object)
+    {
+        $this->preUpdate($object);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function preUpdate($object)
+    {
+        $locale = GlobalParameter::getLocale();
+        $object->translate($locale)->setName($object->getName());
+        $object->translate($locale)->setDescription($object->getDescription());
+        $object->mergeNewTranslations();
+    }
 }

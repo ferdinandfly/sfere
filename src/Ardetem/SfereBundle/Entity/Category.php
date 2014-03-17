@@ -159,4 +159,7 @@ class Category {
     {
         return $this->proxyCurrentLocaleTranslation($method, $arguments);
     }
+    public function __toString(){
+        return $this->name;
+    }
 } 

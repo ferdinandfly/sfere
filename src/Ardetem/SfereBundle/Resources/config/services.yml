@@ -19,3 +19,19 @@ services:
         - ~
         - Ardetem\SfereBundle\Entity\SubCategory
         - ~ #ArdetemSfereBundle:SubCategoryAdmin
+   ardetem.sfere.admin.product:
+      class: Ardetem\SfereBundle\Admin\ProductAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: Product, label: Product }
+      arguments:
+        - ~
+        - Ardetem\SfereBundle\Entity\Product
+        - ~
+   ardetem.sfere.admin.document:
+      class: Ardetem\SfereBundle\Admin\DocumentAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: Document, label: Document }
+      arguments:
+        - ~
+        - Ardetem\SfereBundle\Entity\Document
+        - ~

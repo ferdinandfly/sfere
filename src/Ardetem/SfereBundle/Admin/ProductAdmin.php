@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: ferdinandfly
- * Date: 3/15/14
- * Time: 3:56 PM
+ * Date: 3/16/14
+ * Time: 9:11 AM
  */
 
 namespace Ardetem\SfereBundle\Admin;
@@ -14,9 +14,8 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-use Knp\Menu\ItemInterface as MenuItemInterface;
 
-class CategoryAdmin extends Admin{
+class ProductAdmin extends  Admin{
     /**
      * @param \Sonata\AdminBundle\Show\ShowMapper $showMapper
      *
@@ -42,8 +41,7 @@ class CategoryAdmin extends Admin{
             ->add('name', null, array('required' => true))
             ->add('slug',null, array('required' => true))
             ->add('description',null, array('required' => false))
-            //->add('locales', 'a2lix_translationsLocalesSelector')
-            //->add('translations', 'a2lix_translations')
+            ->add('subCategory','sonata_type_model',array('required' => false))
             ->end()
         ;
     }
@@ -100,4 +98,4 @@ class CategoryAdmin extends Admin{
         $object->translate($locale)->setDescription($object->getDescription());
         $object->mergeNewTranslations();
     }
-}
+} 
