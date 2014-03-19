@@ -18,12 +18,10 @@ intro:
             Email: info@sfere-net.com<br/>
     category:
         name: Produits
-        electronic: TRANSMETTEURS DE MESURES ELECTRIQUES
-        atex: GAMME SECURITE INTRINSEQUE ATEX
-        digital_meter: NDICATEURS NUMÉRIQUES & BARGRAPHS
-        digital_converter: CONVERTISSEURS NUMERIQUES PROGRAMMABLES
-        detector: DETECTEURS DE SEUILS PROGRAMMABLES
-        converter: CONVERTISSEURS ANALOGIQUES
-        others: DIVERS
-        tools: OUTILS DE PROGRAMMATION
+    news:
+        name: Actualité
+    contact:
+        name: Contact
+
 see_more:  Voir plus
+menu:

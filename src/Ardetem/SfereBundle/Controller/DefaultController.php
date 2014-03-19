@@ -29,10 +29,37 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/product/{category}", name="sfere_product")
+     * @Route("/product/subcatgory/{id}",requirements={"id"="\d+"}, name="sfere_sub_category_product")
      * @Template()
      */
-    public function productionAction($category){
+    public function productAction($id){
+        $repository = $this->getDoctrine()
+            ->getRepository('ArdetemSfereBundle:SubCategory');
+        $cat=$repository->findOneById($id);
+        return array('products' => $cat->getProducts());
+    }
+
+    /**
+     * @Route("/contact", name="sfere_contact_client")
+     * @Template()
+     */
+    public function contactCommercialAction(){
+        return array();
+    }
+
+    /**
+     * @Route("/contact", name="sfere_contact_info")
+     * @Template()
+     */
+    public function contactInfoAction(){
+        return array();
+    }
+
+    /**
+     * @Route("/news", name="sfere_news")
+     * @Template()
+     */
+    public function newsAction(){
         return array();
     }
 }

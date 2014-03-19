@@ -78,7 +78,7 @@ nav {
 	width: 100%;
 }
 #menu a {
- text-decoration:;
+ text-decoration:none;
 }
 #menu > li {
 	float: left;
@@ -340,7 +340,7 @@ min-width: 158px;
 	float: left;
 	height: 50px;
 	width: 69px;
-	background: url(images/resource_icons.png) no-repeat
+	background: url(../images/resource_icons.png) no-repeat
 }
 .icon_products {
 	opacity: 0.1;
@@ -350,7 +350,7 @@ min-width: 158px;
 	float: left;
 	height: 42px;
 	width: 48px;
-	background: url(images/resource_icons.png) no-repeat;
+	background: url(../images/resource_icons.png) no-repeat;
 }
 .icon_contact {
 	opacity: 0.8;
@@ -358,7 +358,7 @@ min-width: 158px;
 	float: left;
 	height: 65px;
 	width: 92px;
-	background: url(images/resource_icons.png) no-repeat;
+	background: url(../images/resource_icons.png) no-repeat;
 }
 .icon_content {
 	max-width: 300px;

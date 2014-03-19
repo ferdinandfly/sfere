@@ -141,210 +141,75 @@
 
 
 <ul id="menu">
-
-<li><a href="{{ path('sfere_company') }}" class="active">{{ 'intro.company.name'| trans }}</a>
-
-    <div class="submenu">
-
-        <ul class="list_submenu" id="submenu_enterprise">
-
-            <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.info.title'| trans }}</a> <img
-                        src="http://www.visiotech.es/modules/mod_menu_responsive/images/feria.jpg" class="img"
-                        alt="Feria">
-                <div class="intro_text">
-                    <a href="{{ path('sfere_company') }}">
-                        {{ 'intro.company.info.text'|trans|raw }}
-                        <div class="read_more">{{ 'see_more'| trans }}</div>
-                    </a>
-                </div>
-            </li>
-
-            <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.where.title'|trans }}</a> <img
-                        src="http://www.visiotech.es/modules/mod_menu_responsive/images/map.jpg" class="img"
-                        alt="Feria">
-
-                <div class="intro_text">
-                    {{ 'intro.company.where.text' | trans|raw }}
-                    <a href="{{ path('sfere_company') }}">
-                        <div class="read_more">{{ 'see_more'| trans }}</div>
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</li>
-{{ render(controller('ArdetemSfereBundle:Category:menuList')) }}
-<li><a>Ressources</a>
-
-
-    <div class="submenu">
-
-        <div class="submenu_wrap">
-
-            <div id="intro_demo"><a href="http://www.visiotech.es/fr/ressources/voir-demos"> <img
-                            src="http://www.visiotech.es/modules/mod_menu_responsive/images//laptop_demo.png"
-                            width="60%" id="laptop_demo"> </a> <a
-                        href="http://www.visiotech.es/fr/ressources/voir-demos">
-
-                    <div class="red_button">Voir Démos</div>
-
-                </a></div>
-
-            <ul class="button_submenu recu_submenu">
-
-                <li><a href="http://www.visiotech.es/fr/ressources/voir-demos">
-
-                        <div class="icon_resource" id="icon_demo"></div>
-
-                        <div class="icon_content">
-
-                            <div class="title"> Voir Démos</div>
-
-                            <div class="description">Démos en ligne des produits de IP: DVR, caméras IP et des NVR.
-                            </div>
-
-                        </div>
-
-                    </a></li>
-
-                <li><a href="http://www.visiotech.es/fr/ressources/telechargements">
-
-                        <div class="icon_resource" id="icon_download"></div>
-
-                        <div class="icon_content">
-
-                            <div class="title"> Manuels et logiciels</div>
-
-                            <div class="description">Gratuit, sans inscription préalable</div>
-
-                        </div>
-
-                    </a></li>
-
-                <li><a href="http://www.visiotech.es/fr/component/academy/?id=103">
-
-                        <div class="icon_resource" id="icon_folder"></div>
-
-                        <div class="icon_content">
-
-                            <div class="title">H-Series</div>
-
-                            <div class="description">Firmware, logiciels et manuels de la gamme H-Series</div>
-
-                        </div>
-
-                    </a></li>
-
-                <li><a href="http://www.visiotech.es/fr/ressources/cours/month.calendar/2014/03/02/-">
-
-                        <div class="icon_resource" id="icon_slide"></div>
-
-                        <div class="icon_content">
-
-                            <div class="title">Cours</div>
-
-                            <div class="description">Calendrier des cours dans nos bureaux</div>
-
-                        </div>
-
-                    </a></li>
-
-                <li><a href="http://www.visiotech.es/files/ComparativaCamarasDVR_es.xls">
-
-                        <div class="icon_resource" id="icon_chart"></div>
-
-                        <div class="icon_content">
-
-                            <div class="title">Comparaison</div>
-
-                            <div class="description">Fichier Excel qui compare les caractéristiques techniques des
-                                différents modèles de caméras
-                            </div>
-
-                        </div>
-
-                    </a></li>
-
+    <li><a href="{{ path('sfere_home') }}" class="active">{{ 'intro.company.name'| trans }}</a>
+        <div class="submenu">
+            <ul class="list_submenu" id="submenu_enterprise">
+                <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.info.title'| trans }}</a> <img
+                            src="http://www.visiotech.es/modules/mod_menu_responsive/images/feria.jpg" class="img"
+                            alt="Feria">
+                    <div class="intro_text">
+                        <a href="{{ path('sfere_company') }}">
+                            {{ 'intro.company.info.text'|trans|raw }}
+                            <div class="read_more">{{ 'see_more'| trans }}</div>
+                        </a>
+                    </div>
+                </li>
+                <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.where.title'|trans }}</a> <img
+                            src="http://www.visiotech.es/modules/mod_menu_responsive/images/map.jpg" class="img"
+                            alt="Feria">
+                    <div class="intro_text">
+                        {{ 'intro.company.where.text' | trans|raw }}
+                        <a href="{{ path('sfere_company') }}">
+                            <div class="read_more">{{ 'see_more'| trans }}</div>
+                        </a>
+                    </div>
+                </li>
             </ul>
-
         </div>
-
-    </div>
-
-</li>
-
-
-<li><a>Contact</a>
-
-    <div class="submenu">
-
-        <div class="submenu_wrap">
-
-            <ul class="button_submenu contact_submenu">
-
-                <li><a href="http://www.visiotech.es/fr/contact/haute-new-client">
-
-                        <div class="icon_contact" id="icon_info"></div>
-
-                        <div class="icon_content">
-
-                            <div class="title">Commerciales</div>
-
-                            <div class="description">Contactez-nous si vous souhaitez devenir client</div>
-
-                        </div>
-
-                    </a></li>
-
-                <li><a href="http://www.visiotech.es/fr/contact/contacter">
-
-                        <div class="icon_contact" id="icon_users"></div>
-
-                        <div class="icon_content">
-
-                            <div class="title">Informations</div>
-
-                            <div class="description">Demander des informations en remplissant un formulaire</div>
-
-                        </div>
-
-                    </a></li>
-
-            </ul>
-
+    </li>
+    <li>
+        <a>{{ 'intro.category.name'| trans }}</a>
+        {{ render(controller('ArdetemSfereBundle:Category:menuList')) }}
+    </li>
+    <li><a href="{{ path('sfere_news') }}">{{ 'intro.news.name' | trans }}</a></li>
+    <li><a>{{ 'intro.contact.name' | trans }}</a>
+        <div class="submenu">
+            <div class="submenu_wrap">
+                <ul class="button_submenu contact_submenu">
+                    <li><a href="{{ path('sfere_contact_client') }}">
+                            <div class="icon_contact" id="icon_info"></div>
+                            <div class="icon_content">
+                                <div class="title">Commerciales</div>
+                                <div class="description">Contactez-nous si vous souhaitez devenir client</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('sfere_contact_info') }}">
+                            <div class="icon_contact" id="icon_users"></div>
+                            <div class="icon_content">
+                                <div class="title">Informations</div>
+                                <div class="description">Demander des informations en remplissant un formulaire</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-    </div>
-
-</li>
-
-<li><a href="http://www.visiotech.es/fr/nouvelles">Nouvelles</a></li>
-
-<li>
-
-    <form action="index.php" method="post">
-
-        <div class="search">
-
-            <input name="searchword" id="search" maxlength="20" placeholder="Rechercher Produit" alt="Buscar"
-                   class="inputbox" type="text" size="50" this.value='buscar...';" onfocus="if(this.value=='buscar...')
-            this.value='';">
-
-        </div>
-
-        <input type="hidden" name="task" value="search">
-
-        <input type="hidden" name="option" value="com_search">
-
-        <input type="hidden" name="Itemid" value="87">
-
-    </form>
-
-</li>
-
+    </li>
+    <li>
+        <form action="index.php" method="post">
+            <div class="search">
+                <input name="searchword" id="search" maxlength="20" placeholder="Rechercher Produit" alt="Buscar"
+                       class="inputbox" type="text" size="50" this.value='buscar...';" onfocus="if(this.value=='buscar...')
+                this.value='';">
+            </div>
+            <input type="hidden" name="task" value="search">
+            <input type="hidden" name="option" value="com_search">
+            <input type="hidden" name="Itemid" value="87">
+        </form>
+    </li>
 </ul>
-
-
 </nav>
 </div>
 </div>
@@ -357,62 +222,9 @@
         <div id="line_t"></div>
 
 
-        <div id="page_style">
-            <div>
-                <table class="contentpaneopen">
-                    <tr>
-                        <td class="contentheading" width="100%">
-                            Entreprise
-                        </td>
 
+            {% block page_content %}{% endblock %}
 
-                    </tr>
-                </table>
-
-                <table class="contentpaneopen">
-
-
-                    <tr>
-                        <td valign="top">
-                            <p style="text-align: justify;"><span style="font-size: 12pt; color: #808080;"><strong>PROFIL
-                                        DE LA COMPAGNIE</strong></span></p>
-
-                            <p style="text-align: justify;">VISIOTECH est une entreprise consacrée à la recherche, au
-                                développement et à la distribution équipements et solutions de vidéosurveillance. Depuis
-                                ses débuts en 2003, Visiotech a su offrir à ses clients des produits de haute qualité à
-                                des prix compétitifs et en stock permanent.</p>
-
-                            <p style="text-align: justify;"><img style="float: right; margin-left: 20px;"
-                                                                 src="http://www.visiotech.es/images/stories/imagenes/empresa.jpg"
-                                                                 alt="empresa" width="200" height="200"/>Dispose d'une
-                                équipe de techniciens et commerciaux avec une vaste expérience professionnelle, en
-                                recherche permanente des dernières nouveautés technologiques dans le secteur de
-                                vidéosurveillance, essayant toujours de trouver les solutions indicatrices et plus
-                                adéquates à ses clients.</p>
-
-                            <p style="text-align: justify;">Visiotech centre actuellement sa philosophie de travail à
-                                une attention personnalisée de chaque client, en étendant continuellement le catalogue
-                                de produits en accord avec les nécessités spécifiques détectées, ainsi que l'intégration
-                                des dernières nouveautés technologiques. Un compromis total avec les clients et un
-                                capital humain qui garantit la rénovation continue des produits, ainsi qu'un service de
-                                consultation prévente et support après-vente.</p>
-
-                            <p style="text-align: justify;"><span style="font-size: 12pt; color: #808080;"><strong>OÙ
-                                        SOMMES-NOUS</strong></span></p>
-
-                            <p style="text-align: justify;"><a
-                                        href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=visiotech&amp;sll=40.33201,-3.522763&amp;sspn=0.001364,0.003484&amp;ie=UTF8&amp;hq=visiotech&amp;hnear=&amp;ll=40.333198,-3.524723&amp;spn=0.010845,0.027874&amp;z=16&amp;iwloc=A"><img
-                                            src="http://www.visiotech.es/images/stories/imagenes/comollegarVisiotech.jpg"
-                                            alt="OÙ SOMMES-NOUS" width="707" height="659"/></a></p>
-
-                        </td>
-                    </tr>
-
-                </table>
-                <span class="article_separator">&nbsp;</span>
-
-            </div>
-        </div>
 
 
     </div>

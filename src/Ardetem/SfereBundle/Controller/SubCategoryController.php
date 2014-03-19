@@ -17,15 +17,4 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class SubCategoryController extends Controller{
 
-    /**
-     * @Route("/detail/{id}",requirements={"id"="\d+"}, name="sfere_subcategory_detail" ,options={"expose"=true})
-     * @Template()
-     */
-    public function detailAction($id)
-    {
-        $repository = $this->getDoctrine()
-            ->getRepository('ArdetemSfereBundle:Category');
-        $category=$repository->findOneBy($id);
-        return array("categories"=> $category);
-    }
 } 
