@@ -58,7 +58,7 @@ class Category {
     /**
      * @var integer $order
      *
-     * @ORM\Column(name="order", type="integer", nullable=true)
+     * @ORM\Column(name="order_number", type="integer", nullable=true)
      */
     private $order;
 
