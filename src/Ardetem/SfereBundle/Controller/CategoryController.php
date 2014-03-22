@@ -30,14 +30,14 @@ class CategoryController extends Controller {
     }
 
     /**
-     * @Route("/detail/{id}",requirements={"id"="\d+"}, name="sfere_category_detail" ,options={"expose"=true})
+     * @Route("/detail/{slug}",requirements={"slug"="[a-z\-]+"}, name="sfere_category_detail" ,options={"expose"=true})
      * @Template()
      */
-    public function detailAction($id)
+    public function detailAction($slug)
     {
         $repository = $this->getDoctrine()
             ->getRepository('ArdetemSfereBundle:Category');
-        $category=$repository->findOneBy($id);
+        $category=$repository->findOneBySlug($slug);
         return array("categories"=> $category);
     }
 } 

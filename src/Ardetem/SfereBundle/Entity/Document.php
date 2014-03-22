@@ -141,7 +141,6 @@ class Document {
         $this->file = null;
     }
 
-
     /**
      * @ORM\PostRemove()
      */

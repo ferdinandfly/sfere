@@ -2,12 +2,12 @@
     <ul class="list_submenu">
         {% for category in categories %}
         <li>
-            <a href="{{ path('sfere_category_detail',{'id':category.id}) }}">
+            <a href="{{ path('sfere_category_detail',{'slug':category.slug}) }}">
                 <span class="icon_products" id="icon_analogica"></span>{{ category.name }}
             </a>
             <ul>
             {% for subcategory in category.subCategories %}
-                <li><a href="{{ path('sfere_sub_category_product',{'id': subcategory.id}) }}">{{ subcategory.name }}</a></li>
+                <li><a href="{{ path('sfere_sub_category_product',{'slug': subcategory.slug}) }}">{{ subcategory.name }}</a></li>
             {% endfor %}
             </ul>
         </li>

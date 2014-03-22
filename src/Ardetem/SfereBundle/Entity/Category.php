@@ -37,7 +37,7 @@ class Category {
     /**
      * @var string $slug
      *
-     * @ORM\Column(name="slug", type="string", length=256, nullable=true)
+     * @ORM\Column(name="slug", type="string", unique=true,length=255, nullable=true)
      */
     private $slug;
 

@@ -29,13 +29,13 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/product/subcatgory/{id}",requirements={"id"="\d+"}, name="sfere_sub_category_product")
+     * @Route("/product/subcatgory/{slug}",requirements={"slug"="[a-z\-]+"}, name="sfere_sub_category_product")
      * @Template()
      */
-    public function productAction($id){
+    public function productAction($slug){
         $repository = $this->getDoctrine()
             ->getRepository('ArdetemSfereBundle:SubCategory');
-        $cat=$repository->findOneById($id);
+        $cat=$repository->findOneBySlug($slug);
         return array('products' => $cat->getProducts());
     }
 
