@@ -3,7 +3,8 @@
         {% for category in categories %}
         <li>
             <a href="{{ path('sfere_category_detail',{'id':category.id}) }}">
-                <span class="icon_products" id="icon_analogica">{{ category.name }}</span></a>
+                <span class="icon_products" id="icon_analogica"></span>{{ category.name }}
+            </a>
             <ul>
             {% for subcategory in category.subCategories %}
                 <li><a href="{{ path('sfere_sub_category_product',{'id': subcategory.id}) }}">{{ subcategory.name }}</a></li>
