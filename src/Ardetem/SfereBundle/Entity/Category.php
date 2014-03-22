@@ -28,32 +28,11 @@ class Category {
     private $id;
 
     /**
-     * @var string $name
-     *
-     * @ORM\Column(name="name", type="string", length=256, nullable=true)
-     */
-    private $name;
-
-    /**
      * @var string $slug
      *
      * @ORM\Column(name="slug", type="string", unique=true,length=255, nullable=true)
      */
     private $slug;
-
-    /**
-     * @var text $description
-     *
-     * @ORM\Column(name="description", type="text", nullable=true)
-     */
-    private $description;
-
-    /**
-     * @var text resume
-     *
-     * @ORM\Column(name="resume", type="text", nullable=true)
-     */
-    private $resume;
 
     /**
      * @var integer $order
@@ -85,26 +64,6 @@ class Category {
     }
 
     /**
-     * Set name
-     *
-     * @param string $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
      * Set slug
      *
      * @param string $slug
@@ -123,7 +82,6 @@ class Category {
     {
         return $this->slug;
     }
-
     /**
      * Add subCategory
      *
@@ -155,21 +113,6 @@ class Category {
         return $this->subCategories;
     }
 
-    /**
-     * @return text
-     */
-    public function getDescription(){
-        return $this->description;
-    }
-
-    public function getResume(){
-        return $this->resume;
-    }
-
-    public function setResume($resume){
-        $this->resume=$resume;
-    }
-
 
     public function getOrder(){
         $this->order;
@@ -178,18 +121,45 @@ class Category {
         $this->order=$order;
     }
 
-    /**
-     * @param $desc
-     */
-    public function setDescription($desc){
-        $this->description=$desc;
-    }
-
     public function __call($method, $arguments)
     {
         return $this->proxyCurrentLocaleTranslation($method, $arguments);
     }
     public function __toString(){
-        return $this->name;
+        return $this->getName();
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->translate()->getName();
+    }
+
+    /**
+     * @return text
+     */
+    public function getDescription(){
+        return $this->translate()->getDescription();
+    }
+
+
+    public function getResume(){
+        return $this->translate()->getResume();
+    }
+
+    public function setName($name)
+    {
+        return $this->translate()->setName($name);
+    }
+
+    public function setDescription($desc){
+        return $this->translate()->setDescription($desc);
+    }
+
+
+    public function setResume($res){
+        return $this->translate()->setResume($res);
     }
 } 

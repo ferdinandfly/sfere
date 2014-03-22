@@ -43,9 +43,10 @@ class SubCategoryAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name', null, array('required' => true))
             ->add('slug', null, array('required' => true))
-            ->add('order',null, array('required' => false))
+            ->add('name','text', array('required' => true))
+            ->add('description','text', array('required' => false))
+            ->add('resume','text', array('required' => false))
             ->add('category', 'sonata_type_model')
             ->add('products', 'sonata_type_collection', array('required' => false), array(
                 'edit' => 'inline',
@@ -84,7 +85,8 @@ class SubCategoryAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('name');
+            ->add('name','doctrine_orm_string')
+            ;
     }
 
 

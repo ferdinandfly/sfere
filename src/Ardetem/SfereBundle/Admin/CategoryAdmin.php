@@ -41,10 +41,10 @@ class CategoryAdmin extends Admin{
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name', null, array('required' => true))
-            ->add('slug',null, array('required' => true))
-            ->add('description',null, array('required' => false))
-            ->add('resume',null, array('required' => false))
+            ->add('slug', null, array('required' => true))
+            ->add('name','text', array('required' => true))
+            ->add('description','text', array('required' => false))
+            ->add('resume','text', array('required' => false))
             ->add('order', null, array('required' => false))
             //->add('locales', 'a2lix_translationsLocalesSelector')
             //->add('translations', 'a2lix_translations')
@@ -60,8 +60,8 @@ class CategoryAdmin extends Admin{
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name')
-            ->add('slug')
+            ->addIdentifier('slug')
+            ->add('name')
             ->add('description')
             ->add('resume')
             ->add('order')
@@ -83,7 +83,7 @@ class CategoryAdmin extends Admin{
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('name')
+                ->add('name','doctrine_orm_string')
         ;
     }
 
@@ -100,6 +100,7 @@ class CategoryAdmin extends Admin{
      */
     public function preUpdate($object)
     {
+
         $locale=GlobalParameter::getLocale();
         $object->translate($locale)->setName($object->getName());
         $object->translate($locale)->setDescription($object->getDescription());

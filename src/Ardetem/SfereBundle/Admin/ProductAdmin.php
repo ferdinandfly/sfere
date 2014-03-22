@@ -38,9 +38,10 @@ class ProductAdmin extends  Admin{
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name', null, array('required' => true))
-            ->add('slug',null, array('required' => true))
-            ->add('description',null, array('required' => false))
+            ->add('slug', null, array('required' => true))
+            ->add('name','text', array('required' => true))
+            ->add('description','text', array('required' => false))
+            ->add('resume','text', array('required' => false))
             ->add('subCategory','sonata_type_model',array('required' => false))
             ->end()
         ;
@@ -54,8 +55,8 @@ class ProductAdmin extends  Admin{
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name')
-            ->add('slug')
+            ->addIdentifier('slug')
+            ->add('name')
             ->add('description')
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -75,8 +76,7 @@ class ProductAdmin extends  Admin{
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('name')
-            ->add('description')
+            ->add('name','doctrine_orm_string')
         ;
     }
 

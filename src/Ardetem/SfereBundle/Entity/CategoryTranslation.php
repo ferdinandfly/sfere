@@ -27,8 +27,14 @@ class CategoryTranslation {
      *
      * @ORM\Column(name="description", type="text", nullable=true)
      */
-    private $description;
+    protected $description;
 
+    /**
+     * @var text resume
+     *
+     * @ORM\Column(name="resume", type="text", nullable=true)
+     */
+    protected $resume;
 
     /**
      * @return string
@@ -60,4 +66,14 @@ class CategoryTranslation {
     public function setDescription($desc){
         $this->description=$desc;
     }
+
+
+    public function getResume(){
+        return $this->resume;
+    }
+
+    public function setResume($resume){
+        $this->resume=$resume;
+    }
+
 }

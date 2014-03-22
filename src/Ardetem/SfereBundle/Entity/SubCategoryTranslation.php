@@ -31,6 +31,13 @@ class SubCategoryTranslation {
     private $description;
 
     /**
+     * @var text resume
+     *
+     * @ORM\Column(name="resume", type="text", nullable=true)
+     */
+    private $resume;
+
+    /**
      * @return string
      */
     public function getName()
@@ -52,6 +59,14 @@ class SubCategoryTranslation {
 
     public function setDescription($desc){
         $this->description=$desc;
+    }
+
+    public function getResume(){
+        return $this->resume;
+    }
+
+    public function setResume($resume){
+        $this->resume=$resume;
     }
 
 
