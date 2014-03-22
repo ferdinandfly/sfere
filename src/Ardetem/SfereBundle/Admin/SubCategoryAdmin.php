@@ -30,6 +30,8 @@ class SubCategoryAdmin extends Admin
         $showMapper
             ->add('name')
             ->add('slug')
+            ->add('order')
+            ->add('resume')
             ->add('description');
     }
 
@@ -43,6 +45,7 @@ class SubCategoryAdmin extends Admin
         $formMapper
             ->add('name', null, array('required' => true))
             ->add('slug', null, array('required' => true))
+            ->add('order',null, array('required' => false))
             ->add('category', 'sonata_type_model')
             ->add('products', 'sonata_type_collection', array('required' => false), array(
                 'edit' => 'inline',
@@ -62,6 +65,7 @@ class SubCategoryAdmin extends Admin
         $listMapper
             ->addIdentifier('name')
             ->add('slug')
+            ->add('order')
             ->add('description')
             ->add('_action', 'actions', array(
                 'actions' => array(

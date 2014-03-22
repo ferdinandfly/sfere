@@ -49,6 +49,20 @@ class Category {
     private $description;
 
     /**
+     * @var text resume
+     *
+     * @ORM\Column(name="resume", type="text", nullable=true)
+     */
+    private $resume;
+
+    /**
+     * @var integer $order
+     *
+     * @ORM\Column(name="order", type="integer", nullable=true)
+     */
+    private $order;
+
+    /**
      * @ORM\OneToMany(targetEntity="SubCategory", mappedBy="category", cascade={"all"})
      */
     protected $subCategories;
@@ -146,6 +160,22 @@ class Category {
      */
     public function getDescription(){
         return $this->description;
+    }
+
+    public function getResume(){
+        return $this->resume;
+    }
+
+    public function setResume($resume){
+        $this->resume=$resume;
+    }
+
+
+    public function getOrder(){
+        $this->order;
+    }
+    public function setOrder($order){
+        $this->order=$order;
     }
 
     /**

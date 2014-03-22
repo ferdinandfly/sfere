@@ -40,15 +40,15 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/contact", name="sfere_contact_client")
+     * @Route("/contact/client", name="sfere_contact_client")
      * @Template()
      */
-    public function contactCommercialAction(){
+    public function contactClientAction(){
         return array();
     }
 
     /**
-     * @Route("/contact", name="sfere_contact_info")
+     * @Route("/contact/info", name="sfere_contact_info")
      * @Template()
      */
     public function contactInfoAction(){

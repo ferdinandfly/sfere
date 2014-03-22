@@ -28,6 +28,8 @@ class CategoryAdmin extends Admin{
             ->add('name')
             ->add('slug')
             ->add('description')
+            ->add('resume')
+            ->add('order')
         ;
     }
 
@@ -42,6 +44,8 @@ class CategoryAdmin extends Admin{
             ->add('name', null, array('required' => true))
             ->add('slug',null, array('required' => true))
             ->add('description',null, array('required' => false))
+            ->add('resume',null, array('required' => false))
+            ->add('order', null, array('required' => false))
             //->add('locales', 'a2lix_translationsLocalesSelector')
             //->add('translations', 'a2lix_translations')
             ->end()
@@ -59,6 +63,8 @@ class CategoryAdmin extends Admin{
             ->addIdentifier('name')
             ->add('slug')
             ->add('description')
+            ->add('resume')
+            ->add('order')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),
@@ -78,7 +84,6 @@ class CategoryAdmin extends Admin{
     {
         $datagridMapper
             ->add('name')
-            ->add('description')
         ;
     }
 

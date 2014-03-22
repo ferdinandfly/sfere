@@ -48,6 +48,13 @@ class SubCategory {
     private $description;
 
     /**
+     * @var text resume
+     *
+     * @ORM\Column(name="resume", type="text", nullable=true)
+     */
+    private $resume;
+
+    /**
      * @var Category
      *
      * @ORM\ManyToOne(targetEntity="Category")
@@ -57,6 +64,12 @@ class SubCategory {
      */
     protected  $category;
 
+    /**
+     * @var integer $order
+     *
+     * @ORM\Column(name="order", type="integer", nullable=true)
+     */
+    private $order;
 
     /**
      * @ORM\OneToMany(targetEntity="Product", mappedBy="subCategory", cascade={"all"})
@@ -181,7 +194,20 @@ class SubCategory {
         return $this->products;
     }
 
+    public function getResume(){
+        return $this->resume;
+    }
 
+    public function setResume($resume){
+        $this->resume=$resume;
+    }
+
+    public function getOrder(){
+        $this->order;
+    }
+    public function setOrder($order){
+        $this->order=$order;
+    }
     public function __call($method, $arguments)
     {
         return $this->proxyCurrentLocaleTranslation($method, $arguments);
