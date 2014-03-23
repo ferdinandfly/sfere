@@ -81,16 +81,12 @@ class DocumentAdmin extends  Admin{
         $this->preUpdate($doc);
     }
 
-
     /**
      * {@inheritdoc}
      */
     public function preUpdate($doc)
     {
         $this->manageFileUpload($doc);
-        $locale=GlobalParameter::getLocale();
-        $doc->translate($locale)->setPath($doc->getPath());
-        $doc->mergeNewTranslations();
     }
 
     private function manageFileUpload($doc) {

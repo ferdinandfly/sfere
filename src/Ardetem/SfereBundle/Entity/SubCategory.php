@@ -56,11 +56,17 @@ class SubCategory {
      */
     protected $products;
 
+
     /**
      *
      */
     public function __construct(){
         $this->products = new ArrayCollection();
+    }
+
+    public function __call($method, $arguments)
+    {
+        return $this->proxyCurrentLocaleTranslation($method, $arguments);
     }
 
     /**
@@ -152,13 +158,10 @@ class SubCategory {
     public function setOrder($order){
         $this->order=$order;
     }
-    public function __call($method, $arguments)
-    {
-        return $this->proxyCurrentLocaleTranslation($method, $arguments);
-    }
+
 
     public function __toString(){
-        return $this->getName();
+        return $this->slug;
     }
 
     /**

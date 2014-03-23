@@ -45,14 +45,10 @@ class SubCategoryAdmin extends Admin
     {
         $formMapper
             ->add('slug', null, array('required' => true))
-            ->add('name','text', array('required' => true))
-            ->add('description','text', array('required' => false))
-            ->add('resume','text', array('required' => false))
-            ->add('category', 'sonata_type_model')
-            ->add('products', 'sonata_type_collection', array('required' => false), array(
-                'edit' => 'inline',
-                'inline' => 'table',
-            ))
+            ->add('translations','a2lix_translations')
+            ->add('category', 'sonata_type_model',array('property' => 'name'))
+            ->add('products', 'sonata_type_model', array('property' => 'name','required' => false, 'multiple' => true)
+                )
             ->end();
     }
 

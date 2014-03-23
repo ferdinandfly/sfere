@@ -19,7 +19,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Document {
     use ORMBehaviors\Timestampable\Timestampable;
-    use ORMBehaviors\Translatable\Translatable;
     private $temp;
 
     /**

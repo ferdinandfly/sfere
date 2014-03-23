@@ -60,7 +60,6 @@ class CategoryAdmin extends Admin{
         $listMapper
             ->addIdentifier('slug')
             ->add('name')
-            ->add('description')
             ->add('resume')
             ->add('order')
             ->add('_action', 'actions', array(

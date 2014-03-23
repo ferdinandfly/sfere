@@ -18,6 +18,7 @@ class SubCategoryTranslation {
 
     use ORMBehaviors\Translatable\Translation;
 
+
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -28,14 +29,14 @@ class SubCategoryTranslation {
      *
      * @ORM\Column(name="description", type="text", nullable=true)
      */
-    private $description;
+    protected $description;
 
     /**
      * @var text resume
      *
      * @ORM\Column(name="resume", type="text", nullable=true)
      */
-    private $resume;
+    protected $resume;
 
     /**
      * @return string
@@ -53,13 +54,21 @@ class SubCategoryTranslation {
     {
         $this->name = $name;
     }
+
+    /**
+     * @return text
+     */
     public function getDescription(){
         return $this->description;
     }
 
+    /**
+     * @param $desc
+     */
     public function setDescription($desc){
         $this->description=$desc;
     }
+
 
     public function getResume(){
         return $this->resume;
@@ -68,6 +77,4 @@ class SubCategoryTranslation {
     public function setResume($resume){
         $this->resume=$resume;
     }
-
-
 } 

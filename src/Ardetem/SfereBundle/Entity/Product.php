@@ -35,15 +35,6 @@ class Product {
      */
     private $slug;
 
-    /**
-     * @var Document
-     *
-     * @ORM\OneToOne(targetEntity="Document")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="document_id", referencedColumnName="id")
-     * })
-     */
-    protected  $document;
 
     /**
      * @var SubCategory
@@ -110,19 +101,7 @@ class Product {
         return $this->subCategory;
     }
 
-    /**
-     * @param Document $doc
-     */
-    public function setDocument(Document $doc){
-        $this->document=$doc;
-    }
 
-    /**
-     * @return Document
-     */
-    public function getDocument(){
-        return $this->document;
-    }
 
     public function __toString(){
         return $this->getName();
@@ -160,5 +139,19 @@ class Product {
 
     public function setResume($res){
         return $this->translate()->setResume($res);
+    }
+
+    /**
+     * @param Document $doc
+     */
+    public function setDocument(Document $doc){
+        $this->translate()->setDocument($doc);
+    }
+
+    /**
+     * @return Document
+     */
+    public function getDocument(){
+        return  $this->translate()->getDocument();
     }
 }

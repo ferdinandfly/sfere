@@ -53,6 +53,11 @@ class Category {
         $this->subCategories = new ArrayCollection();
     }
 
+    public function __call($method, $arguments)
+    {
+        return $this->proxyCurrentLocaleTranslation($method, $arguments);
+    }
+
     /**
      * Get id
      *
@@ -121,10 +126,6 @@ class Category {
         $this->order=$order;
     }
 
-    public function __call($method, $arguments)
-    {
-        return $this->proxyCurrentLocaleTranslation($method, $arguments);
-    }
     public function __toString(){
         return $this->getName();
     }

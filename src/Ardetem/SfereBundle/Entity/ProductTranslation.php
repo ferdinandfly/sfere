@@ -35,6 +35,15 @@ class ProductTranslation {
      */
     protected $resume;
 
+    /**
+     * @var Document
+     *
+     * @ORM\OneToOne(targetEntity="Document")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="document_id", referencedColumnName="id")
+     * })
+     */
+    protected  $document;
 
     /**
      * @return string
@@ -75,4 +84,17 @@ class ProductTranslation {
         $this->resume=$resume;
     }
 
+    /**
+     * @param Document $doc
+     */
+    public function setDocument(Document $doc){
+        $this->document=$doc;
+    }
+
+    /**
+     * @return Document
+     */
+    public function getDocument(){
+        return $this->document;
+    }
 } 

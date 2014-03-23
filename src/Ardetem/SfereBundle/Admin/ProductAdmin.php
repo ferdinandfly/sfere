@@ -39,9 +39,15 @@ class ProductAdmin extends  Admin{
     {
         $formMapper
             ->add('slug', null, array('required' => true))
-            ->add('name','text', array('required' => true))
-            ->add('description','text', array('required' => false))
-            ->add('resume','text', array('required' => false))
+            ->add('translations','a2lix_translations',array(
+                'fields' => array(
+                    'document' =>array(
+                        'field_type' => 'entity',
+                        'class' => 'Ardetem\SfereBundle\Entity\Document',
+                    )
+                )
+            ))
+
             ->add('subCategory','sonata_type_model',array('required' => false))
             ->end()
         ;
