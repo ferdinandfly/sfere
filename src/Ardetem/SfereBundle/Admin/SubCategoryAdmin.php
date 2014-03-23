@@ -52,7 +52,6 @@ class SubCategoryAdmin extends Admin
                 'edit' => 'inline',
                 'inline' => 'table',
             ))
-            ->add('description', null, array('required' => false))
             ->end();
     }
 
