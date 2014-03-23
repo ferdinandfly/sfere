@@ -42,9 +42,7 @@ class CategoryAdmin extends Admin{
     {
         $formMapper
             ->add('slug', null, array('required' => true))
-            ->add('name','text', array('required' => true))
-            ->add('description','text', array('required' => false))
-            ->add('resume','text', array('required' => false))
+            ->add('translations','a2lix_translations')
             ->add('order', null, array('required' => false))
             //->add('locales', 'a2lix_translationsLocalesSelector')
             //->add('translations', 'a2lix_translations')
@@ -100,7 +98,6 @@ class CategoryAdmin extends Admin{
      */
     public function preUpdate($object)
     {
-
         $locale=GlobalParameter::getLocale();
         $object->translate($locale)->setName($object->getName());
         $object->translate($locale)->setDescription($object->getDescription());

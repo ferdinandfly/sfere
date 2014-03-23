@@ -87,3 +87,5 @@ assetic:
         lessphp:
             file: "%kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php"
             apply_to: "\.less$"
+a2lix_translation_form:
+    locales: [en,fr, es, de,zh_CN]

@@ -28,11 +28,12 @@ class SubCategoryAdmin extends Admin
     protected function configureShowField(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('name')
             ->add('slug')
-            ->add('order')
+            ->add('name')
             ->add('resume')
-            ->add('description');
+            ->add('description')
+            ->add('order')
+        ;
     }
 
     /**
@@ -63,10 +64,10 @@ class SubCategoryAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name')
-            ->add('slug')
+            ->addIdentifier('slug')
+            ->add('name')
+            ->add('resume')
             ->add('order')
-            ->add('description')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),

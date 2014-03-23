@@ -45,7 +45,7 @@
 }
 body {
 	font-family: OpenSansLight, Helvetica, Arial;
-	background: url(images/background.jpg) center top no-repeat;
+	background: url(../images/background.jpg) center top no-repeat;
 	color: gray;
 	font-size: 100%;
 	padding: 0px;
@@ -194,17 +194,17 @@ top: -7px;
 
 }
 #line_l{left: -19px;
-	background:  url('images/line_l.png') 0px 0px no-repeat;
+	background:  url('../images/line_l.png') 0px 0px no-repeat;
 }
 
 #line_r{
-	background:  url('images/line_r.png') 0px 0px no-repeat;
+	background:  url('../images/line_r.png') 0px 0px no-repeat;
 	right:-18px;
 
 }
 
 #line_t{
-    background: url('images/line_t.png') 0px 0px repeat-x;
+    background: url('../images/line_t.png') 0px 0px repeat-x;
     width: 100%;
     position: absolute;
     height: 15px;
@@ -431,7 +431,7 @@ footer {
 	display: block;
 	height: 50px;
 	width: 50px;
-	background: url('images/social.png') 0px 0px no-repeat;
+	background: url('../images/social.png') 0px 0px no-repeat;
 	transition: 0.25s;
 }
 #social li a:hover {

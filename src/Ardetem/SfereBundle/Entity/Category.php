@@ -151,15 +151,19 @@ class Category {
 
     public function setName($name)
     {
-        return $this->translate()->setName($name);
+        $this->translate()->setName($name);
+        return $this;
     }
 
     public function setDescription($desc){
-        return $this->translate()->setDescription($desc);
+
+        $this->translate()->setDescription($desc);
+        return $this;
     }
 
 
     public function setResume($res){
-        return $this->translate()->setResume($res);
+        $this->translate()->setResume($res);
+        return $this;
     }
 } 

@@ -1,10 +1,11 @@
-ardetem_sfere:
+ardetem_sfere_locale:
     resource: "@ArdetemSfereBundle/Resources/config/routing.yml"
     prefix:   /{_locale}
 
 sonata_user:
     resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
-    prefix: /{_locale}/admin
+    prefix: /admin
+
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
     prefix: /{_locale}/admin

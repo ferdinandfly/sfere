@@ -1,0 +1,8 @@
+menu:
+    language:
+        title: espa choos language
+        en: English
+        fr: Français
+        es: Espagnole
+        zh_CN: Chinois
+    login: Login

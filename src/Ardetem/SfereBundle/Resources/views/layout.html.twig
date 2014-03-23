@@ -105,8 +105,7 @@
 
 <div id="menu_top">
     <ul class="menu-nav">
-        <li class="item141"><a href="http://www.visiotech.es/fr/login"><span>Login</span></a></li>
-        <li class="item142"><a href="http://cctvddns.net"><span>cctvddns.net</span></a></li>
+        <li class="item141"><a href="{{ path('fos_user_security_login') }}"><span>{{ 'menu.login' | trans }}</span></a></li>
     </ul>
     <div id="jflanguageselection">
         <select name="lang" class="jflanguageselection" size="1" onchange="document.location.replace(this.value);">
