@@ -30,8 +30,8 @@ class AppKernel extends Kernel
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
-            //new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
             new Ardetem\SfereBundle\ArdetemSfereBundle()
         );
 

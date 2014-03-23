@@ -122,10 +122,18 @@ file that was distributed with this source code.
                             {% endblock %}
 
                             {% block sonata_nav_menu_before %}{% endblock %}
-
                             {% block sonata_nav_menu %}
                                 <div class="nav-collapse">
                                     <ul class="nav">
+                                        <li class="dropdown">
+                                            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">{{ 'menu.language.title' | trans }} <b class="caret"></b></a>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ path('sonata_admin_dashboard',{'_locale':'en'}) }}">{{ 'menu.language.en' | trans }}</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ path('sonata_admin_dashboard',{'_locale':'fr'}) }}">{{ 'menu.language.fr'| trans }}</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ path('sonata_admin_dashboard',{'_locale':'es'}) }}">{{ 'menu.language.es'| trans }}</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ path('sonata_admin_dashboard',{'_locale':'zh_CN'}) }}">{{ 'menu.language.zh_CN' | trans }}</a></li>
+                                            </ul>
+                                        </li>
                                         {% block top_bar_before_nav %} {% endblock %}
                                         {% block sonata_top_bar_nav %}
                                             {% if app.security.token and is_granted('ROLE_SONATA_ADMIN') %}

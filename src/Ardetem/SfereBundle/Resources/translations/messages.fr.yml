@@ -25,3 +25,10 @@ intro:
 
 see_more:  Voir plus
 menu:
+    language:
+        title: Choisir une langage
+        en: English
+        fr: Français
+        es: Espagnole
+        zh_CN: Chinois
+
