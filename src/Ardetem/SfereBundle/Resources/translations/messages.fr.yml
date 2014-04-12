@@ -16,6 +16,15 @@ intro:
             Tel:<br/>
             Fax:<br/>
             Email: info@sfere-net.com<br/>
+        presentation:
+          title: PRÉSENTATION DE SOCIÉTÉ
+          text: >
+            <p>Reconnu par sa précision et fiabilité, SFERE est une société en innovation permanente dans le secteur de mesure et de contrôle de process industriels et réseaux électriques.</p>
+            <p>Notre siège se situe à LYON, nous disposons deux bureaux d’étude en FRANCE, une équipe de d’ingénieurs expérimentés, et des commerciaux nationaux et internationaux dynamiques, qui sont toujours à l’écoule des besoin des clients.</p>
+            <p>Tous nos produits sont fabriqué en France, nous avons deux agences commerciales, en CHINE et en POLOGNE, notre réseau de distribution est réparties dans 32 pays sur 5 continents.</p>
+            <p>Nos produits sont utilisés aussi bien dans les petits projets industriels comme dans beaucoup de projets étatiques françaises et étrangers sur de nombreux secteurs différents, notre savoir-faire répond aux plus hautes exigences.</p>
+            <p>Nous étudions en détail chaque besoin des clients, et propose la solution la plus adéquate dans un délais très court.</p>
+            <p>Il y a certaines choses dans ce monde qui ne se mesurent pas, pour tout le reste, consultez SFERE.</p>
     category:
         name: Produits
     news:
@@ -32,3 +41,7 @@ menu:
         es: Espagnole
         zh_CN: Chinois
     login: Login
+common:
+    tel: Téléphone
+    fax: Fax
+    email: Email
