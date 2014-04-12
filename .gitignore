@@ -4,3 +4,6 @@ app/cache
 vendor/*
 web/bundles
 web/uploads
+web/js
+web/css
+web/images
