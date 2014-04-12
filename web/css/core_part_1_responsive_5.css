@@ -1,0 +1,375 @@
+/* CSS Document */
+
+@media only screen and (max-width :  320px) {
+	
+#relative_wrap_product{display: none!important;}
+body{
+background: url(../../bundles/ardetemsfere/css/images/background.jpg) -998px 0px no-repeat;
+}
+#header {
+	min-height: 0;
+	height: auto;
+}
+#logo {
+	/*width: 50%;*/
+}
+.news {
+	width: 100%;
+	text-align: center;
+}
+#news_2 {
+	margin-top: 1em;
+}
+#news .img {
+	float: none;
+	width: 170px;
+	margin: 0px auto;
+}
+#news .description {
+	margin: 0px;
+	width: 100%;
+}
+#shortcut li {
+	float: none;
+	margin: 0px 0px 2% 0px;
+	width: 100%;
+}
+}
+ @media only screen and (max-width : 495px) {
+	 
+body {
+	font-size: 70%;
+background: url(../../bundles/ardetemsfere/css/images/background.jpg) -998px 0px no-repeat;
+}
+#header {
+	min-height: 0;
+	height: auto;
+}
+nav {
+	display: inline-block;
+	position: relative;
+	margin-top: 40px;
+	width: 100%;
+}
+#menu_top ul {
+	display: none;
+}
+#menu_icon {
+	display: inline-block;
+	float: right;
+	margin-left: auto;
+	border-radius: 5px;
+	width: 50px;
+	height: 50px;
+	background: #C03158 url(../../bundles/ardetemsfere/css/images/menu_icon.png) center no-repeat;
+	transition: 0.25s;
+}
+#login_icon {
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+	width: 50px;
+	height: 50px;
+	background: url(../../bundles/ardetemsfere/css/images/login_icon.png) center no-repeat;
+	transition: 0.25s;
+}
+#menu {
+	display: none;
+	overflow: hidden;
+	background-color: #C03158;
+	position: relative;
+	top: -4px;
+	font-size: 19px;
+	max-width: 992px;
+	width: 100%;
+	margin-bottom: 15px;
+	transition: 0s;
+}
+#menu:hover {
+	height: 100%;
+	display: block;
+	visibility: visible;
+}
+#menu li {
+	display: block;
+	color: white;
+	float: none;
+	width: 100%;
+}
+#menu li a {
+	border-bottom: solid 1px #AA1B1B;
+}
+#menu li:hover > .submenu {
+	display: block;
+	visibility: visible;
+}
+.submenu {
+	border-bottom: none!important;
+	display: none;
+	position: relative;
+	height: auto;
+	border: none;
+	background: #A70431;
+	box-shadow: none;
+	transition: 0.1s;
+}
+.list_submenu, .button_submenu {
+	width: 100%;
+	border-bottom: none!important;
+	float: none;
+	position: relative;
+	height: auto;
+	margin: 0px!important;
+	border: none;
+	background-color: #A70431;
+	box-shadow: none;
+	transition: 0.1s;
+}
+.submenu li, .button_submenu li {
+	border: none!important;
+	background-color: #990909;
+	box-shadow: none;
+	margin: 0px;
+	padding: 0px;
+}
+.submenu li:hover, .button_submenu li:hover {
+	box-shadow: none;
+	background: #A70431;
+}
+.list_submenu > li > a, .button_submenu a {
+	font: 19px Titillium, helvetica, Arial;
+	display: inline-block;
+	font-family: inherit;
+	text-align: center;
+	text-shadow: none;
+	margin: 0px;
+	width: 100%;
+	padding: 0.3em 0px;
+}
+.submenu_wrap {
+	margin: 0px;
+	width: 100%;
+}
+.contact_submenu li {
+	height: auto;
+}
+.button_submenu .title {
+	font: inherit!important;
+	margin: 0px;
+}
+.icon_content {
+	margin: 0px;
+	max-width: none;
+}
+.list_submenu li img {
+	display: none;
+}
+.list_submenu li div {
+	display: none!important;
+}
+.list_submenu li ul {
+	display: none!important;
+}
+.list_submenu li span {
+	display: none!important;
+}
+.button_submenu .icon_resource {
+	display: none!important;
+}
+.button_submenu .icon_contact {
+	display: none!important;
+}
+.button_submenu .description {
+	display: none!important;
+}
+#intro_demo {
+	display: none!important;
+}
+#search {
+	display: block;
+	opacity: 1;
+	position: relative;
+	top: 0px;
+	width: 92%;
+	padding: 3%;
+	margin: 1%;
+	border: none;
+}
+#web-links {
+	display: none;
+}
+
+#info {
+width: 100%;
+border-right: none;
+
+
+}
+ }
+ 
+ @media only screen and (min-width : 321px) and (max-width : 495px) {
+body {
+	font-size: 70%;
+}
+#relative_wrap_product{display: none!important;}
+header {
+	min-height: 70px;
+	height: auto;
+}
+#logo {
+	width: 154px;
+}
+.news {
+	width: 100%;
+}
+#news_2 {
+	clear: left;
+	margin-top: 1em;
+}
+#news .description {
+	width: 71.5%;
+}
+#news .img {
+	width: 24.5%;
+}
+#shortcut li {
+	height: auto;
+	display: inline-block;
+	float: none;
+	margin: 0px 0px 2% 0px;
+	width: 99.5%;
+}
+#shortcut li a {
+	height: auto;
+	padding: 3.8%;
+	min-height: 68px;
+}
+#shortcut img {
+	margin: 0px;
+	width: 22%;
+	display: block;
+	float: left;
+}
+#shortcut .title {
+	font-size: 2em;
+	display: inline-block;
+	text-align: left;
+	margin: 2.5% 0px 0px 5%;
+	width: 61%;
+}
+
+}
+ @media only screen and (min-width : 496px) and (max-width : 768px) {
+#menu_top ul li, #jflanguageselection {
+	padding-top: 2px;
+	font-size: 0.9em;
+}
+
+#relative_wrap_product{display: none!important;}
+
+#login {
+	top: 0px;
+	font-size: inherit;
+}
+#search {
+	top: -65px;
+	width: 50%;
+}
+.news {
+	width: 100%;
+}
+#news_2 {
+	clear: left;
+	margin-top: 1em;
+}
+#news .description {
+	width: 72%;
+}
+#news .img {
+	width: 24.5%;
+}
+/*Menu*/
+
+#menu {
+	display: block!important;
+	font-size: 1.05em;
+	max-width: 992px;
+}
+#menu> li {
+	width: 20%;
+}
+#submenu_enterprise .intro_text {
+	float: none;
+	width: 100%;
+	display: inline-block;
+}
+#submenu_enterprise img {
+	display: none;
+}
+.recu_submenu {
+	width: 100%;
+}
+.recu_submenu li {
+	width: 38%;
+	float: left;
+	height: 100px;
+	margin: 0.5%;
+}
+#intro_demo {
+	display: none;
+}
+.recu_submenu li:nth-child(1) {
+	display: inline-block;
+}
+.recu_submenu li:last-child {
+	width: 87.3%;
+}
+.contact_submenu li {
+	width: 90%;
+}
+/*Menu  End*/
+
+
+
+/*Shortcut*/
+
+#shortcut li {
+	width: 47.9%;
+	margin: 1.57%;
+}
+#shortcut li:nth-child(2) {
+	margin-right: 0px;
+}
+#shortcut li:nth-child(3) {
+	clear: left;
+	margin-left: 0px;
+}
+/*Shortcut End*/
+
+
+
+}
+ @media only screen and (min-width : 768px) {
+#menu {
+	display: block!important;
+}
+.recu_submenu li:nth-child(5) {/*antes era el 1, hasta que se quito el ultimo*/
+	display: none;
+}
+.recu_submenu li:nth-child(2) {
+	/*margin: 0px;*/
+}
+
+
+}
+ @media only screen and (min-width : 960px) {
+#arrow_l, #arrow_r {
+	visibility: hidden!important;
+}
+#product_menu ul {
+	margin-left: 0px;
+}
+#menu {
+	display: block!important;
+}
+}

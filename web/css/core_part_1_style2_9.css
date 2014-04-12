@@ -4,57 +4,57 @@
 
 @font-face {
 	font-family: MuseoSans_700;
-	src: url(../fonts/MuseoSans_700.otf);
+	src: url(../../bundles/ardetemsfere/fonts/MuseoSans_700.otf);
 	font-weight: 400;
 }
 @font-face {
 	font-family: MuseoSans_500;
-	src: url(../fonts/MuseoSans_300.otf);
+	src: url(../../bundles/ardetemsfere/fonts/MuseoSans_300.otf);
 	font-weight: 400;
 }
 @font-face {
 	font-family: MuseoSans_300;
-	src: url(../fonts/MuseoSans_300.otf);
+	src: url(../../bundles/ardetemsfere/fonts/MuseoSans_300.otf);
 	font-weight: 400;
 }
 @font-face {
 	font-family: MuseoSans_100;
-	src: url(../fonts/MuseoSans_100.otf);
+	src: url(../../bundles/ardetemsfere/fonts/MuseoSans_100.otf);
 	font-weight: 400;
 }
 @font-face {
 	font-family: 'OpenSansLight';
-	src: url(../fonts/OpenSans-Light-webfont.eot);
-	src: url(../fonts/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/OpenSans-Light-webfont.woff) format('woff'),
-    url(../fonts/OpenSans-Light-webfont.ttf) format('truetype'),
-    url(../fonts/OpenSans-Light-webfont.svg#OpenSansLight) format('svg');
+	src: url(../../bundles/ardetemsfere/fonts/OpenSans-Light-webfont.eot);
+	src: url(../../bundles/ardetemsfere/fonts/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../../bundles/ardetemsfere/fonts/OpenSans-Light-webfont.woff) format('woff'),
+    url(../../bundles/ardetemsfere/fonts/OpenSans-Light-webfont.ttf) format('truetype'),
+    url(../../bundles/ardetemsfere/fonts/OpenSans-Light-webfont.svg#OpenSansLight) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Titillium';
-	src: url(../fonts/TitilliumText25L003-webfont.eot);
-	src: url(../fonts/TitilliumText25L003-webfont.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/TitilliumText25L003-webfont.woff) format('woff'),
-    url(../fonts/TitilliumText25L003-webfont.ttf) format('truetype'),
-    url(../fonts/TitilliumText25L003-webfont.svg#TitilliumText25L400wt) format('svg');
+	src: url(../../bundles/ardetemsfere/fonts/TitilliumText25L003-webfont.eot);
+	src: url(../../bundles/ardetemsfere/fonts/TitilliumText25L003-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../../bundles/ardetemsfere/fonts/TitilliumText25L003-webfont.woff) format('woff'),
+    url(../../bundles/ardetemsfere/fonts/TitilliumText25L003-webfont.ttf) format('truetype'),
+    url(../../bundles/ardetemsfere/fonts/TitilliumText25L003-webfont.svg#TitilliumText25L400wt) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Titillium_Light';
-	src: url(../fonts/TitilliumText25L005-webfont.eot);
-	src: url(../fonts/TitilliumText25L005-webfont.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/TitilliumText25L005-webfont.woff) format('woff'),
-    url(../fonts/TitilliumText25L005-webfont.ttf) format('truetype'),
-    url(../fonts/TitilliumText25L005-webfont.svg#TitilliumText25L1wt) format('svg');
+	src: url(../../bundles/ardetemsfere/fonts/TitilliumText25L005-webfont.eot);
+	src: url(../../bundles/ardetemsfere/fonts/TitilliumText25L005-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../../bundles/ardetemsfere/fonts/TitilliumText25L005-webfont.woff) format('woff'),
+    url(../../bundles/ardetemsfere/fonts/TitilliumText25L005-webfont.ttf) format('truetype'),
+    url(../../bundles/ardetemsfere/fonts/TitilliumText25L005-webfont.svg#TitilliumText25L1wt) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 body {
 	font-family: OpenSansLight, Helvetica, Arial;
-	background: url(../images/background.jpg) center top no-repeat;
+	background: url(../../bundles/ardetemsfere/images/background.jpg) center top no-repeat;
 	color: gray;
 	font-size: 100%;
 	padding: 0px;
@@ -203,17 +203,17 @@ top: -7px;
 
 }
 #line_l{left: -19px;
-	background:  url('../images/line_l.png') 0px 0px no-repeat;
+	background:  url('../../bundles/ardetemsfere/images/line_l.png') 0px 0px no-repeat;
 }
 
 #line_r{
-	background:  url('../images/line_r.png') 0px 0px no-repeat;
+	background:  url('../../bundles/ardetemsfere/images/line_r.png') 0px 0px no-repeat;
 	right:-18px;
 
 }
 
 #line_t{
-    background: url('../images/line_t.png') 0px 0px repeat-x;
+    background: url('../../bundles/ardetemsfere/images/line_t.png') 0px 0px repeat-x;
     width: 100%;
     position: absolute;
     height: 15px;
@@ -440,7 +440,7 @@ footer {
 	display: block;
 	height: 50px;
 	width: 50px;
-	background: url('../images/social.png') 0px 0px no-repeat;
+	background: url('../../bundles/ardetemsfere/images/social.png') 0px 0px no-repeat;
 	transition: 0.25s;
 }
 #social li a:hover {

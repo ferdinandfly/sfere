@@ -1,0 +1,28 @@
+{% extends "ArdetemSfereBundle::layout.html.twig" %}
+{% form_theme form 'ApplicationSonataUserBundle:Form:table_field.html.twig' %}
+{% block page_content %}
+    <div id="page_style">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h2 class="componentheading">{{ 'title_user_registration'|trans({}, 'SonataUserBundle') }}</h2>
+            </div>
+            <div class="panel-body">
+                <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST"
+                      class="fos_user_registration_register form-horizontal">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="contentpane">
+                        <tbody>
+                        {{ form_widget(form) }}
+                        </tbody>
+                    </table>
+                    <p>
+                        {{ 'form_field_required'|trans({}, 'SonataUserBundle') }}
+                    </p>
+                    <div class="form-actions">
+                        <input type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}"
+                               class="button validate"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

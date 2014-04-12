@@ -3,7 +3,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="robots" content="index, follow"/>
-    <meta name="keywords" content="videovigilancia, cctv, cámaras analógicas, cámaras IP, videograbadores, dahua, hikvision, avtech, apexis, distribuidor, mayorista, accesorios, cables"/>
+    <meta name="keywords"
+          content="videovigilancia, cctv, cámaras analógicas, cámaras IP, videograbadores, dahua, hikvision, avtech, apexis, distribuidor, mayorista, accesorios, cables"/>
     <meta name="title" content="Entreprise"/>
     <meta name="author" content="Administrator"/>
     <meta name="description"
@@ -96,121 +97,138 @@
 
 </head>
 <body>
-<div>
-</div>
 <div id="header">
 
-<div class="wrap" style="position:relative">
+    <div class="wrap" style="position:relative">
 
 
-<div id="menu_top">
-    <ul class="menu-nav">
-        <li class="item141"><a href="{{ path('fos_user_security_login') }}"><span>{{ 'menu.login' | trans }}</span></a></li>
-    </ul>
-    <div id="jflanguageselection">
-        <select name="lang" class="jflanguageselection" size="1" onchange="document.location.replace(this.value);">
-            <option value="/es/"   {% if app.request.get('_locale') == 'es' %} selected="selected" {% endif %}>Español
-            </option>
-            <option value="/fr/"  {% if app.request.get('_locale') == 'fr' %} selected="selected" {% endif %} >Française
-            </option>
-            <option value="/zh_CN/"  {% if app.request.get('_locale') == 'zh_CN' %} selected="selected" {% endif %} >chinese
-            </option>
-            <option value="/it/"  {% if app.request.get('_locale') == 'it' %} selected="selected" {% endif %} >Italiano
-            </option>
-        </select>
-    </div>
-    <noscript><a href="/es/"><span lang="es" xml:lang="es">Español</span></a>&nbsp;
-        <a href="/fr/"><span lang="fr" xml:lang="fr">Française</span></a>&nbsp;
-        <a href="/cn/"><span lang="pt" xml:lang="pt">chinese</span></a>&nbsp;
-        <a href="/it/"><span lang="it" xml:lang="it">Italiano</span></a>&nbsp;
-    </noscript>
-    <!--Joom!fish V2.0.3 (Flash)-->
-    <!-- &copy; 2003-2009 Think Network, released under the GPL. -->
-    <!-- More information: at http://www.joomfish.net -->
-
-</div>
-
-<a href="{{ path('sfere_home') }}"><img src="http://www.visiotech.es/templates/responsive/images/logo.png" id="logo"
-                                          alt="Visiotech Logo"/></a>
-
-
-<nav>
-<div id="menu_icon"></div>
-<!--<div id="login_icon"></div> -->
-
-
-<ul id="menu">
-    <li><a href="{{ path('sfere_home') }}" class="active">{{ 'intro.company.name'| trans }}</a>
-        <div class="submenu">
-            <ul class="list_submenu" id="submenu_enterprise">
-                <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.info.title'| trans }}</a> <img
-                            src="http://www.visiotech.es/modules/mod_menu_responsive/images/feria.jpg" class="img"
-                            alt="Feria">
-                    <div class="intro_text">
-                        <a href="{{ path('sfere_company') }}">
-                            {{ 'intro.company.info.text'|trans|raw }}
-                            <div class="read_more">{{ 'see_more'| trans }}</div>
-                        </a>
-                    </div>
-                </li>
-                <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.where.title'|trans }}</a> <img
-                            src="http://www.visiotech.es/modules/mod_menu_responsive/images/map.jpg" class="img"
-                            alt="Feria">
-                    <div class="intro_text">
-                        {{ 'intro.company.where.text' | trans|raw }}
-                        <a href="{{ path('sfere_company') }}">
-                            <div class="read_more">{{ 'see_more'| trans }}</div>
-                        </a>
-                    </div>
+        <div id="menu_top">
+            <ul class="menu-nav">
+                <li class="item141"><a
+                            href="{{ path('fos_user_security_login') }}"><span>{{ 'menu.login' | trans }}</span></a>
                 </li>
             </ul>
-        </div>
-    </li>
-    <li>
-        <a>{{ 'intro.category.name'| trans }}</a>
-        {{ render(controller('ArdetemSfereBundle:Category:menuList')) }}
-    </li>
-    <li><a href="{{ path('sfere_news') }}">{{ 'intro.news.name' | trans }}</a></li>
-    <li><a>{{ 'intro.contact.name' | trans }}</a>
-        <div class="submenu">
-            <div class="submenu_wrap">
-                <ul class="button_submenu contact_submenu">
-                    <li><a href="{{ path('sfere_contact_client') }}">
-                            <div class="icon_contact" id="icon_info"></div>
-                            <div class="icon_content">
-                                <div class="title">Commerciales</div>
-                                <div class="description">Contactez-nous si vous souhaitez devenir client</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ path('sfere_contact_info') }}">
-                            <div class="icon_contact" id="icon_users"></div>
-                            <div class="icon_content">
-                                <div class="title">Informations</div>
-                                <div class="description">Demander des informations en remplissant un formulaire</div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+            <div id="jflanguageselection">
+                <select name="lang" class="jflanguageselection" size="1"
+                        onchange="document.location.replace(this.value);">
+                    <option value="/es/"   {% if app.request.get('_locale') == 'es' %} selected="selected" {% endif %}>
+                        Español
+                    </option>
+                    <option value="/fr/"  {% if app.request.get('_locale') == 'fr' %} selected="selected" {% endif %} >
+                        Française
+                    </option>
+                    <option value="/zh_CN/"  {% if app.request.get('_locale') == 'zh_CN' %} selected="selected" {% endif %} >
+                        chinese
+                    </option>
+                    <option value="/it/"  {% if app.request.get('_locale') == 'it' %} selected="selected" {% endif %} >
+                        Italiano
+                    </option>
+                </select>
             </div>
+            <noscript><a href="/es/"><span lang="es" xml:lang="es">Español</span></a>&nbsp;
+                <a href="/fr/"><span lang="fr" xml:lang="fr">Française</span></a>&nbsp;
+                <a href="/cn/"><span lang="pt" xml:lang="pt">chinese</span></a>&nbsp;
+                <a href="/it/"><span lang="it" xml:lang="it">Italiano</span></a>&nbsp;
+            </noscript>
+            <!--Joom!fish V2.0.3 (Flash)-->
+            <!-- &copy; 2003-2009 Think Network, released under the GPL. -->
+            <!-- More information: at http://www.joomfish.net -->
+
         </div>
-    </li>
-    <li>
-        <form action="index.php" method="post">
-            <div class="search">
-                <input name="searchword" id="search" maxlength="20" placeholder="Rechercher Produit" alt="Buscar"
-                       class="inputbox" type="text" size="50" this.value='buscar...';" onfocus="if(this.value=='buscar...')
-                this.value='';">
-            </div>
-            <input type="hidden" name="task" value="search">
-            <input type="hidden" name="option" value="com_search">
-            <input type="hidden" name="Itemid" value="87">
-        </form>
-    </li>
-</ul>
-</nav>
-</div>
+
+        <a href="{{ path('sfere_home') }}"><img src="http://www.visiotech.es/templates/responsive/images/logo.png"
+                                                id="logo"
+                                                alt="Visiotech Logo"/></a>
+
+
+        <nav>
+            <div id="menu_icon"></div>
+            <!--<div id="login_icon"></div> -->
+
+
+            <ul id="menu">
+                <li><a href="{{ path('sfere_home') }}" class="active">{{ 'intro.company.name'| trans }}</a>
+
+                    <div class="submenu">
+                        <ul class="list_submenu" id="submenu_enterprise">
+                            <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.info.title'| trans }}</a> <img
+                                        src="http://www.visiotech.es/modules/mod_menu_responsive/images/feria.jpg"
+                                        class="img"
+                                        alt="Feria">
+
+                                <div class="intro_text">
+                                    <a href="{{ path('sfere_company') }}">
+                                        {{ 'intro.company.info.text'|trans|raw }}
+                                        <div class="read_more">{{ 'see_more'| trans }}</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.where.title'|trans }}</a> <img
+                                        src="http://www.visiotech.es/modules/mod_menu_responsive/images/map.jpg"
+                                        class="img"
+                                        alt="Feria">
+
+                                <div class="intro_text">
+                                    {{ 'intro.company.where.text' | trans|raw }}
+                                    <a href="{{ path('sfere_company') }}">
+                                        <div class="read_more">{{ 'see_more'| trans }}</div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a>{{ 'intro.category.name'| trans }}</a>
+                    {{ render(controller('ArdetemSfereBundle:Category:menuList')) }}
+                </li>
+                <li><a href="{{ path('sfere_news') }}">{{ 'intro.news.name' | trans }}</a></li>
+                <li><a>{{ 'intro.contact.name' | trans }}</a>
+
+                    <div class="submenu">
+                        <div class="submenu_wrap">
+                            <ul class="button_submenu contact_submenu">
+                                <li><a href="{{ path('sfere_contact_client') }}">
+                                        <div class="icon_contact" id="icon_info"></div>
+                                        <div class="icon_content">
+                                            <div class="title">Commerciales</div>
+                                            <div class="description">Contactez-nous si vous souhaitez devenir client
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('sfere_contact_info') }}">
+                                        <div class="icon_contact" id="icon_users"></div>
+                                        <div class="icon_content">
+                                            <div class="title">Informations</div>
+                                            <div class="description">Demander des informations en remplissant un
+                                                formulaire
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <form action="index.php" method="post">
+                        <div class="search">
+                            <input name="searchword" id="search" maxlength="20" placeholder="Rechercher Produit"
+                                   alt="Buscar"
+                                   class="inputbox" type="text" size="50" this.value='buscar...';"
+                            onfocus="if(this.value=='buscar...')
+                            this.value='';">
+                        </div>
+                        <input type="hidden" name="task" value="search">
+                        <input type="hidden" name="option" value="com_search">
+                        <input type="hidden" name="Itemid" value="87">
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </div>
 <div id="main">
 
@@ -220,7 +238,7 @@
         <div class="line_deg" id="line_r"></div>
         <div id="line_t"></div>
 
-            {% block page_content %}{% endblock %}
+        {% block page_content %}{% endblock %}
     </div>
 </div>
 

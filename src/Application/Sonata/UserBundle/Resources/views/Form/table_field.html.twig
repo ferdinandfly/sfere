@@ -1,0 +1,18 @@
+{% block form_widget_simple %}
+    {% set type = type|default('text') %}
+    <input class="inputbox" type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+{% endblock form_widget_simple %}
+
+{% block form_row %}
+    {% spaceless %}
+        <tr height="40">
+            <td>
+                {{ form_label(form) }}
+            </td>
+            <td>
+                {{ form_errors(form) }}
+                {{ form_widget(form) }}
+            </td>
+        </tr>
+    {% endspaceless %}
+{% endblock form_row %}
