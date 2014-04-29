@@ -13,8 +13,8 @@ use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ORM\Entity(repositoryClass="Ardetem\SfereBundle\Repository\ProductRepository")
  * @ORM\Table(name="product")
- * @ORM\Entity
  */
 class Product {
     use ORMBehaviors\Translatable\Translatable;
@@ -35,11 +35,20 @@ class Product {
      */
     private $slug;
 
+    /**
+     * @var Document
+     *
+     * @ORM\OneToOne(targetEntity="Document", cascade={"persist","remove"},fetch="EAGER")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="image_id", referencedColumnName="id")
+     * })
+     */
+    protected  $image;
 
     /**
      * @var SubCategory
      *
-     * @ORM\ManyToOne(targetEntity="SubCategory")
+     * @ORM\ManyToOne(targetEntity="SubCategory",inversedBy="products", fetch="EAGER")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="sub_category_id", referencedColumnName="id")
      * })
@@ -102,6 +111,14 @@ class Product {
     }
 
 
+    public function getImage(){
+        return $this->image;
+    }
+
+    public function setImage(Document $image){
+        $this->image=$image;
+        return $this;
+    }
 
     public function __toString(){
         return $this->getName();

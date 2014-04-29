@@ -45,9 +45,9 @@ security:
             context:             user
             form_login:
                 provider:       fos_userbundle
-                login_path:     /login
+                login_path:     fos_user_security_login
                 use_forward:    false
-                check_path:     /login_check
+                check_path:     fos_user_security_check
                 failure_path:   null
             logout:             true
             anonymous:          true

@@ -7,7 +7,7 @@
             </a>
             <ul>
             {% for subcategory in category.subCategories %}
-                <li><a href="{{ path('sfere_sub_category_product',{'slug': subcategory.slug}) }}">{{ subcategory.name }}</a></li>
+                <li><a href="{{ path('sfere_subcategory_detail',{'slug': subcategory.slug}) }}">{{ subcategory.name }}</a></li>
             {% endfor %}
             </ul>
         </li>

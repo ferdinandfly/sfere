@@ -1,0 +1,220 @@
+{% extends "ArdetemSfereBundle:Default:detail.layout.html.twig" %}
+{% block page_detail %}
+    <div>
+    <div id="vmMainPage">
+
+    <script>
+        console.debug(_gaq.push(['_trackEvent', 'Products', 'A11', 'Visto']));
+    </script>
+
+    <script src="/templates/responsive/js/tabs.js"></script>
+    <table border="0" style="width: 100%;">
+    <tbody>
+    <tr>
+        <td rowspan="1" colspan="3">
+
+            <h1>{{ product.name }}</h1>
+
+            <div class="product_desc">
+               {{ product.resume }}
+            </div>
+            <div class="product_img"><a
+                        href="{{ path("sfere_product_show", {"slug": product.slug}) }}"
+                        title="{{ product.name }}" ><img
+                            src="{{ product.image }}"
+                            alt="{{ product.name }}" width="250px" border="0"></a></div>
+        </td>
+    </tr>
+    <tr>
+    <td rowspan="1" colspan="3">
+    <ul id="product_tab">
+        <li id="prod_0" class="active"> {{ "product.description" | trans }}</li>
+        <li id="prod_1" class=""> {{ "product.download" | trans }}</li>
+        <li id="prod_2" class=""> {{ "product.relative" | trans }}</li>
+    </ul>
+    <div id="content_tabs">
+    <div class="content active" rel="prod_0">
+    <table style="height: 332px;" cellspacing="0" cellpadding="0" border="0" width="90%">
+        <tbody>
+        <tr>
+            <td style="vertical-align:text-top;text-align:justify;padding:20px;"><span>Système d'alarme sans fil complet, avec communication des alertes via des appels. Vous avez seulement besoin d'avoir une ligne téléphonique (RTC / PSTN) pour garder votre maison ou votre entreprise sécurisé. Et sans aucun frais ni abonnement mensuel, vous recevrez sur votre téléphone portable des appels d’alerte, envoyé directement par l'alarme.</span>
+                En plus, étant totalement sans fil, pas besoin de ne connecter aucun appareil par câbles.
+            </td>
+            <td style="color:#00A3D2;vertical-align:text-top;text-align:justify;padding:20px;">Ce magnifique kit dispose
+                de tout le nécessaire pour que vous même puissiez installer une alarme qui l'informera sur votre
+                téléphone portable à toute tentative de vol ou intrusion. Il se compose par le panneau de contrôle, un
+                capteur de mouvement PIR, un détecteur d'ouverture de porte/fenêtre, deux télécommandes et deux cartes
+                de proximité RFID.
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+    </div>
+    <div class="content" rel="prod_1">
+        <ul class="large_button_download pdf">
+            <li><a onclick="_gaq.push(['_trackPageview', 'Download']);" id="download_pdf_button"
+                   href="/index.php?option=com_virtuemart&amp;page=shop.product_details&amp;flypage=visiotech_pdf.tpl&amp;product_id=1255&amp;category_id=386&amp;format=pdf&amp;lang=fr">
+                    <div class="file_icons pdf"></div>
+                    <div class="content">
+                        <div class="title"> Télécharger la fiche en PDF</div>
+                        <div class="description"> Fiche neutre en PDF avec les spécifications du produit</div>
+                    </div>
+                </a></li>
+            <li>
+                <a href="/index.php?option=com_virtuemart&amp;format=raw&amp;page=shop.product_details&amp;flypage=visiotech_html.tpl&amp;product_id=1255&amp;category_id=386&amp;lang=fr">
+                    <div class="file_icons html"></div>
+                    <div class="content">
+                        <div class="title"> Télécharger la fiche en HTML</div>
+                        <div class="description"> Fiche format HTML pour la publication en ligne, sans styles et
+                            images
+                        </div>
+                    </div>
+                </a></li>
+
+            <li>
+                <a href="/includes/zip_generator.php?name=A11&amp;path=tM%2FJ29DJ1KG11%2BPG4crXmK7R1eW21K%2FR1NXVytaXoqOj">
+                    <div class="file_icons zip_images"></div>
+                    <div class="content">
+                        <div class="title"> Télécharger les images des produits</div>
+                        <div class="description"> Fichier ZIP avec toutes les images de produit et le contenu de
+                            paquet
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="content" rel="prod_2">
+        <!-- chelo_158 -->
+        <div id="product_list" style="width:100%; float:none;">
+
+            <div class="browse_separator">
+                <div class="browseProductContainer">
+
+                    <a href="/fr/produits/details/1157/385/alarmas/detectores/pir-900">
+
+                        <div class="browse_header">
+                            <span class="prod_title">PIR-900</span>
+                            <img src="http://www.visiotech.es/images/productos/Alarmas/Chuango/Detectores/PIR-900/PIR-900_thumb.png"
+                                 class="browseProductImage" border="0" title="PIR-900" alt="PIR-900"></div>
+                        <ul>
+                            <li>
+                                <div>- Détecteur volumétrique PIR</div>
+                            </li>
+                            <li>
+                                <div>- Sans fil</div>
+                            </li>
+                            <li>
+                                <div>- Antenne interne</div>
+                            </li>
+                            <li>
+                                <div>- Indicateur LED de batterie faible</div>
+                            </li>
+                            <li>
+                                <div>- Portée de détection 8 m/110º</div>
+                            </li>
+                            <li>
+                                <div>- Alimentation 2 piles AA 1.5 V LR6</div>
+
+
+                            </li>
+                        </ul>
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="browse_separator">
+                <div class="browseProductContainer">
+
+                    <a href="/fr/produits/details/1312/386/alarmas/kits-de-alarmas/a9">
+
+                        <div class="browse_header">
+                            <span class="prod_title">A9</span>
+                            <img src="http://www.visiotech.es/images/productos/Alarmas/Chuango/KitsDeAlarmas/A9/A9_thumb.png"
+                                 class="browseProductImage" border="0" title="A9" alt="A9"></div>
+                        <ul>
+                            <li>
+                                Kit de alarma doméstica<br></li>
+                            <li> Panel con botonera y módulo PSTN<br></li>
+                            <li> Envío de alertas mediante llamadas<br></li>
+                            <li> Detector PIR volumétrico<br></li>
+                            <li> Contacto magnético puerta/ventana<br></li>
+                            <li> Incluye 2 mandos<br>
+
+
+                            </li>
+                        </ul>
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="browse_separator">
+                <div class="browseProductContainer">
+
+                    <a href="/fr/produits/details/1179/385/alarmas/detectores/dwc-100">
+
+                        <div class="browse_header">
+                            <span class="prod_title">DWC-100</span>
+                            <img src="http://www.visiotech.es/images/productos/Alarmas/Chuango/Detectores/DWC-100/DWC-100_thumb.png"
+                                 class="browseProductImage" border="0" title="DWC-100" alt="DWC-100"></div>
+                        <ul>
+                            <li>
+                                Detector contacto magnético<br></li>
+                            <li> Inalámbrico<br></li>
+                            <li> Antena interna<br></li>
+                            <li> Indicador LED de baja bateria<br></li>
+                            <li> Apertura de puertas/ventanas<br></li>
+                            <li> Alimentación 1 pila AA 1.5 V LR6<br>
+
+
+                            </li>
+                        </ul>
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="browse_separator">
+                <div class="browseProductContainer">
+
+                    <a href="/fr/produits/details/1195/385/alarmas/detectores/pir-910">
+
+                        <div class="browse_header">
+                            <span class="prod_title">PIR-910</span>
+                            <img src="http://www.visiotech.es/images/productos/Alarmas/Chuango/Detectores/PIR-910/PIR-910_thumb.png"
+                                 class="browseProductImage" border="0" title="PIR-910" alt="PIR-910"></div>
+                        <ul>
+                            <li>
+                                Detector PIR anti mascotas<br></li>
+                            <li> Inalámbrico<br></li>
+                            <li> Antena interna<br></li>
+                            <li> Indicador LED de baja bateria<br></li>
+                            <li> Rango de detección 8 m / 110º<br></li>
+                            <li> Alimentación 2 pilas AA 1.5 V LR6<br>
+
+
+                            </li>
+                        </ul>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    </td>
+    </tr>
+
+    </tbody>
+    </table>
+
+    <div id="statusBox" style="text-align:center;display:none;visibility:hidden;"></div>
+    </div>
+    </div>
+
+{% endblock %}

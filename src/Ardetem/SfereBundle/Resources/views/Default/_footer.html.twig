@@ -3,8 +3,11 @@
         <div id="foot">
             <div class="wrap">
                 <div id="w-foot">
-                    <div id="info"><img src="http://www.visiotech.es/templates/responsive/images/logo_gray.png"
-                                        alt="Visiotech Gray" width="55%">
+                    <div id="info">
+                        {% image '@ArdetemSfereBundle/Resources/public/images/sfere.jpg'
+                        output='/images/sfere.jpg' %}
+                        <img class="footer-logo" src="{{ asset_url }}" alt="SFERE"/>
+                        {% endimage %}
                         <div id="adress">
                             Parc d’activité ARBORA N°2<br>
                             69510 SOUCIEU EN JARREST<br>
@@ -35,7 +38,6 @@
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
                         </ul>
                     </div>
                 </div>

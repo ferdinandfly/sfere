@@ -35,3 +35,7 @@ services:
         - ~
         - Ardetem\SfereBundle\Entity\Document
         - ~
+   form.type.document.file:
+       class: Ardetem\SfereBundle\Form\Type\DocumentFile
+       tags:
+           - { name: form.type, alias: admin_document_to_file }

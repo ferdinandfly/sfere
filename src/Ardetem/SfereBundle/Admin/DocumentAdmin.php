@@ -50,6 +50,7 @@ class DocumentAdmin extends  Admin{
     {
         $listMapper
             ->addIdentifier('path')
+            ->add('createdAt')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),
@@ -69,6 +70,7 @@ class DocumentAdmin extends  Admin{
     {
         $datagridMapper
             ->add('path')
+
         ;
     }
 

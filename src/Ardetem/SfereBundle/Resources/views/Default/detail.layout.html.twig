@@ -1,0 +1,11 @@
+{% extends "ArdetemSfereBundle::layout.html.twig" %}
+{% block page_content %}
+    <div id="table_wrap">
+        {{ render(controller('ArdetemSfereBundle:Category:sideBar')) }}
+        <div id="page_style">
+            {% block page_detail %}
+            {% endblock %}
+            </div>
+    </div>
+    <div style="clear: both;"></div>
+{% endblock %}

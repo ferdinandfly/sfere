@@ -39,11 +39,11 @@ class ProductAdmin extends  Admin{
     {
         $formMapper
             ->add('slug', null, array('required' => true))
+            ->add("image","admin_document_to_file")
             ->add('translations','a2lix_translations',array(
                 'fields' => array(
                     'document' =>array(
-                        'field_type' => 'entity',
-                        'class' => 'Ardetem\SfereBundle\Entity\Document',
+                        'field_type' => 'admin_document_to_file',
                     )
                 )
             ))

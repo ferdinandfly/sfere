@@ -1,0 +1,41 @@
+{% extends "ArdetemSfereBundle::layout.html.twig" %}
+{% block page_content %}
+        <div id="page_style">
+            <div class="componentheading">
+                {{ 'product.search' | trans }}
+            </div>
+            <div style="clear:both"></div>
+            {% if pagination|length <1 %}
+                {{ 'product.norecord'|trans }}
+            {% else %}
+                <div class="count">
+                    {{ pagination.getTotalItemCount }}
+                </div>
+                <table class="contentpaneopen">
+                    <tbody>
+
+                    {% for p in pagination %}
+                        <tr>
+                            <td>
+                                <fieldset>
+                                    <div>
+                                        <a href=" {{ path('sfere_product_show',{"slug": p.slug}) }}">{{ p.name }}</a>
+                                        <br>
+                                        <span>{{ p.subcategory }} / {{ p.subcategory.category }}</span>
+                                    </div>
+                                    <div>
+                                        {{ p.resume }}
+                                    </div>
+                                </fieldset>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+                <div class="navigation">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+            {% endif %}
+        </div>
+{% endblock %}

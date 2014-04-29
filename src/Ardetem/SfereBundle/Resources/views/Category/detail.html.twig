@@ -1,4 +1,15 @@
-{% extends "ArdetemSfereBundle::layout.html.twig" %}
-{% block page_content %}
-    category detail
+{% extends "ArdetemSfereBundle:Default:detail.layout.html.twig" %}
+{% block page_detail %}
+        <h1 class="componentheading"> {{ category.name }}</h1>
+        <div>{{ category.description }}</div>
+        <div id="category_list" >
+            {% for subCat in category.subCategories %}
+                <div class="browse_separator">
+                    <div class="browseCategoryContainer">
+                        <a href="{{ path("sfere_subcategory_detail", {"slug":subCat.slug}) }}">
+                            <img title="{{ subCat.resume }}" src="/{{ subCat.image}}"/>
+                            <div class="category_name">{{ subCat.name }}</div>      </a></div>
+                </div>
+            {% endfor %}
+        </div>
 {% endblock %}

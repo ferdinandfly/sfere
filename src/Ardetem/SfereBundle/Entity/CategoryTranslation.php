@@ -18,7 +18,7 @@ class CategoryTranslation {
     use ORMBehaviors\Translatable\Translation;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     protected $name;
 

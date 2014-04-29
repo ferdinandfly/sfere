@@ -1,0 +1,28 @@
+<div id="relative_wrap_product">
+    <ul id="product_navigator">
+        {% for cat in categories %}
+            <li>
+                <a title="{{ cat.name }}"
+                {% if (categorySlug== cat.slug)%}
+                   class="active"
+                {% endif %}
+                   href="{{ path('sfere_category_detail',{'slug':cat.slug}) }}">{{ cat.name }}</a>
+                <ul
+                {% if (categorySlug== cat.slug)%}
+                    class="active"
+                {% endif %}
+                        >
+                    {% for subCat in cat.subCategories %}
+                        <li>
+                            <a title="{{ subCat.name }}"
+                                    {% if (subCategorySlug== subCat.slug)%}
+                                        class="active"
+                                    {% endif %}
+                               href="{{ path('sfere_subcategory_detail',{"slug": subCat.slug}) }}">{{ subCat.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

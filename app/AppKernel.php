@@ -33,7 +33,9 @@ class AppKernel extends Kernel
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
-            new Ardetem\SfereBundle\ArdetemSfereBundle()
+            new Ardetem\SfereBundle\ArdetemSfereBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

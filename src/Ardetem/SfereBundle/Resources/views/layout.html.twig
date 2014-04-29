@@ -24,14 +24,22 @@
 
     <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    {% block sub_css %}
+    {% endblock %}
+
+
 
     {% javascripts
-    "bundles/ardetemsfere/js/*"
+
+    "bundles/ardetemsfere/js/jquery-126.js"
+    "bundles/ardetemsfere/js/jceutilities-212.js"
+    "bundles/ardetemsfere/js/mootools.js"
+    "bundles/ardetemsfere/js/caption.js"
     filter='?yui_js'
     output="js/core.js" %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
+
     <script type="text/javascript"
             src="http://www.visiotech.es/plugins/system/shadowbox/min/index.php?g=sb&ad=base&lan=en&play=img"></script>
     <script type="text/javascript">
@@ -41,7 +49,22 @@
         });
     </script>
     <script type="text/javascript">Shadowbox.init();</script>
+    {% javascripts
+    "bundles/ardetemsfere/js/embed.js"
+    "bundles/ardetemsfere/js/jquery-1.10.1.min.js"
+    "bundles/ardetemsfere/js/jquery-ui.js"
+    "bundles/ardetemsfere/js/responsiveslides.js"
+    "bundles/ardetemsfere/js/jQueryRotate.2.2.js"
+    "bundles/ardetemsfere/js/scripts-1.01.js"
+    "bundles/ardetemsfere/js/new_style.js"
+    "bundles/ardetemsfere/js/jquery.custom-scrollbar.js"
+    "bundles/ardetemsfere/js/ga.js"
+    filter='?yui_js'
+    output="js/core_2.js" %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 
+    {% block sub_js %}{% endblock %}
     <!--[if lt IE 9]>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
@@ -62,12 +85,6 @@
 
         });
 
-        /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-         ga('create', 'UA-41126756-1', 'visiotech.es');
-         ga('send', 'pageview');*/
 
         /**********************TRACKING********************************/
         var _gaq = _gaq || [];
@@ -108,20 +125,29 @@
                             href="{{ path('fos_user_security_login') }}"><span>{{ 'menu.login' | trans }}</span></a>
                 </li>
             </ul>
+            {% set params = app.request.attributes.get('_route_params')|merge(app.request.query.all()) %}
+            {% set esParams = params|merge({'_locale': 'es'}) %}
+            {% set enParams = params|merge({'_locale': 'en'}) %}
+            {% set frParams = params|merge({'_locale': 'fr'}) %}
+            {% set itParams = params|merge({'_locale': 'it'}) %}
+            {% set cnParams = params|merge({'_locale': 'zh_CN'}) %}
             <div id="jflanguageselection">
                 <select name="lang" class="jflanguageselection" size="1"
                         onchange="document.location.replace(this.value);">
-                    <option value="/es/"   {% if app.request.get('_locale') == 'es' %} selected="selected" {% endif %}>
-                        Español
+                    <option value="{{ path(app.request.attributes.get('_route'), enParams) }}"   {% if app.request.get('_locale') == 'en' %} selected="selected" {% endif %}>
+                        {{ 'menu.language.en' |trans }}
                     </option>
-                    <option value="/fr/"  {% if app.request.get('_locale') == 'fr' %} selected="selected" {% endif %} >
-                        Française
+                    <option value="{{ path(app.request.attributes.get('_route'), esParams) }}"   {% if app.request.get('_locale') == 'es' %} selected="selected" {% endif %}>
+                        {{ 'menu.language.es' |trans }}
                     </option>
-                    <option value="/zh_CN/"  {% if app.request.get('_locale') == 'zh_CN' %} selected="selected" {% endif %} >
-                        chinese
+                    <option value="{{ path(app.request.attributes.get('_route'), frParams) }}"  {% if app.request.get('_locale') == 'fr' %} selected="selected" {% endif %} >
+                        {{ 'menu.language.fr'| trans }}
                     </option>
-                    <option value="/it/"  {% if app.request.get('_locale') == 'it' %} selected="selected" {% endif %} >
-                        Italiano
+                    <option value="{{ path(app.request.attributes.get('_route'), cnParams) }}"  {% if app.request.get('_locale') == 'zh_CN' %} selected="selected" {% endif %} >
+                        {{ 'menu.language.zh_CN' | trans}}
+                    </option>
+                    <option value="{{ path(app.request.attributes.get('_route'), itParams) }}"  {% if app.request.get('_locale') == 'it' %} selected="selected" {% endif %} >
+                        {{ 'menu.language.it' | trans }}
                     </option>
                 </select>
             </div>
@@ -136,9 +162,12 @@
 
         </div>
 
-        <a href="{{ path('sfere_home') }}"><img src="http://www.visiotech.es/templates/responsive/images/logo.png"
-                                                id="logo"
-                                                alt="Visiotech Logo"/></a>
+        <a href="{{ path('sfere_home') }}">
+            {% image '@ArdetemSfereBundle/Resources/public/images/sfere.jpg'
+            output='/images/sfere.jpg' %}
+            <img class="header-logo" src="{{ asset_url }}" alt="SFERE"/>
+            {% endimage %}
+           </a>
 
 
         <nav>
@@ -213,13 +242,9 @@
                     </div>
                 </li>
                 <li>
-                    <form action="index.php" method="post">
+                    <form action="{{ path('sfere_search') }}" method="post">
                         <div class="search">
-                            <input name="searchword" id="search" maxlength="20" placeholder="Rechercher Produit"
-                                   alt="Buscar"
-                                   class="inputbox" type="text" size="50" this.value='buscar...';"
-                            onfocus="if(this.value=='buscar...')
-                            this.value='';">
+                            <input name="searchword" id="search" maxlength="20" placeholder="Rechercher Produit" alt="Buscar" class="inputbox" type="text" size="50" >
                         </div>
                         <input type="hidden" name="task" value="search">
                         <input type="hidden" name="option" value="com_search">

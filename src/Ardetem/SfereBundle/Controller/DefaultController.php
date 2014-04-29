@@ -5,6 +5,7 @@ namespace Ardetem\SfereBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -29,17 +30,6 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/product/subcatgory/{slug}",requirements={"slug"="[a-z\-]+"}, name="sfere_sub_category_product")
-     * @Template()
-     */
-    public function productAction($slug){
-        $repository = $this->getDoctrine()
-            ->getRepository('ArdetemSfereBundle:SubCategory');
-        $cat=$repository->findOneBySlug($slug);
-        return array('products' => $cat->getProducts());
-    }
-
-    /**
      * @Route("/contact/client", name="sfere_contact_client")
      * @Template()
      */
@@ -61,5 +51,22 @@ class DefaultController extends Controller
      */
     public function newsAction(){
         return array();
+    }
+
+    /**
+     * @Route("/search", name="sfere_search")
+     * @Template()
+     */
+    public function searchAction(Request $request){
+        $locale = $request->getLocale();
+        $em = $this->getDoctrine()->getManager();
+        $qb=$em->getRepository("ArdetemSfereBundle:Product")->findAllByKeywords($request->request->get("searchword"),$locale);
+        $paginator=$this->get('knp_paginator');
+        $pagination=$paginator->paginate(
+            $qb,
+            $this->get('request')->query->get('page',1),
+            10
+        );
+        return array("pagination" => $pagination);
     }
 }

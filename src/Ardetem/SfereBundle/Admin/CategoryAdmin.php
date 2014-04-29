@@ -44,6 +44,7 @@ class CategoryAdmin extends Admin{
             ->add('slug', null, array('required' => true))
             ->add('translations','a2lix_translations')
             ->add('order', null, array('required' => false))
+            ->add("image","admin_document_to_file")
             //->add('locales', 'a2lix_translationsLocalesSelector')
             //->add('translations', 'a2lix_translations')
             ->end()

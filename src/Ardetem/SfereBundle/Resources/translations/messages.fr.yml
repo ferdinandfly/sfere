@@ -39,9 +39,16 @@ menu:
         en: English
         fr: Français
         es: Espagnole
+        it: Italien
         zh_CN: Chinois
     login: Login
 common:
     tel: Téléphone
     fax: Fax
     email: Email
+product:
+  search: Recherche
+  norecord: Aucun produit trouvé
+  description: Description
+  download: Téléchargement
+  relative: Rélatives

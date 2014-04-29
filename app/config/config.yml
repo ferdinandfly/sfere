@@ -16,7 +16,7 @@ framework:
     templating:
         engines: ['twig']
         #assets_version: SomeVersionScheme
-    default_locale:  "%locale%"
+    default_locale:  fr
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
@@ -89,3 +89,5 @@ assetic:
             apply_to: "\.less$"
 a2lix_translation_form:
     locales: [en,fr, es, de,zh_CN]
+braincrafted_bootstrap:
+    less_filter: lessphp

@@ -20,7 +20,8 @@ class SubCategoryTranslation {
 
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     protected $name;
 

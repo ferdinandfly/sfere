@@ -45,6 +45,7 @@ class SubCategoryAdmin extends Admin
     {
         $formMapper
             ->add('slug', null, array('required' => true))
+            ->add("image","admin_document_to_file")
             ->add('translations','a2lix_translations')
             ->add('category', 'sonata_type_model',array('property' => 'name'))
             ->add('products', 'sonata_type_model', array('property' => 'name','required' => false, 'multiple' => true)

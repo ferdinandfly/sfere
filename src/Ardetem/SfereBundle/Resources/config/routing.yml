@@ -10,3 +10,7 @@ ardetem_sfere_subcategory:
     resource: "@ArdetemSfereBundle/Controller/SubCategoryController.php"
     type:     annotation
     prefix:   /subcategory
+ardetem_sfere_product:
+    resource: "@ArdetemSfereBundle/Controller/ProductController.php"
+    type:     annotation
+    prefix:   /product

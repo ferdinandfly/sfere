@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table(name="category")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Ardetem\SfereBundle\Repository\CategoryRepository")
  */
 class Category {
     use ORMBehaviors\Translatable\Translatable;
@@ -42,7 +42,17 @@ class Category {
     private $order;
 
     /**
-     * @ORM\OneToMany(targetEntity="SubCategory", mappedBy="category", cascade={"all"})
+     * @var Document
+     *
+     * @ORM\OneToOne(targetEntity="Document" ,cascade={"persist","remove"},fetch="EAGER")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="image_id", referencedColumnName="id")
+     * })
+     */
+    protected  $image;
+
+    /**
+     * @ORM\OneToMany(targetEntity="SubCategory", mappedBy="category", cascade={"all"},fetch="EAGER")
      */
     protected $subCategories;
 
@@ -126,6 +136,15 @@ class Category {
         $this->order=$order;
     }
 
+    public function getImage(){
+        return $this->image;
+    }
+
+    public function setImage(Document $image){
+        $this->image=$image;
+        return $this;
+    }
+
     public function __toString(){
         return $this->getName();
     }
@@ -167,4 +186,5 @@ class Category {
         $this->translate()->setResume($res);
         return $this;
     }
+
 } 

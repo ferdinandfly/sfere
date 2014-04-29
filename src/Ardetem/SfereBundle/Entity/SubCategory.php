@@ -37,7 +37,7 @@ class SubCategory {
     /**
      * @var Category
      *
-     * @ORM\ManyToOne(targetEntity="Category")
+     * @ORM\ManyToOne(targetEntity="Category",inversedBy="subCategories",fetch="EAGER")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      * })
@@ -52,10 +52,29 @@ class SubCategory {
     private $order;
 
     /**
-     * @ORM\OneToMany(targetEntity="Product", mappedBy="subCategory", cascade={"all"})
+     * @ORM\OneToMany(targetEntity="Product", mappedBy="subCategory", cascade={"all"},fetch="EAGER")
      */
     protected $products;
 
+    /**
+     * @var Document
+     *
+     * @ORM\OneToOne(targetEntity="Document", cascade={"persist","remove"},fetch="EAGER")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="image_id", referencedColumnName="id")
+     * })
+     */
+    protected  $image;
+
+    public function getImage(){
+        return $this->image;
+    }
+
+    public function setImage($image){
+        if ($image != null )
+            $this->image=$image;
+        return $this;
+    }
 
     /**
      *
@@ -161,7 +180,7 @@ class SubCategory {
 
 
     public function __toString(){
-        return $this->slug;
+        return $this->getName();
     }
 
     /**
@@ -197,4 +216,5 @@ class SubCategory {
     public function setResume($res){
         return $this->translate()->setResume($res);
     }
+
 } 

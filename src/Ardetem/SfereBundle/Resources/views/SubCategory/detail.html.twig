@@ -1,0 +1,22 @@
+{% extends "ArdetemSfereBundle:Default:detail.layout.html.twig" %}
+{% block page_detail %}
+        <h1>{{ subCategory.name }}</h1>
+        <div id="product_list" style="width:100%; float:none;">
+            {% for p in subCategory.products %}
+                <div class="browse_separator">
+                    <div class="browseProductContainer">
+                        <a href="{{ path("sfere_product_show", {"slug": p.slug}) }}">
+                            <div class="browse_header">
+                                <span class="prod_title">{{ p.name }}</span>
+                                <img src="http://www.visiotech.es/images/productos/DVR/SAFIRE/DVR7104HWI-SL/DVR7104HWI-SL_thumb.png"
+                                     class="browseProductImage" border="0" title="{{ p.name }}" alt="{{ p.name }}">
+                            </div>
+                            <div>
+                                {{ p.description }}
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+{% endblock %}

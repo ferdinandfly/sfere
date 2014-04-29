@@ -17,7 +17,7 @@ use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 class ProductTranslation {
     use ORMBehaviors\Translatable\Translation;
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     protected $name;
 
@@ -38,7 +38,7 @@ class ProductTranslation {
     /**
      * @var Document
      *
-     * @ORM\OneToOne(targetEntity="Document")
+     * @ORM\OneToOne(targetEntity="Document", cascade={"persist","remove"},fetch="EAGER")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="document_id", referencedColumnName="id")
      * })

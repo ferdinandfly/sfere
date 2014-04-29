@@ -1,0 +1,9 @@
+#category_list .browseCategoryContainer>a>img{
+    max-width: 90px;
+    max-height:90px;
+}
+
+#product_navigator li>ul>li>a.active{
+    background-color: #efefef;
+    color: #5e5e5e;
+}
