@@ -21,7 +21,7 @@
             <div class="product_img"><a
                         href="{{ path("sfere_product_show", {"slug": product.slug}) }}"
                         title="{{ product.name }}" ><img
-                            src="{{ product.image }}"
+                            src="{{ base_url }}{{ product.image }}"
                             alt="{{ product.name }}" width="250px" border="0"></a></div>
         </td>
     </tr>
@@ -37,14 +37,8 @@
     <table style="height: 332px;" cellspacing="0" cellpadding="0" border="0" width="90%">
         <tbody>
         <tr>
-            <td style="vertical-align:text-top;text-align:justify;padding:20px;"><span>Système d'alarme sans fil complet, avec communication des alertes via des appels. Vous avez seulement besoin d'avoir une ligne téléphonique (RTC / PSTN) pour garder votre maison ou votre entreprise sécurisé. Et sans aucun frais ni abonnement mensuel, vous recevrez sur votre téléphone portable des appels d’alerte, envoyé directement par l'alarme.</span>
-                En plus, étant totalement sans fil, pas besoin de ne connecter aucun appareil par câbles.
-            </td>
-            <td style="color:#00A3D2;vertical-align:text-top;text-align:justify;padding:20px;">Ce magnifique kit dispose
-                de tout le nécessaire pour que vous même puissiez installer une alarme qui l'informera sur votre
-                téléphone portable à toute tentative de vol ou intrusion. Il se compose par le panneau de contrôle, un
-                capteur de mouvement PIR, un détecteur d'ouverture de porte/fenêtre, deux télécommandes et deux cartes
-                de proximité RFID.
+            <td style="color:#00A3D2;vertical-align:text-top;text-align:justify;padding:20px;">
+                {{ product.description }}
             </td>
         </tr>
 
@@ -52,38 +46,14 @@
     </table>
     </div>
     <div class="content" rel="prod_1">
-        <ul class="large_button_download pdf">
-            <li><a onclick="_gaq.push(['_trackPageview', 'Download']);" id="download_pdf_button"
-                   href="/index.php?option=com_virtuemart&amp;page=shop.product_details&amp;flypage=visiotech_pdf.tpl&amp;product_id=1255&amp;category_id=386&amp;format=pdf&amp;lang=fr">
-                    <div class="file_icons pdf"></div>
-                    <div class="content">
-                        <div class="title"> Télécharger la fiche en PDF</div>
-                        <div class="description"> Fiche neutre en PDF avec les spécifications du produit</div>
-                    </div>
-                </a></li>
-            <li>
-                <a href="/index.php?option=com_virtuemart&amp;format=raw&amp;page=shop.product_details&amp;flypage=visiotech_html.tpl&amp;product_id=1255&amp;category_id=386&amp;lang=fr">
-                    <div class="file_icons html"></div>
-                    <div class="content">
-                        <div class="title"> Télécharger la fiche en HTML</div>
-                        <div class="description"> Fiche format HTML pour la publication en ligne, sans styles et
-                            images
-                        </div>
-                    </div>
-                </a></li>
-
-            <li>
-                <a href="/includes/zip_generator.php?name=A11&amp;path=tM%2FJ29DJ1KG11%2BPG4crXmK7R1eW21K%2FR1NXVytaXoqOj">
-                    <div class="file_icons zip_images"></div>
-                    <div class="content">
-                        <div class="title"> Télécharger les images des produits</div>
-                        <div class="description"> Fichier ZIP avec toutes les images de produit et le contenu de
-                            paquet
-                        </div>
-                    </div>
-                </a>
-            </li>
-        </ul>
+        <a onclick="_gaq.push(['_trackPageview', 'Download']);" id="download_pdf_button"
+               href="{{ base_url }}{{ product.document }}">
+                <div class="file_icons pdf"></div>
+                <div class="content">
+                    <div class="title"> Télécharger la fiche en PDF</div>
+                    <div class="description"> Fiche neutre en PDF avec les spécifications du produit</div>
+                </div>
+        </a>
     </div>
     <div class="content" rel="prod_2">
         <!-- chelo_158 -->

@@ -87,7 +87,7 @@ class ProductTranslation {
     /**
      * @param Document $doc
      */
-    public function setDocument(Document $doc){
+    public function setDocument($doc){
         $this->document=$doc;
     }
 

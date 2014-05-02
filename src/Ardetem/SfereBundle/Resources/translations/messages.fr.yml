@@ -52,3 +52,5 @@ product:
   description: Description
   download: Téléchargement
   relative: Rélatives
+news:
+  title: Nouvelles

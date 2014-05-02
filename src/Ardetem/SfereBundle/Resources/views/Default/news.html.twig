@@ -3,133 +3,46 @@
     <div id="page_style">
         <div>
             <div class="componentheading">
-                Nouvelles</div>
+                {{ "news.title" | trans }}
+            </div>
             <table class="blog" cellpadding="0" cellspacing="0">
-
-                <tbody><tr>
+                <tbody>
+                <tr>
                     <td valign="top">
                         <table width="100%" cellpadding="0" cellspacing="0">
-                            <tbody><tr>
+                            <tbody>
+                            <tr>
                                 <td valign="top" width="100%" class="article_column">
-
+                                    {% for element in news %}
                                     <table class="contentpaneopen">
-
-
-
-
-                                        <tbody><tr>
+                                        <tbody>
+                                        <tr>
                                             <td valign="top" colspan="2">
-                                                <img style="float:left" height="167" width="167" src="/images/stories/front_news/eco-savvy.jpg" alt="eco-savvy">
+                                                <img style="float:left" height="167" width="167"
+                                                     src="{{ base_url }}{{ element.image }}" alt="{{ element.name }}">
+
                                                 <div class="description">
-                                                    <div class="title"><a href="/fr/nouvelles/114-nuevas-camaras-ip-eco-savvy" target="_blank">Nouvelles cameras Eco-Savvy</a></div>
-                                                    <div class="intro">Les caméras IP Eco-savvy permettent d'économiser la bande passante et sont plus efficace énergétique.<br><a href="/fr/nouvelles/114-nuevas-camaras-ip-eco-savvy" target="_blank">En savoir plus</a></div>
-                                                </div></td>
+                                                    <div class="title"><a
+                                                                href="{{ path('sfere_news_show', {"slug":element.slug}) }}"
+                                                                target="_blank">{{ element.name }}</a></div>
+                                                    <div class="intro">{{ element.resume }}</div>
+                                                </div>
+                                            </td>
                                         </tr>
-
-
-
-                                        </tbody></table>
+                                        </tbody>
+                                    </table>
                                     <span class="article_separator">&nbsp;</span>
-
-                                    <table class="contentpaneopen">
-
-
-
-
-                                        <tbody><tr>
-                                            <td valign="top" colspan="2">
-                                                <a target="_blank" href="/fr/nouvelles/116-visiotech-en-sicur-2014"><img alt="eco-savvy" src="/images/stories/front_news/sicur.jpg" width="167" height="167" style="float:left"></a>
-                                                <div class="description">
-                                                    <div class="title"><a target="_blank" href="/fr/index.php?option=com_content&amp;view=article&amp;id=116:visiotech-en-sicur-2014&amp;catid=176:division">Visiotech dans Sicur 2014</a></div>
-                                                    <div class="intro"><span lang="FR">Visiotech sera présent une fois de plus dans foire </span><span><span lang="FR"><a href="http://www.ifema.es/sicur_06/" target="_blank">Sicur 2014</a></span></span><span lang="FR">, qui se tiendra du 25 au 28 février, </span><span>dans les salles à la Foire de Madrid</span><span lang="FR"> (IFEMA)</span><br><a target="_blank" href="/fr/index.php?option=com_content&amp;view=article&amp;id=116:visiotech-en-sicur-2014&amp;catid=176:division">En savoir plus</a></div>
-                                                </div></td>
-                                        </tr>
-
-
-
-                                        </tbody></table>
-                                    <span class="article_separator">&nbsp;</span>
-
-                                    <table class="contentpaneopen">
-
-
-
-
-                                        <tbody><tr>
-                                            <td valign="top" colspan="2">
-                                                <a href="/fr/nouvelles/108"><img src="/images/stories/front_news/job.jpg" alt="Catalogo 2013 Visiotech" class="img" id="img_2"></a>
-                                                <div class="description">
-                                                    <div class="title"><a href="/fr/nouvelles/108" target="_blank">Bourse de travail</a></div>
-                                                    <div class="intro">En Visiotech nous croissons, et nous voulons continuer à croître avec vous ! Nous disposons de plusieurs offres d'emploi pour différents profils professionnels.<br><a href="/fr/nouvelles/108">Consulter les offres d'emploi</a></div>
-                                                </div></td>
-                                        </tr>
-
-
-
-                                        </tbody></table>
-                                    <span class="article_separator">&nbsp;</span>
-
-                                    <table class="contentpaneopen">
-
-
-
-
-                                        <tbody><tr>
-                                            <td valign="top" colspan="2">
-                                                <a href="/fr/ressources/h-series/167-recursos/103-h-series"><img src="/images/stories/front_news/h-series.jpg" class="img" id="img_2"></a>
-                                                <div class="description">
-                                                    <div class="title"><a href="/fr/ressources/h-series/167-recursos/103-h-series">Nouvelle section H-Series</a></div>
-                                                    <div class="intro">Accédez à tous les manuels, les logiciels et firmware des graveurs et caméras IP H-SERIES</div>
-                                                </div></td>
-                                        </tr>
-
-
-
-                                        </tbody></table>
-                                    <span class="article_separator">&nbsp;</span>
+                                    {% endfor %}
                                 </td>
 
                             </tr>
-                            </tbody></table>
+                            </tbody>
+                        </table>
                     </td>
                 </tr>
-                <tr>
-                    <td valign="top">
-                        <div class="blog_more">
-                            <div>
-                                <strong>Plus d'articles...</strong>
-                            </div>
-                            <ul>
-                                <li>
-                                    <a class="blogsection" href="/fr/nouvelles/99-domo-motorizada-dm714sdi">
-                                        DM714SDI : Nouvelle dôme motorisée 23X IR </a>
-                                </li>
-                                <li>
-                                    <a class="blogsection" href="/fr/nouvelles/101-visiotech-distribuira-cpplus">
-                                        Visiotech, nouveau représentant de la marque CPPLUS </a>
-                                </li>
-                                <li>
-                                    <a class="blogsection" href="/fr/nouvelles/97-hd-sdi-alta-definicion-en-cctv">
-                                        HD-SDI, Haute Définition en CCTV</a>
-                                </li>
-                                <li>
-                                    <a class="blogsection" href="/fr/nouvelles/96-paris-2012">
-                                        Expoprotection 2012 Paris</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top" align="center">
-                        &lt;&lt; <span class="pagenav">Début</span> &lt; <span class="pagenav">Préc</span> <span class="pagenav">1</span> <a title="2" href="/fr/nouvelles?start=4" class="pagenav">2</a> <a title="3" href="/fr/nouvelles?start=8" class="pagenav">3</a> <a title="4" href="/fr/nouvelles?start=12" class="pagenav">4</a> <a title="5" href="/fr/nouvelles?start=16" class="pagenav">5</a> <a title="6" href="/fr/nouvelles?start=20" class="pagenav">6</a> <a title="7" href="/fr/nouvelles?start=24" class="pagenav">7</a> <a title="8" href="/fr/nouvelles?start=28" class="pagenav">8</a> <a title="Suivant" href="/fr/nouvelles?start=4" class="pagenav">Suivant</a> &gt; <a title="Fin" href="/fr/nouvelles?start=28" class="pagenav">Fin</a> &gt;&gt;		<br><br>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top" align="center">
-                        JPAGE_CURRENT_OF_TOTAL	</td>
-                </tr>
-                </tbody></table>
+
+                </tbody>
+            </table>
 
         </div>
     </div>

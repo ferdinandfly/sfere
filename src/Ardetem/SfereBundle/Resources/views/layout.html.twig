@@ -212,34 +212,7 @@
                     {{ render(controller('ArdetemSfereBundle:Category:menuList')) }}
                 </li>
                 <li><a href="{{ path('sfere_news') }}">{{ 'intro.news.name' | trans }}</a></li>
-                <li><a>{{ 'intro.contact.name' | trans }}</a>
-
-                    <div class="submenu">
-                        <div class="submenu_wrap">
-                            <ul class="button_submenu contact_submenu">
-                                <li><a href="{{ path('sfere_contact_client') }}">
-                                        <div class="icon_contact" id="icon_info"></div>
-                                        <div class="icon_content">
-                                            <div class="title">Commerciales</div>
-                                            <div class="description">Contactez-nous si vous souhaitez devenir client
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('sfere_contact_info') }}">
-                                        <div class="icon_contact" id="icon_users"></div>
-                                        <div class="icon_content">
-                                            <div class="title">Informations</div>
-                                            <div class="description">Demander des informations en remplissant un
-                                                formulaire
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <li><a href="{{ path('sfere_contact') }}">{{ 'intro.contact.name' | trans }}</a>
                 </li>
                 <li>
                     <form action="{{ path('sfere_search') }}" method="post">

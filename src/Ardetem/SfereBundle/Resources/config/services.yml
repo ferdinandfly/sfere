@@ -19,6 +19,14 @@ services:
         - ~
         - Ardetem\SfereBundle\Entity\SubCategory
         - ~ #ArdetemSfereBundle:SubCategoryAdmin
+   ardetem.sfere.admin.news:
+      class: Ardetem\SfereBundle\Admin\NewsAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: news, label: News}
+      arguments:
+        - ~
+        - Ardetem\SfereBundle\Entity\News
+        - ~
    ardetem.sfere.admin.product:
       class: Ardetem\SfereBundle\Admin\ProductAdmin
       tags:

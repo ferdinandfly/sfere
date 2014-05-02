@@ -45,12 +45,31 @@ class DefaultController extends Controller
         return array();
     }
 
+
+    /**
+     * @Route("/contact", name="sfere_contact")
+     * @Template()
+     */
+    public function contactAction(){
+        return array();
+    }
+
     /**
      * @Route("/news", name="sfere_news")
      * @Template()
      */
     public function newsAction(){
-        return array();
+        $news = $this->getDoctrine()->getManager()->getRepository("ArdetemSfereBundle:News")->findAll();
+        return array("news" => $news);
+    }
+
+    /**
+     * @Route("/news/{slug}", name="sfere_news_show")
+     * @Template()
+     */
+    public function newsShowAction($slug){
+        $element = $this->getDoctrine()->getManager()->getRepository("ArdetemSfereBundle:News")->findOneBySlug($slug);
+        return array("element" => $element);
     }
 
     /**

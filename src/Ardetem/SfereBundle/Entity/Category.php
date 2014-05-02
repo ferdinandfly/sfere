@@ -140,8 +140,9 @@ class Category {
         return $this->image;
     }
 
-    public function setImage(Document $image){
-        $this->image=$image;
+    public function setImage($image){
+        if ($image != null )
+            $this->image=$image;
         return $this;
     }
 
