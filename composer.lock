@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4a3c706a94d74edbae3a73d9c3c9648f",
+    "hash": "941d082e3fb59a72394dc5df810481cf",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -70,67 +70,6 @@
                 "translation"
             ],
             "time": "2014-04-27 11:37:25"
-        },
-        {
-            "name": "braincrafted/bootstrap-bundle",
-            "version": "v2.0.1",
-            "target-dir": "Braincrafted/Bundle/BootstrapBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/braincrafted/bootstrap-bundle.git",
-                "reference": "dc6169b1e29d8668cda960aa663fcc4bbd602bd4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/braincrafted/bootstrap-bundle/zipball/dc6169b1e29d8668cda960aa663fcc4bbd602bd4",
-                "reference": "dc6169b1e29d8668cda960aa663fcc4bbd602bd4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "symfony/console": "~2.3",
-                "symfony/finder": "~2.3",
-                "symfony/form": "~2.3",
-                "symfony/framework-bundle": "~2.3",
-                "symfony/twig-bundle": "~2.3"
-            },
-            "require-dev": {
-                "knplabs/knp-menu": "~2.0@alpha",
-                "knplabs/knp-menu-bundle": "~2.0@alpha",
-                "knplabs/knp-paginator-bundle": "dev-master",
-                "mockery/mockery": "0.8.*",
-                "phpunit/phpunit": "3.7.*",
-                "symfony/assetic-bundle": "~2.3"
-            },
-            "suggest": {
-                "knplabs/knp-menu": "Required to use KnpMenuBundle.",
-                "knplabs/knp-menu-bundle": "BraincraftedBootstrapBundle styles the menus provided by KnpMenuBundle.",
-                "knplabs/knp-paginator-bundle": "BraincraftedBootstrapBundle styles the pagination provided by KnpPaginatorBundle.",
-                "twbs/bootstrap": "Twitter Bootstrap provides the assets (images, CSS and JS)"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Braincrafted\\Bundle\\BootstrapBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Florian Eckerstorfer",
-                    "email": "florian@eckerstorfer.co",
-                    "homepage": "http://florian.ec",
-                    "role": "Developer"
-                }
-            ],
-            "description": "BraincraftedBootstrapBundle integrates Bootstrap into Symfony2 by providing templates, Twig extensions, services and commands.",
-            "keywords": [
-                "bootstrap"
-            ],
-            "time": "2014-04-03 16:59:23"
         },
         {
             "name": "doctrine/annotations",
@@ -1232,17 +1171,17 @@
         },
         {
             "name": "knplabs/knp-paginator-bundle",
-            "version": "2.4.0",
+            "version": "dev-master",
             "target-dir": "Knp/Bundle/PaginatorBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
-                "reference": "4202329b4d639c1a03d0007e31a52049d31c591e"
+                "reference": "55d38f204b8c994ddf7e9aa3207c23d2b7ff429b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/4202329b4d639c1a03d0007e31a52049d31c591e",
-                "reference": "4202329b4d639c1a03d0007e31a52049d31c591e",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/55d38f204b8c994ddf7e9aa3207c23d2b7ff429b",
+                "reference": "55d38f204b8c994ddf7e9aa3207c23d2b7ff429b",
                 "shasum": ""
             },
             "require": {
@@ -1254,7 +1193,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3.x-dev"
+                    "dev-master": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -1287,7 +1226,7 @@
                 "pagination",
                 "paginator"
             ],
-            "time": "2014-01-21 07:26:00"
+            "time": "2014-04-26 09:18:07"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1403,16 +1342,16 @@
         },
         {
             "name": "michelf/php-markdown",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/michelf/php-markdown.git",
-                "reference": "96d8150406f67e683ef4acc09fef91785fef1266"
+                "reference": "de9a19c7bf352d41cc99ed86c3c0ef17e87394b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/96d8150406f67e683ef4acc09fef91785fef1266",
-                "reference": "96d8150406f67e683ef4acc09fef91785fef1266",
+                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/de9a19c7bf352d41cc99ed86c3c0ef17e87394b6",
+                "reference": "de9a19c7bf352d41cc99ed86c3c0ef17e87394b6",
                 "shasum": ""
             },
             "require": {
@@ -1450,7 +1389,7 @@
             "keywords": [
                 "markdown"
             ],
-            "time": "2013-11-29 17:09:24"
+            "time": "2014-05-05 02:43:50"
         },
         {
             "name": "monolog/monolog",
@@ -2325,6 +2264,57 @@
             "time": "2014-03-31 09:18:53"
         },
         {
+            "name": "sonata-project/jquery-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonatajQueryBundle.git",
+                "reference": "8db2fbc85e57f193d22ed67f0223c8a717eeaad5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonatajQueryBundle/zipball/8db2fbc85e57f193d22ed67f0223c8a717eeaad5",
+                "reference": "8db2fbc85e57f193d22ed67f0223c8a717eeaad5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sonata\\jQueryBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonatajQueryBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonatajQueryBundle",
+            "homepage": "http://sonata-project.org/bundles/jquery",
+            "keywords": [
+                "jquery",
+                "sonata"
+            ],
+            "time": "2014-03-19 11:45:00"
+        },
+        {
             "name": "sonata-project/user-bundle",
             "version": "2.2.4",
             "source": {
@@ -2790,48 +2780,6 @@
             "time": "2014-04-27 13:39:18"
         },
         {
-            "name": "twbs/bootstrap",
-            "version": "v3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6d03173a1aad98e75f7d33e65b411c519176c59a",
-                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Jacob Thornton",
-                    "email": "jacobthornton@gmail.com"
-                },
-                {
-                    "name": "Mark Otto",
-                    "email": "markdotto@gmail.com"
-                }
-            ],
-            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
-            "homepage": "http://getbootstrap.com",
-            "keywords": [
-                "bootstrap",
-                "css"
-            ],
-            "time": "2013-12-05 16:09:10"
-        },
-        {
             "name": "twig/extensions",
             "version": "v1.0.1",
             "source": {
@@ -3035,10 +2983,12 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "knplabs/doctrine-behaviors": 20,
+        "knplabs/knp-paginator-bundle": 20,
+        "a2lix/translation-form-bundle": 20,
         "sonata-project/admin-bundle": 20,
         "sonata-project/doctrine-orm-admin-bundle": 20,
         "sonata-project/easy-extends-bundle": 20,
-        "a2lix/translation-form-bundle": 20
+        "sonata-project/jquery-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"
