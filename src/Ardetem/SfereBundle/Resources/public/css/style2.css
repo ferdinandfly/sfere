@@ -54,7 +54,7 @@
 }
 body {
 	font-family: OpenSansLight, Helvetica, Arial;
-	background: url(../images/background.jpg) center top no-repeat;
+	background: url(../images/background.png) center top no-repeat;
 	color: gray;
 	font-size: 100%;
 	padding: 0px;
@@ -391,7 +391,7 @@ footer {
 	border-top: solid 5px #BBBDC0;
 }
 #foot {
-	border-top: solid 5px #A70431;
+	border-top: solid 5px #177A37;
 }
 #inner_footer {
 	position: relative;

@@ -37,4 +37,4 @@ assetic:
 
 twig:
    globals:
-       base_url: "http://local.sfere/"
+      base_url: "%local_base_url%"

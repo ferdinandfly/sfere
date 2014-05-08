@@ -7,7 +7,7 @@
                 <div class="browse_separator">
                     <div class="browseCategoryContainer">
                         <a href="{{ path("sfere_subcategory_detail", {"slug":subCat.slug}) }}">
-                            <img title="{{ subCat.resume }}" src="/{{ subCat.image}}"/>
+                            <img title="{{ subCat.resume }}" src="{{ base_url }}{{ subCat.image}}"/>
                             <div class="category_name">{{ subCat.name }}</div>      </a></div>
                 </div>
             {% endfor %}

@@ -12,3 +12,5 @@ parameters:
     mailer_password: null
     locale: fr
     secret: 65493241453985c1e7e6005c4d26f9bcb0e3d98e
+    base_url: http://haimin-hao.us.to/
+    local_base_url: http://local.sfere/
