@@ -36,6 +36,7 @@ class AppKernel extends Kernel
             new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
             new Ardetem\SfereBundle\ArdetemSfereBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             //new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
         );
 

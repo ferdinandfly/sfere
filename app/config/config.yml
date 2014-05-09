@@ -1,5 +1,6 @@
 imports:
     - { resource: parameters.yml }
+    - { resource: extra_parameters.yml }
     - { resource: security.yml }
     - { resource: ../../vendor/knplabs/doctrine-behaviors/config/orm-services.yml }
     - { resource: sonata.yml }
@@ -92,3 +93,5 @@ a2lix_translation_form:
     locales: [en,fr, es, de,zh_CN]
 #braincrafted_bootstrap:
 #    less_filter: lessphp
+mopa_bootstrap:
+    form: ~  # Adds twig form theme  support
