@@ -1,0 +1,38 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ferdinandfly
+ * Date: 5/13/14
+ * Time: 9:05 PM
+ */
+
+namespace Ardetem\SfereBundle\Entity;
+use Knp\DoctrineBehaviors\Model as ORMBehaviors;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="download_info")
+ */
+class DownloadInfo {
+ //   use ORMBehaviors\Timestampable\Timestampable,
+ //       ORMBehaviors\Blameable\Blameable;
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var Profile
+     *
+     * @ORM\ManyToOne(targetEntity="Profile",fetch="EAGER")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="profile_id", referencedColumnName="id")
+     * })
+     */
+    protected  $profile;
+}

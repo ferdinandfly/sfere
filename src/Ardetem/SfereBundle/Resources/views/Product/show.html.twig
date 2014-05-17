@@ -49,7 +49,7 @@
         <ul class="large_button_download">
             <li>
                 <a onclick="_gaq.push(['_trackPageview', 'Download']);" id="download_pdf_button"
-                   href="{{ base_url }}{{ product.document }}">
+                   href="{{ path('sfere_product_download',{'slug':product.slug}) }}">
                     <div class="file_icons pdf"></div>
                     <div class="content">
                         <div class="title"> Télécharger la fiche en PDF</div>

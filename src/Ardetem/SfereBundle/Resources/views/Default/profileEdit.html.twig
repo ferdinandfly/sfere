@@ -1,0 +1,49 @@
+{% extends "ArdetemSfereBundle::layout.html.twig" %}
+{% block page_content %}
+    <div id="page_style">
+        <div>
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="flash-notice">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
+            <div>
+                <form action="{{ path("sfere_profile_edit") }}" method="post" role="form"
+                      class="form-horizontal">
+                    {{ form_errors(form) }}
+                    <p class="form-group">
+                        {{ form_row(form.companyName) }}
+                    </p>
+
+                    <p class="form-group">
+                        {{ form_row(form.mobile) }}
+                    </p>
+                    <p class="form-group">
+                        {{ form_row(form.companyAddress) }}
+                    </p>
+                    <p class="form-group">
+                        {{ form_row(form.postCode) }}
+                    </p>
+                    <p class="form-group">
+                        {{ form_row(form.city) }}
+                    </p>
+                    <p class="form-group">
+                        {{ form_row(form.country) }}
+                    </p>
+                    <p class="form-group">
+                        {{ form_row(form.url) }}
+                    </p>
+                    <p class="form-group">
+                        {{ form_row(form.receiveMail) }}
+                    </p>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8">
+                            <input type="submit" class="button"
+                                   value="{{ 'form.submit'|trans }}"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

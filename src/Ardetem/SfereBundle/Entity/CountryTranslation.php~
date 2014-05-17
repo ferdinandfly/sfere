@@ -1,0 +1,24 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ferdinandfly
+ * Date: 5/13/14
+ * Time: 8:29 PM
+ */
+
+namespace Ardetem\SfereBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+use Knp\DoctrineBehaviors\Model as ORMBehaviors;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="country_trans")
+ */
+class CountryTranslation {
+    //use ORMBehaviors\Translatable\Translation;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $name;
+} 

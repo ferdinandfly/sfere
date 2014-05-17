@@ -154,6 +154,7 @@ class Document {
         }
 
     }
+
     public function __toString(){
         return $this->getWebPath();
     }

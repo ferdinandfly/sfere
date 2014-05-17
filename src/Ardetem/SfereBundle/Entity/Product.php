@@ -8,7 +8,6 @@
 
 namespace Ardetem\SfereBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 use Doctrine\ORM\Mapping as ORM;
 

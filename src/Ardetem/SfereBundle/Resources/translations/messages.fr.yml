@@ -31,7 +31,6 @@ intro:
         name: Actualité
     contact:
         name: Contact
-
 see_more:  Voir plus
 menu:
     language:
@@ -42,6 +41,9 @@ menu:
         it: Italien
         zh_CN: Chinois
     login: Login
+    profile: Profil
+    companyProfile:
+      modify: Modifier
 common:
     tel: Téléphone
     fax: Fax
@@ -54,3 +56,19 @@ product:
   relative: Rélatives
 news:
   title: Nouvelles
+notice:
+  title: Notification
+  complete_profile: Vous devez complétez votre profil.
+form:
+  profile:
+    company_name: Nom de la société
+    company_address: Adresse de la société
+    post_code: Code postale
+    city: Ville
+    country: Pays
+    url: Site internet
+    receive_mail: Recevoir des notification
+    mobile: Téléphone mobile
+  submit: Envoyer
+  yes: oui
+  no: non

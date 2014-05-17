@@ -1,0 +1,45 @@
+{% extends "ArdetemSfereBundle::layout.html.twig" %}
+{% block page_content %}
+    <div id="page_style">
+        <div>
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="flash-notice">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
+                <div style="margin-bottom: 20px;"><a type="button" class="button">{{ 'menu.companyProfile.modify'|trans }}</a></div>
+                <table class="specs" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                    <tr align="left" valign="middle">
+                        <td height="22" width="30%"><strong>{{ 'form.profile.company_name'| trans }}</strong></td>
+                        <td height="22" width="70%"> {{ profile.companyName }} </td>
+                    </tr>
+                    <tr align="left" valign="middle">
+                        <td height="22"><strong>{{ 'form.profile.company_address' | trans }}</strong></td>
+                        <td height="22">{{ profile.companyAddress }}</td>
+                    </tr>
+                    <tr align="left" valign="middle">
+                        <td height="22"><strong>{{ 'form.profile.post_code' | trans }}</strong></td>
+                        <td height="22">{{ profile.postCode }}</td>
+                    </tr>
+                    <tr align="left" valign="middle">
+                        <td height="22"><strong>{{ 'form.profile.city' | trans }}</strong></td>
+                        <td height="22">{{ profile.city }}</td>
+                    </tr>
+                    <tr align="left" valign="middle">
+                        <td height="22"><strong>{{ 'form.profile.country' | trans }}</strong></td>
+                        <td height="22">{{ profile.country }}</td>
+                    </tr>
+                    <tr align="left" valign="middle">
+                        <td height="22"><strong>{{ 'form.profile.url' | trans }}</strong></td>
+                        <td height="22">{{ profile.url }}</td>
+                    </tr>
+                    <tr align="left" valign="middle">
+                        <td height="22"><strong>{{ 'form.profile.mobile' | trans }}</strong></td>
+                        <td height="22">{{ profile.mobile }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+{% endblock %}

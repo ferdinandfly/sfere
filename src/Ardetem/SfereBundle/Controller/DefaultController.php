@@ -2,6 +2,8 @@
 
 namespace Ardetem\SfereBundle\Controller;
 
+use Ardetem\SfereBundle\Entity\Profile;
+use Ardetem\SfereBundle\Form\Type\ProfileFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -79,5 +81,46 @@ class DefaultController extends Controller
             10
         );
         return array("pagination" => $pagination);
+    }
+
+    /**
+     * @Route("/profile/edit", name="sfere_profile_edit")
+     * @Template()
+     */
+    public function profileEditAction(Request $request){
+        $user=$this->get('security.context')->getToken()->getUser();
+        $repository = $this->getDoctrine()->getRepository('ArdetemSfereBundle:Profile');
+        $profile = $repository->findProfileByUserId($user ->getId());
+        if ($profile == null ){
+            $profile = new Profile();
+        }
+        $form = $this->createForm(new ProfileFormType(), $profile);
+        if ('POST' == $request->getMethod()) {
+            $form->submit($request);
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $profile->setUser($user);
+                $em->persist($profile);
+                $em->flush();
+                return $this->redirect($this->generateUrl('sfere_profile_show'));
+            }
+        }
+        return array('form' => $form->createView());
+    }
+
+    /**
+     * @Route("/profile/show", name="sfere_profile_show")
+     * @Template()
+     */
+    public function profileShowAction(Request $request)
+    {
+        $userId= $this->get('security.context')->getToken()->getUser()->getId();
+        $repository = $this->getDoctrine()->getRepository('ArdetemSfereBundle:Profile');
+        $profile = $repository->findProfileByUserId($userId);
+        if ($profile == null ){
+            return $this->redirect($this->generateUrl('sfere_profile_edit'));
+
+        }
+        return array('profile'=> $profile);
     }
 }

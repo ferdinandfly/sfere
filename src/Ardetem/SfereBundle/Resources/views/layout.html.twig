@@ -24,93 +24,11 @@
 
     <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
+
     {% block sub_css %}
     {% endblock %}
 
 
-
-    {% javascripts
-
-    "bundles/ardetemsfere/js/jquery-126.js"
-    "bundles/ardetemsfere/js/jceutilities-212.js"
-    "bundles/ardetemsfere/js/mootools.js"
-    "bundles/ardetemsfere/js/caption.js"
-    filter='?yui_js'
-    output="js/core.js" %}
-    <script src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-
-    <script type="text/javascript"
-            src="http://www.visiotech.es/plugins/system/shadowbox/min/index.php?g=sb&ad=base&lan=en&play=img"></script>
-    <script type="text/javascript">
-        var jcexhtmlembed = 1;
-        jQuery(document).ready(function () {
-            jceutilities({'popup': {'legacy': 0, 'resize': 1, 'icons': 1, 'overlay': 1, 'overlayopacity': 0.8, 'overlaycolor': "#000000", 'fadespeed': 500, 'scalespeed': 500, 'width': 640, 'height': 480, 'theme': "standard", 'themecustom': "", 'themepath': "plugins/system/jceutilities/themes"}, 'tootlip': {'classname': "tooltip", 'opacity': 1, 'speed': 150, 'position': "br", 'offsets': "{'x': 16, 'y': 16}"}, 'imgpath': "plugins/system/jceutilities/img", 'pngfix': 0, 'wmode': 0});
-        });
-    </script>
-    <script type="text/javascript">Shadowbox.init();</script>
-    {% javascripts
-    "bundles/ardetemsfere/js/embed.js"
-    "bundles/ardetemsfere/js/jquery-1.10.1.min.js"
-    "bundles/ardetemsfere/js/jquery-ui.js"
-    "bundles/ardetemsfere/js/responsiveslides.js"
-    "bundles/ardetemsfere/js/jQueryRotate.2.2.js"
-    "bundles/ardetemsfere/js/scripts-1.01.js"
-    "bundles/ardetemsfere/js/new_style.js"
-    "bundles/ardetemsfere/js/jquery.custom-scrollbar.js"
-    "bundles/ardetemsfere/js/ga.js"
-    filter='?yui_js'
-    output="js/core_2.js" %}
-    <script src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-
-    {% block sub_js %}{% endblock %}
-    <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
-    <script>
-        // You can also use "$(window).load(function() {"
-        jQuery(document).ready(function () {
-
-            // Slideshow 1
-            $("#slider1").responsiveSlides({
-                maxwidth: 960,
-                manualControls: '#control_slider',
-                speed: 800
-            });
-
-
-            //     jQuery("#scrollbar_products").customScrollbar();
-
-
-        });
-
-
-        /**********************TRACKING********************************/
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-41126756-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-        /******************************************************/
-
-        document.createElement('header');
-        document.createElement('hgroup');
-        document.createElement('nav');
-        document.createElement('menu');
-        document.createElement('section');
-        document.createElement('article');
-        document.createElement('aside');
-        document.createElement('footer');
-
-    </script>
 
 </head>
 <body>
@@ -121,8 +39,13 @@
 
         <div id="menu_top">
             <ul class="menu-nav">
-                <li class="item141"><a
-                            href="{{ path('fos_user_security_login') }}"><span>{{ 'menu.login' | trans }}</span></a>
+                <li class="item141">
+                    {% if app.user %}
+                        <a href="{{ path('sfere_profile_show') }}" ><span>{{ 'menu.profile'|trans }}</span></a>
+                    {% else %}
+                        <a href="{{ path('fos_user_security_login') }}"><span>{{ 'menu.login' | trans }}</span></a>
+                    {% endif %}
+
                 </li>
             </ul>
             {% set params = app.request.attributes.get('_route_params')|merge(app.request.query.all()) %}
@@ -180,10 +103,11 @@
 
                     <div class="submenu">
                         <ul class="list_submenu" id="submenu_enterprise">
-                            <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.info.title'| trans }}</a> <img
-                                        src="http://www.sfere-net.com/images/feria.jpg"
-                                        class="img"
-                                        alt="Feria">
+                            <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.info.title'| trans }}</a>
+                                {% image '@ArdetemSfereBundle/Resources/public/images/societe.png'
+                                output='/images/societe.jpg' %}
+                                <img  class="img" src="{{ asset_url }}" alt="societe">
+                                {% endimage %}
 
                                 <div class="intro_text">
                                     <a href="{{ path('sfere_company') }}">
@@ -192,10 +116,11 @@
                                     </a>
                                 </div>
                             </li>
-                            <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.where.title'|trans }}</a> <img
-                                        src="http://www.sfere-net.com/images/map.jpg"
-                                        class="img"
-                                        alt="Feria">
+                            <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.where.title'|trans }}
+                                </a> {% image '@ArdetemSfereBundle/Resources/public/images/location.png'
+                                output='/images/location.png' %}
+                                <img  class="img" src="{{ asset_url }}" alt="location">
+                                {% endimage %}
 
                                 <div class="intro_text">
                                     {{ 'intro.company.where.text' | trans|raw }}
@@ -253,5 +178,89 @@
     </div>
 </div>
 {% include 'ArdetemSfereBundle:Default:_footer.html.twig' %}
+
+
+{% javascripts
+
+"bundles/ardetemsfere/js/jquery-126.js"
+"bundles/ardetemsfere/js/jceutilities-212.js"
+"bundles/ardetemsfere/js/mootools.js"
+"bundles/ardetemsfere/js/caption.js"
+filter='?yui_js'
+output="js/core.js" %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<script type="text/javascript"
+        src="http://www.visiotech.es/plugins/system/shadowbox/min/index.php?g=sb&ad=base&lan=en&play=img"></script>
+<script type="text/javascript">
+    var jcexhtmlembed = 1;
+    jQuery(document).ready(function () {
+        jceutilities({'popup': {'legacy': 0, 'resize': 1, 'icons': 1, 'overlay': 1, 'overlayopacity': 0.8, 'overlaycolor': "#000000", 'fadespeed': 500, 'scalespeed': 500, 'width': 640, 'height': 480, 'theme': "standard", 'themecustom': "", 'themepath': "plugins/system/jceutilities/themes"}, 'tootlip': {'classname': "tooltip", 'opacity': 1, 'speed': 150, 'position': "br", 'offsets': "{'x': 16, 'y': 16}"}, 'imgpath': "plugins/system/jceutilities/img", 'pngfix': 0, 'wmode': 0});
+    });
+</script>
+<script type="text/javascript">Shadowbox.init();</script>
+{% javascripts
+"bundles/ardetemsfere/js/embed.js"
+"bundles/ardetemsfere/js/jquery-1.10.1.min.js"
+"bundles/ardetemsfere/js/jquery-ui.js"
+"bundles/ardetemsfere/js/responsiveslides.js"
+"bundles/ardetemsfere/js/jQueryRotate.2.2.js"
+"bundles/ardetemsfere/js/scripts-1.01.js"
+"bundles/ardetemsfere/js/new_style.js"
+"bundles/ardetemsfere/js/jquery.custom-scrollbar.js"
+"bundles/ardetemsfere/js/ga.js"
+filter='?yui_js'
+output="js/core_2.js" %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% block sub_js %}{% endblock %}
+<!--[if lt IE 9]>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<script>
+    // You can also use "$(window).load(function() {"
+    jQuery(document).ready(function () {
+
+        // Slideshow 1
+        $("#slider1").responsiveSlides({
+            maxwidth: 960,
+            manualControls: '#control_slider',
+            speed: 800
+        });
+
+
+        //     jQuery("#scrollbar_products").customScrollbar();
+
+
+    });
+
+
+    /**********************TRACKING********************************/
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41126756-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+    /******************************************************/
+
+    document.createElement('header');
+    document.createElement('hgroup');
+    document.createElement('nav');
+    document.createElement('menu');
+    document.createElement('section');
+    document.createElement('article');
+    document.createElement('aside');
+    document.createElement('footer');
+
+</script>
+
 </body>
 </html>

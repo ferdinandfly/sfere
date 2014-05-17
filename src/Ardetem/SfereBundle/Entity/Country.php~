@@ -1,0 +1,27 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ferdinandfly
+ * Date: 5/13/14
+ * Time: 8:29 PM
+ */
+
+namespace Ardetem\SfereBundle\Entity;
+use Knp\DoctrineBehaviors\Model as ORMBehaviors;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="country")
+ */
+class Country {
+    use ORMBehaviors\Translatable\Translatable;
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+} 
