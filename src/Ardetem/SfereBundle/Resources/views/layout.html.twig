@@ -103,20 +103,20 @@
 
                     <div class="submenu">
                         <ul class="list_submenu" id="submenu_enterprise">
-                            <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.info.title'| trans }}</a>
+                            <li><a href="{{ path('sfere_home') }}#intro-text">{{ 'intro.company.info.title'| trans }}</a>
                                 {% image '@ArdetemSfereBundle/Resources/public/images/societe.png'
                                 output='/images/societe.png' %}
                                 <img  class="img" src="{{ asset_url }}" alt="societe">
                                 {% endimage %}
 
                                 <div class="intro_text">
-                                    <a href="{{ path('sfere_company') }}">
+                                    <a href="{{ path('sfere_home') }}#intro-text">
                                         {{ 'intro.company.info.text'|trans|raw }}
                                         <div class="read_more">{{ 'see_more'| trans }}</div>
                                     </a>
                                 </div>
                             </li>
-                            <li><a href="{{ path('sfere_company') }}">{{ 'intro.company.where.title'|trans }}
+                            <li><a href="{{ path('sfere_home') }}#intro-geo">{{ 'intro.company.where.title'|trans }}
                                 </a> {% image '@ArdetemSfereBundle/Resources/public/images/location.png'
                                 output='/images/location.png' %}
                                 <img  class="img" src="{{ asset_url }}" alt="location">
@@ -124,7 +124,7 @@
 
                                 <div class="intro_text">
                                     {{ 'intro.company.where.text' | trans|raw }}
-                                    <a href="{{ path('sfere_company') }}">
+                                    <a href="{{ path('sfere_home') }}#intro-geo">
                                         <div class="read_more">{{ 'see_more'| trans }}</div>
                                     </a>
                                 </div>
