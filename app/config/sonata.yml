@@ -1,27 +1,3 @@
-
-# Doctrine Configuration
-doctrine:
-    orm:
-        entity_managers:
-            default:
-                mappings:
-                    ApplicationSonataUserBundle: ~
-                    SonataUserBundle: ~
-                    ArdetemSfereBundle: ~
-    dbal:
-        default_connection: default
-        connections:
-            default:
-                host:     %database_host%
-                port:     %database_port%
-                dbname:   %database_name%
-                user:     %database_user%
-                password: %database_password%
-                driver:   %database_driver%
-                charset:  UTF8
-        types:
-            json: Sonata\Doctrine\Types\JsonType
-
 fos_user:
     db_driver:      orm # can be orm or odm
     firewall_name:  main
