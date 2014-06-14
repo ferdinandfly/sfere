@@ -53,8 +53,8 @@ class CategoryController extends Controller {
     {
 
         $repository = $this->getDoctrine()
-            ->getRepository('ArdetemSfereBundle:Category');
-        $category=$repository->findOneBySlug($slug);
+            ->getRepository('ArdetemSfereBundle:CategoryTranslation');
+        $category=$repository->findOneBySlug($slug)->getTranslatable();
         return array("category"=> $category);
     }
 } 

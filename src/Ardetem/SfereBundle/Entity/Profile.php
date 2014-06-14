@@ -28,9 +28,9 @@ class Profile {
     /**
      * @var User
      *
-     * @ORM\OneToOne(targetEntity="Application\Sonata\UserBundle\Entity\User", fetch="EAGER")
+     * @ORM\OneToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="user_id", referencedColumnName="id",onDelete="CASCADE")
      * })
      */
     protected  $user;
@@ -81,11 +81,22 @@ class Profile {
     protected $url;
 
     /**
-     * @var String
+     * @var bool
      * @ORM\Column(type="boolean")
      */
     protected $receiveMail;
 
+    /**
+     * @var String
+     * @ORM\Column(type="text")
+     */
+    protected $activity;
+
+    /**
+     * @var String
+     * @ORM\Column(type="text")
+     */
+    protected $sector;
     /**
      * Get id
      *
@@ -96,6 +107,28 @@ class Profile {
         return $this->id;
     }
 
+    public function setActivity($act)
+    {
+        $this->activity=$act;
+        return $this;
+    }
+
+    public function getActivity()
+    {
+        return $this->activity;
+    }
+
+    public function setSector($sec)
+    {
+        $this->sector= $sec;
+        return $this;
+
+    }
+
+    public function getSector()
+    {
+        return $this->sector;
+    }
     /**
      * Set companyName
      *

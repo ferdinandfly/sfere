@@ -36,7 +36,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [ ArdetemSfereBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -48,20 +48,43 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   "%database_driver%"
-        host:     "%database_host%"
-        port:     "%database_port%"
-        dbname:   "%database_name%"
-        user:     "%database_user%"
-        password: "%database_password%"
-        charset:  UTF8
+        default_connection: default
+        connections:
+            default:
+                driver:   "%database_driver%"
+                host:     "%database_host%"
+                port:     "%database_port%"
+                dbname:   "%database_name%"
+                user:     "%database_user%"
+                password: "%database_password%"
+                charset:  UTF8
+            old:
+                driver:   "%database_driver%"
+                host:     "%database_host%"
+                port:     "%database_port%"
+                dbname:   "sfere-origin"
+                user:     "%database_user%"
+                password: "%database_password%"
+                charset:  UTF8
         # if using pdo_sqlite as your database driver, add the path in parameters.yml
         # e.g. database_path: "%kernel.root_dir%/data/data.db3"
         # path:     "%database_path%"
 
     orm:
+        default_entity_manager: default
+        entity_managers:
+            default:
+                connection: default
+                mappings:
+                    ArdetemSfereBundle: ~
+                    ApplicationSonataUserBundle: ~
+                    SonataUserBundle: ~
+                    FOSUserBundle: ~
+            old:
+                connection: old
+                mappings:
+                    ArdetemImportBundle: ~
         auto_generate_proxy_classes: "%kernel.debug%"
-        auto_mapping: true
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -90,7 +113,7 @@ assetic:
             file: "%kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php"
             apply_to: "\.less$"
 a2lix_translation_form:
-    locales: [en,fr, es, de,zh_CN]
+    locales: [zh_CN, en, es, fr, pl]
 #braincrafted_bootstrap:
 #    less_filter: lessphp
 mopa_bootstrap:

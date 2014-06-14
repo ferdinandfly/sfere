@@ -16,7 +16,7 @@ use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 class CategoryTranslation {
 
     use ORMBehaviors\Translatable\Translation;
-
+    use ORMBehaviors\Sluggable\Sluggable;
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
@@ -76,4 +76,8 @@ class CategoryTranslation {
         $this->resume=$resume;
     }
 
+    public function getSluggableFields()
+    {
+        return [ 'name' ,'id'];
+    }
 }

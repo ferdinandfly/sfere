@@ -38,7 +38,6 @@ class ProductAdmin extends  Admin{
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('slug', null, array('required' => true))
             ->add("image","admin_document_to_file")
             ->add('translations','a2lix_translations',array(
                 'fields' => array(

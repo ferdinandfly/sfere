@@ -18,7 +18,7 @@ use Doctrine\ORM\Mapping as ORM;
 class News {
 
     use ORMBehaviors\Translatable\Translatable;
-
+    use ORMBehaviors\Sluggable\Sluggable;
     /**
      * @var integer $id
      *
@@ -27,13 +27,6 @@ class News {
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
-
-    /**
-     * @var string $slug
-     *
-     * @ORM\Column(name="slug", type="string", unique=true,length=255, nullable=true)
-     */
-    private $slug;
 
 
     /**
@@ -46,30 +39,14 @@ class News {
         return $this->id;
     }
 
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     * @return News
-     */
-    public function setSlug($slug)
+    public function getSluggableFields()
     {
-        $this->slug = $slug;
-
-        return $this;
+        return [ 'name' ];
     }
 
-    /**
-     * Get slug
-     *
-     * @return string 
-     */
-    public function getSlug()
-    {
+    public function getSlug(){
         return $this->slug;
     }
-
-
     /**
      * @return string
      */

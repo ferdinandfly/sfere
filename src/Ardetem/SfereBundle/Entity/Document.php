@@ -49,6 +49,14 @@ class Document {
         return $this->path;
     }
 
+    /**
+     * @param $path
+     * only for import or sometimes we already have the file.
+     */
+    public function setPath($path)
+    {
+        $this->path=$path;
+    }
     public function getAbsolutePath()
     {
         return null === $this->path

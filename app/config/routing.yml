@@ -1,3 +1,7 @@
+ardetem_import:
+    resource: "@ArdetemImportBundle/Resources/config/routing.yml"
+    prefix:   /
+
 root:
     pattern: /
     defaults:

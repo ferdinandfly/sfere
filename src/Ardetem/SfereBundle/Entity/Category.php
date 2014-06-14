@@ -17,22 +17,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Category {
     use ORMBehaviors\Translatable\Translatable;
-
     /**
      * @var integer $id
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
-
-    /**
-     * @var string $slug
-     *
-     * @ORM\Column(name="slug", type="string", unique=true,length=255, nullable=true)
-     */
-    private $slug;
 
     /**
      * @var integer $order
@@ -78,6 +69,9 @@ class Category {
         return $this->id;
     }
 
+    public function setId($id){
+        $this->id=$id;
+    }
     /**
      * Set slug
      *
@@ -85,7 +79,7 @@ class Category {
      */
     public function setSlug($slug)
     {
-        $this->slug = $slug;
+        return $this->translate()->setSlug($slug);
     }
 
     /**
@@ -95,8 +89,9 @@ class Category {
      */
     public function getSlug()
     {
-        return $this->slug;
+        return $this->translate()->getSlug();
     }
+
     /**
      * Add subCategory
      *

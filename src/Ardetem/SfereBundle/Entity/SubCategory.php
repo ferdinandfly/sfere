@@ -16,22 +16,13 @@ use Knp\DoctrineBehaviors\Model as ORMBehaviors;
  */
 class SubCategory {
     use ORMBehaviors\Translatable\Translatable;
-
     /**
      * @var integer $id
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
-
-    /**
-     * @var string $slug
-     *
-     * @ORM\Column(name="slug", type="string", unique=true,length=255, nullable=true)
-     */
-    private $slug;
 
 
     /**
@@ -97,7 +88,9 @@ class SubCategory {
     {
         return $this->id;
     }
-
+    public function setId($id){
+        $this->id=$id;
+    }
     /**
      * Set slug
      *
@@ -105,7 +98,7 @@ class SubCategory {
      */
     public function setSlug($slug)
     {
-        $this->slug = $slug;
+        return $this->translate()->setSlug($slug);
     }
 
     /**
@@ -115,7 +108,7 @@ class SubCategory {
      */
     public function getSlug()
     {
-        return $this->slug;
+        return $this->translate()->getSlug();
     }
 
 

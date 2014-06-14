@@ -17,22 +17,20 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Product {
     use ORMBehaviors\Translatable\Translatable;
+    use ORMBehaviors\Sluggable\Sluggable;
 
     /**
      * @var integer $id
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
-     * @var string $slug
-     *
-     * @ORM\Column(name="slug", type="string",unique=true, length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $slug;
+    protected $name;
 
     /**
      * @var Document
@@ -55,7 +53,6 @@ class Product {
     protected  $subCategory;
 
 
-    protected $name;
     protected $description;
     protected $resume;
 
@@ -69,24 +66,13 @@ class Product {
         return $this->id;
     }
 
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
+    public function setId($id){
+        $this->id=$id;
     }
 
-    /**
-     * Get slug
-     *
-     * @return string
-     */
-    public function getSlug()
+    public function getSluggableFields()
     {
-        return $this->slug;
+        return [ 'name' ];
     }
 
     /**
@@ -129,7 +115,12 @@ class Product {
      */
     public function getName()
     {
-        return $this->translate()->getName();
+       return $this->name;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -144,10 +135,6 @@ class Product {
         return $this->translate()->getResume();
     }
 
-    public function setName($name)
-    {
-        return $this->translate()->setName($name);
-    }
 
     public function setDescription($desc){
         return $this->translate()->setDescription($desc);

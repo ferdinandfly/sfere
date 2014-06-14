@@ -17,7 +17,7 @@ use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 class SubCategoryTranslation {
 
     use ORMBehaviors\Translatable\Translation;
-
+    use ORMBehaviors\Sluggable\Sluggable;
 
     /**
      * @var string
@@ -78,4 +78,10 @@ class SubCategoryTranslation {
     public function setResume($resume){
         $this->resume=$resume;
     }
+
+    public function getSluggableFields()
+    {
+        return [ 'name','id' ];
+    }
+
 } 

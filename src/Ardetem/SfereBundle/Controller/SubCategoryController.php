@@ -24,8 +24,9 @@ class SubCategoryController extends Controller{
     public function detailAction($slug, Request $request)
     {
         $repository = $this->getDoctrine()
-            ->getRepository('ArdetemSfereBundle:SubCategory');
-        $subCategory=$repository->findOneBySlug($slug);
+            ->getRepository('ArdetemSfereBundle:SubCategoryTranslation');
+        $subCategoryTrans=$repository->findOneBySlug($slug);
+        $subCategory = $subCategoryTrans->getTranslatable();
         $category=$subCategory->getCategory();
         return array("category" => $category,"subCategory"=> $subCategory);
     }

@@ -1,0 +1,4 @@
+ardetem_import:
+    resource: "@ArdetemImportBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /import

@@ -38,6 +38,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             //new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
+            new Ardetem\ImportBundle\ArdetemImportBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

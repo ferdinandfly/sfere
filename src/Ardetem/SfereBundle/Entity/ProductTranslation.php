@@ -16,10 +16,6 @@ use Knp\DoctrineBehaviors\Model as ORMBehaviors;
  */
 class ProductTranslation {
     use ORMBehaviors\Translatable\Translation;
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    protected $name;
 
     /**
      * @var text $description
