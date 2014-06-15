@@ -55,6 +55,8 @@ product:
   description: Description
   download: Téléchargement
   relative: Rélatives
+  download-link: Télécharger la fiche en PDF
+  download-desc: Fiche neutre en PDF avec les spécifications du produit
 news:
   title: Nouvelles
 notice:
@@ -71,5 +73,5 @@ form:
     receive_mail: Recevoir des notification
     mobile: Téléphone mobile
   submit: Envoyer
-  yes: oui
-  no: non
+  yes: Oui
+  no: Non

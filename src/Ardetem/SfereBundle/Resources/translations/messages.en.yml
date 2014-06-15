@@ -1,0 +1,74 @@
+intro:
+    company:
+        title: Company
+        name: Entreprise
+        info:
+          title: PRESENTATION
+          text: >
+            <p>SFERE specialises in the R&D and manufacturing of electronic modules for the measurement and control of industrial processes and electrical networks. </p>
+            <p>SFERE also stands for the know how of a constructor, a team of specialists, engineers and technicians, motivated by research and innovation. </p>
+
+        where:
+          title: WHERE WE ARE
+          text: >
+            SFERE<br />
+            Parc d’activité ARBORA N°2<br />
+            69510 SOUCIEU EN JARREST<br />
+            Phone:<br/>
+            Fax:<br/>
+            Email: info@sfere-net.com<br/>
+        presentation:
+          title: INTRODUCTION
+          text: >
+            <p>We have a broad range of products: converters, transmitters, setpoint relays, AC signal analysers, digital panel meters, galvanic partitions, etc... Our know-how allows us to measure and check numerous parameters. Please feel free to consult with us for any specific request.</p>
+            <p>SFERE, located in France, in SOUCIEU EN JARREST, at the door of LYON, designs and manufactures the electronic equipment marketed in the world work by a network of specialised distributors.</p>
+    category:
+        name: Products
+    news:
+        name: News
+    contact:
+        name: Contact
+see_more:  See more
+menu:
+    language:
+        title: Chose linguage
+        en: English
+        fr: French
+        es: Spanish
+        it: Italien
+        zh_CN: Chinese
+    login: Login
+    profile: Profil
+    companyProfile:
+      modify: Modify
+common:
+    tel: Phone
+    fax: Fax
+    email: Email
+product:
+  search: Search
+  norecord: 0 results found
+  description: Description
+  download: Download
+  relative: Relatives
+  download-link: Download the PDF
+  download-desc: neutral sheet PDF with product specifications
+
+news:
+  title: News
+notice:
+  title: Notification
+  complete_profile: You must complete your profil
+form:
+  profile:
+    company_name: Company name
+    company_address: Company address
+    post_code: Postal code
+    city: City
+    country: Country
+    url: Website
+    receive_mail: Email me SFERE updates and news
+    mobile: Mobile phone
+  submit: Send
+  yes: Yes
+  no: No

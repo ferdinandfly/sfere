@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class SubCategoryController extends Controller{
     /**
-     * @Route("/detail/{slug}",requirements={"slug"="[a-z0-9\-]+"}, name="sfere_subcategory_detail" ,options={"expose"=true})
+     * @Route("/detail/{slug}",name="sfere_subcategory_detail" ,options={"expose"=true})
      * @Template()
      */
     public function detailAction($slug, Request $request)

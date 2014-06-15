@@ -1,0 +1,84 @@
+menu:
+    language:
+        title: Linguas
+        en: Inglese 
+        fr: Francese 
+        es: Spagnolo
+        zh_CN: Cinese
+    login: Loginintro:
+intro:
+    company:
+        title: Azienda
+        name: Azienda
+        info:
+          title: PRESENTAZIONE
+          text: >
+            <p> SFERE specializzata nella progettazione e costruzione di moduli elettronici per la misurazione e il controllo dei processi industriali e delle reti elettriche. </ p>
+            <p> SFERE è anche la responsabilità di un costruttore, un team di specialisti, ingegneri e tecnici, motivato dalla ricerca e innovazione .. </ p>
+        where:
+          title: DOVE SIAMO
+          text: >
+            SFERE<br />
+            Parc d’activité ARBORA N°2<br />
+            69510 SOUCIEU EN JARREST<br />
+            Tel:<br/>
+            Fax:<br/>
+            Email: info@sfere-net.com<br/>
+        presentation:
+          title: CHI SIAMO
+          text: >
+            <p> Noto per la sua precisione ed affidabilità, SFERE è una società in continua innovazione nel campo della misurazione e il controllo dei processi industriali e delle reti elettriche. </ p>
+            <p> nostra sede a Lione, abbiamo due dinamiche società di consulenza nazionali e internazionali in Francia, un team di esperti ingegneri, e le imprese, che sono sempre sul flusso delle esigenze dei clienti. </ p>
+            <p> Tutti i nostri prodotti sono fabbricati in Francia, abbiamo due uffici vendite in Cina e Polonia, la nostra rete di distribuzione in 32 paesi su 5 continenti. </ p>
+            <p> I nostri prodotti sono utilizzati anche bene in piccoli progetti industriali come in molti progetti statali francesi e stranieri in molti settori diversi, la nostra esperienza soddisfa i più alti requisiti. </ p>
+            <p> Studiamo ogni esigenza del cliente e offre la soluzione più adeguata in un tempo molto breve. </ p>
+            <p> Ci sono alcune cose in questo mondo che non possono essere misurati, per tutto il resto, controllare SFERE. </ p>
+    category:
+        name: Prodotti
+    news:
+        name: Notizie
+    contact:
+        name: Contatti
+see_more:  Vedere di più
+menu:
+    language:
+        title: Scegliere una lingua
+        en: Inglese
+        fr: Francese
+        es: Spagnolo
+        it: Italiano
+        zh_CN: Cine
+    login: Login
+    profile: Profilo
+    companyProfile:
+      modify: Cambiamento
+common:
+    tel: Telefono
+    fax: Fax
+    email: Email
+product:
+  search: Ricerca
+  norecord: 0 risultati trovati.
+  description: Descrizione
+  download: Scaricare
+  relative: Releted
+  download-link: Scarica il PDF
+  download-desc: PDF foglio neutrale con le specifiche del prodotto
+news:
+  title: Notizie
+notice:
+  title: Notifica
+  complete_profile: Completare il tuo profilo
+form:
+  profile:
+    company_name: Nome della azienda
+    company_address: Indirizzo della azienda
+    post_code: codice postale
+    city: Città
+    country: Nazione
+    url: Sito web
+    receive_mail: Ricevi notifiche
+    mobile: Telefono
+  submit: Inviare
+  yes: sì 
+  no: Non

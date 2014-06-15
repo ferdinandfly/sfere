@@ -46,7 +46,7 @@ class CategoryController extends Controller {
 
 
     /**
-     * @Route("/detail/{slug}",requirements={"slug"="[a-z0-9\-]+"}, name="sfere_category_detail" ,options={"expose"=true})
+     * @Route("/detail/{slug}",name="sfere_category_detail" ,options={"expose"=true})
      * @Template()
      */
     public function detailAction($slug, Request $request)

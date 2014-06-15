@@ -1,0 +1,77 @@
+intro:
+    company:
+        title: 公司
+        name: 公司
+        info:
+          title: 公司简介
+          text: >
+            <p>法国SFERE 有限公司，总部坐落于法国中部的里昂市附近，20多年来公司集中里昂大学和众多实验室的技术力量，一直致力于工业自动化和电力测量设备的研究和制造，在里昂和波尔多有两个产品研发中心，在中国也设有分公司。 </p>
+            <p>公司在长期的发展中与众多国际化企业和组织，如阿尔斯通 、道达尔、西门子、 ABB等建立了长期良好的合作关系，为其设备、项目和工程上不断提供优质高效的电子测量设备。</p>
+        where:
+          title: 公司地址
+          text: >
+            SFERE<br />
+            Parc d’activité ARBORA N°2<br />
+            69510 SOUCIEU EN JARREST<br />
+            Phone:<br/>
+            Fax:<br/>
+            Email: info@sfere-net.com<br/><br/>
+            中国分公司地址：<br/>
+            上海办事处： <br/>
+            上海市虹口区花园路128号一街区2A18<br/>
+            联系方式：<br/>
+            电话： 021 - 56412512 <br/>
+            传真 ：021 - 56412512<br/>
+        presentation:
+          title: 企业文化
+          text: >
+            <p>SFERE 致力于电力计量和工业自动化控制，产品应用范围广泛，我们在各个行业竭诚为您提供最好的服务，我们专业的研发团队，始终致力于了解客户的需求，积累有关各个行业丰富的知识和经验。SFERE总部位于法国，在全球各地均有经销商，在中国上海设有分公司。</ P>
+    category:
+        name: 产品中心
+    news:
+        name: 公司动态
+    contact:
+        name: 联系方式
+see_more:  查看更多
+menu:
+    language:
+        title: 语言选择
+        en: 英语
+        fr: 法语
+        es: 西班牙语
+        it: 意大利语
+        zh_CN: 中文
+    login: 登陆
+    profile: 个人信息
+    companyProfile:
+      modify: 更改
+common:
+    tel: 电话
+    fax: 传真
+    email: Email
+product:
+  search: 查询
+  norecord: 没有找到符合您搜索条件的结果
+  description: 产品详情
+  download: 文件下载
+  relative: 相关产品
+  download-link: 下载pdf文件
+  download-desc: 产品详细资料(.pdf)
+news:
+  title: 公司动态
+notice:
+  title: 新闻
+  complete_profile: 请您补充以下信息
+form:
+  profile:
+    company_name: 公司名称
+    company_address: 公司地址
+    post_code: 邮政编码
+    city: 城市
+    country: 国家
+    url: 网址
+    receive_mail: SFERE 产品更新请邮件通知我
+    mobile: 手机
+  submit: 发送
+  yes: 是
+  no: 否

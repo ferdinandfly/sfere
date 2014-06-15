@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
 class ProductController extends Controller{
 
     /**
-     * @Route("/{slug}/show",requirements={"slug" = "[a-z0-9\-]+"}, name="sfere_product_show")
+     * @Route("/{slug}/show", name="sfere_product_show")
      * @Template()
      */
     public function showAction($slug, Request $request){
@@ -32,7 +32,7 @@ class ProductController extends Controller{
     }
 
     /**
-     * @Route("/download/{slug}",requirements={"slug" = "[a-z0-9\-]+"}, name="sfere_product_download")
+     * @Route("/download/{slug}",name="sfere_product_download")
      */
     public function downloadAction($slug){
         $userId= $this->get('security.context')->getToken()->getUser()->getId();

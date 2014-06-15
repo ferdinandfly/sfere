@@ -91,6 +91,7 @@ class SubCategory {
     public function setId($id){
         $this->id=$id;
     }
+
     /**
      * Set slug
      *
@@ -171,11 +172,6 @@ class SubCategory {
         $this->order=$order;
     }
 
-
-    public function __toString(){
-        return $this->getName();
-    }
-
     /**
      * @return string
      */
@@ -210,4 +206,7 @@ class SubCategory {
         return $this->translate()->setResume($res);
     }
 
+    public function __toString(){
+        return $this->getName();
+    }
 } 
