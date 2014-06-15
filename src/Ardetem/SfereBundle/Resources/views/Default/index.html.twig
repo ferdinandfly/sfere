@@ -21,7 +21,19 @@
                         <strong>{{ 'intro.company.presentation.title' | trans }}</strong></span></p>
 
                 {{ 'intro.company.presentation.text'| trans | raw }}
+                <p style="text-align: justify;">
+                    <span style="font-size: 12pt; color: #808080;">
+                <strong>{{ 'intro.company.title' }}</strong>
+                    </span>
+                </p>
 
+                <p style="text-align: justify;">
+
+                        {% image '@ArdetemSfereBundle/Resources/public/images/bat1.jpg' %}
+                        <img src="{{ asset_url }}" alt="Example"/>
+                        {% endimage %}
+                        >
+                </p>
 
             </td>
         </tr>
