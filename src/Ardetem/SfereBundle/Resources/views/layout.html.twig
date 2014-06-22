@@ -38,7 +38,7 @@
             <ul class="menu-nav">
                 <li class="item141">
                     {% if app.user %}
-                        <a href="{{ path('sfere_profile_show') }}" ><span>{{ 'menu.profile'|trans }}</span></a>
+                        <a href="{{ path('sfere_profile_show') }}"><span>{{ 'menu.profile'|trans }}</span></a>
                     {% else %}
                         <a href="{{ path('fos_user_security_login') }}"><span>{{ 'menu.login' | trans }}</span></a>
                     {% endif %}
@@ -64,7 +64,7 @@
                         {{ 'menu.language.fr'| trans }}
                     </option>
                     <option value="{{ path(app.request.attributes.get('_route'), cnParams) }}"  {% if app.request.get('_locale') == 'zh_CN' %} selected="selected" {% endif %} >
-                        {{ 'menu.language.zh_CN' | trans}}
+                        {{ 'menu.language.zh_CN' | trans }}
                     </option>
                     <option value="{{ path(app.request.attributes.get('_route'), itParams) }}"  {% if app.request.get('_locale') == 'it' %} selected="selected" {% endif %} >
                         {{ 'menu.language.it' | trans }}
@@ -87,7 +87,7 @@
             output='/images/sfere.jpg' %}
             <img class="header-logo" src="{{ asset_url }}" alt="SFERE"/>
             {% endimage %}
-           </a>
+        </a>
 
 
         <nav>
@@ -104,7 +104,7 @@
                                 <a href="{{ path('sfere_home') }}#intro-text">{{ 'intro.company.info.title'| trans }}</a>
                                 {% image '@ArdetemSfereBundle/Resources/public/images/bat4.jpg'
                                 output='/images/societe.png' %}
-                                <img  class="img company" src="{{ asset_url }}" alt="societe">
+                                <img class="img company" src="{{ asset_url }}" alt="societe">
                                 {% endimage %}
 
                                 <div class="intro_text">
@@ -117,7 +117,7 @@
                             <li><a href="{{ path('sfere_contact') }}">{{ 'intro.company.where.title'|trans }}
                                 </a> {% image '@ArdetemSfereBundle/Resources/public/images/location.png'
                                 output='/images/location.png' %}
-                                <img  class="img" src="{{ asset_url }}" alt="location">
+                                <img class="img" src="{{ asset_url }}" alt="location">
                                 {% endimage %}
 
                                 <div class="intro_text">
@@ -140,7 +140,8 @@
                 <li>
                     <form action="{{ path('sfere_search') }}" method="post">
                         <div class="search">
-                            <input name="searchword" id="search" maxlength="20" placeholder="Rechercher Produit" alt="Buscar" class="inputbox" type="text" size="50" >
+                            <input name="searchword" id="search" maxlength="20" placeholder="Rechercher Produit"
+                                   alt="Buscar" class="inputbox" type="text" size="50">
                         </div>
                         <input type="hidden" name="task" value="search">
                         <input type="hidden" name="option" value="com_search">
@@ -158,7 +159,7 @@
         <div class="line_deg" id="line_l"></div>
         <div class="line_deg" id="line_r"></div>
         <div id="line_t"></div>
-
+        {% block slider %} {% endblock %}
         {% block page_content %}{% endblock %}
     </div>
 </div>

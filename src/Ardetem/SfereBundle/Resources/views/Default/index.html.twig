@@ -1,46 +1,81 @@
 {% extends "ArdetemSfereBundle::layout.html.twig" %}
+
+{% block slider %}
+    <div id="slider">
+        <ul class="rslides rslides1" id="slider1" style="max-width: 960px;">
+            <li id="rslides1_s0" class=""
+                style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; -webkit-transition: opacity 800ms ease-in-out; transition: opacity 800ms ease-in-out;">
+                {% image '@ArdetemSfereBundle/Resources/public/images/sfere01.jpg' %}
+                <img src="{{ asset_url }}" alt=""/>
+                {% endimage %}
+            </li>
+            <li id="rslides1_s1" class="rslides1_on"
+                style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; -webkit-transition: opacity 800ms ease-in-out; transition: opacity 800ms ease-in-out;">
+
+                {% image '@ArdetemSfereBundle/Resources/public/images/sfere02.jpg' %}
+                <img src="{{ asset_url }}" alt=""/>
+                {% endimage %}
+            </li>
+        </ul>
+    </div>
+    <div id="wrap_control_slider">
+        <div id="wrap_control_slider_right">
+            <div id="wrap_control_bar">
+                <div id="control_bar" style="height: 44.30680821078431%; overflow: hidden;"></div>
+            </div>
+            <div id="wrap_thumbnail_slider">
+                <ul id="control_slider" class="rslides_tabs rslides1_tabs">
+                    <li val="0" class="rslides1_s1">
+                        <a href="#">
+
+                        </a></li>
+                    <li val="25" class="rslides1_s2 rslides_here">
+                        <a href="#">
+
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
 {% block page_content %}
     <div id="page_style">
-<div>
-    <table class="contentpaneopen">
-        <tr>
-            <td class="contentheading" width="100%">
-                {{  'intro.company.name' | trans}}
-            </td>
-
-
-        </tr>
-    </table>
-
-    <table class="contentpaneopen">
-
-
-        <tr>
-            <td valign="top" class="presentation">
-                <p id="intro-text" style="text-align: justify;"><span style="font-size: 12pt; color: #808080;">
+        <div>
+            <table class="contentpaneopen">
+                <tr>
+                    <td class="contentheading" width="100%">
+                        {{ 'intro.company.name' | trans }}
+                    </td>
+                </tr>
+            </table>
+            <table class="contentpaneopen">
+                <tr>
+                    <td valign="top" class="presentation">
+                        <p id="intro-text" style="text-align: justify;"><span style="font-size: 12pt; color: #808080;">
                         <strong>{{ 'intro.company.presentation.title' | trans }}</strong></span></p>
 
-                {{ 'intro.company.presentation.text'| trans | raw }}
-                <p style="text-align: justify;">
+                        {{ 'intro.company.presentation.text'| trans | raw }}
+                        <p style="text-align: justify;">
                     <span style="font-size: 12pt; color: #808080;">
                 <strong>{{ 'intro.company.title'|trans }}</strong>
                     </span>
-                </p>
+                        </p>
 
-                <p style="text-align: justify;">
+                        <p style="text-align: justify;">
 
-                        {% image '@ArdetemSfereBundle/Resources/public/images/bat1.jpg' %}
-                        <img src="{{ asset_url }}" alt="Example"/>
-                        {% endimage %}
-                        >
-                </p>
+                            {% image '@ArdetemSfereBundle/Resources/public/images/bat1.jpg' %}
+                            <img src="{{ asset_url }}" alt="Example"/>
+                            {% endimage %}
+                            >
+                        </p>
 
-            </td>
-        </tr>
+                    </td>
+                </tr>
 
-    </table>
-    <span class="article_separator">&nbsp;</span>
-
-</div>
+            </table>
+            <span class="article_separator">&nbsp;</span>
+        </div>
     </div>
 {% endblock %}
