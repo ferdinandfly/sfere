@@ -70,7 +70,7 @@ class DocumentAdmin extends  Admin{
     {
         $datagridMapper
             ->add('path')
-
+            ->add('createdAt')
         ;
     }
 

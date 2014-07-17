@@ -18,7 +18,6 @@ use Doctrine\ORM\Mapping as ORM;
 class News {
 
     use ORMBehaviors\Translatable\Translatable;
-    use ORMBehaviors\Sluggable\Sluggable;
     /**
      * @var integer $id
      *
@@ -39,14 +38,6 @@ class News {
         return $this->id;
     }
 
-    public function getSluggableFields()
-    {
-        return [ 'name' ];
-    }
-
-    public function getSlug(){
-        return $this->slug;
-    }
     /**
      * @return string
      */

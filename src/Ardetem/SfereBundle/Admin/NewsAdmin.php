@@ -25,7 +25,6 @@ class NewsAdmin extends  Admin{
     {
         $showMapper
             ->add('name')
-            ->add('slug')
             ->add('description')
             ->add('resume')
         ;
@@ -39,7 +38,6 @@ class NewsAdmin extends  Admin{
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('slug', null, array('required' => true))
             ->add('translations','a2lix_translations',array(
                 'fields' => array(
                     'image' =>array(
@@ -59,7 +57,7 @@ class NewsAdmin extends  Admin{
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('slug')
+            ->addIdentifier('id')
             ->add('name')
             ->add('resume')
             ->add('_action', 'actions', array(

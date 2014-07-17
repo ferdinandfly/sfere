@@ -58,11 +58,11 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/news/{slug}", name="sfere_news_show")
+     * @Route("/news/{id}", name="sfere_news_show")
      * @Template()
      */
-    public function newsShowAction($slug){
-        $element = $this->getDoctrine()->getManager()->getRepository("ArdetemSfereBundle:News")->findOneBySlug($slug);
+    public function newsShowAction($id){
+        $element = $this->getDoctrine()->getManager()->getRepository("ArdetemSfereBundle:News")->find($id);
         return array("element" => $element);
     }
 
