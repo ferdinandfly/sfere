@@ -16,17 +16,6 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
 class DocumentAdmin extends  Admin{
-    /**
-     * @param \Sonata\AdminBundle\Show\ShowMapper $showMapper
-     *
-     * @return void
-     */
-    protected function configureShowField(ShowMapper $showMapper)
-    {
-        $showMapper
-            ->add('path')
-        ;
-    }
 
     /**
      * @param \Sonata\AdminBundle\Form\FormMapper $formMapper
@@ -50,10 +39,10 @@ class DocumentAdmin extends  Admin{
     {
         $listMapper
             ->addIdentifier('path')
+            ->add('webPath','url')
             ->add('createdAt')
             ->add('_action', 'actions', array(
                 'actions' => array(
-                    'view' => array(),
                     'edit' => array(),
                     'delete' => array(),
                 )

@@ -206,7 +206,4 @@ class SubCategory {
         return $this->translate()->setResume($res);
     }
 
-    public function __toString(){
-        return $this->getName();
-    }
 } 
