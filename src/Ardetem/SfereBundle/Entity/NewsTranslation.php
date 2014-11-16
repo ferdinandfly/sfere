@@ -18,7 +18,6 @@ use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 class NewsTranslation {
 
     use ORMBehaviors\Translatable\Translation;
-
     /**
      * @var string
      * @ORM\Column(type="string", length=255, nullable=true)
