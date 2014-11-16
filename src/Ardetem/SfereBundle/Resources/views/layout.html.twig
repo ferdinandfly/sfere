@@ -3,19 +3,15 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="robots" content="index, follow"/>
-    <meta name="keywords"
-          content="videovigilancia, cctv, cámaras analógicas, cámaras IP, videograbadores, dahua, hikvision, avtech, apexis, distribuidor, mayorista, accesorios, cables"/>
-    <meta name="title" content="Entreprise"/>
-    <meta name="author" content="Administrator"/>
-    <meta name="description"
-    <meta name="generator" content=""/>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{% block meta_title %} {% endblock %}</title>
+    <meta name="keywords"
+          content="{% block meta_keywords %} {% endblock %}" />
+    <meta name="title" content="Entreprise"/>
+    <meta name="description" content="{% block meta_description %} {% endblock %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-    <title>Entreprise - Sfere - Vente en gros de cameras de surveillance, videosurveillance et de CCTV</title>
     <link href="{{ base_url }}favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     {% stylesheets
     "bundles/ardetemsfere/css/*"
@@ -219,17 +215,15 @@ output="js/core_2.js" %}
 <![endif]-->
 <script>
     // You can also use "$(window).load(function() {"
-    jQuery(document).ready(function () {
 
-        // Slideshow 1
-        $("#slider1").responsiveSlides({
-            maxwidth: 960,
-            manualControls: '#control_slider',
-            speed: 800
-        });
+    // Slideshow 1
+    $("#slider1").responsiveSlides({
+        maxwidth: 960,
+        manualControls: '#control_slider',
+        speed: 800
+    });
+    //     jQuery("#scrollbar_products").customScrollbar();   jQuery(document).ready(function () {
 
-
-        //     jQuery("#scrollbar_products").customScrollbar();
 
 
     });
