@@ -14,6 +14,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class User extends BaseUser{
     /**
+     * @var integer
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")

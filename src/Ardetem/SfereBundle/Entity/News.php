@@ -18,14 +18,14 @@ use Doctrine\ORM\Mapping as ORM;
 class News {
 
     use ORMBehaviors\Translatable\Translatable;
+
     /**
-     * @var integer $id
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @var integer
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
 
     /**

@@ -5,6 +5,8 @@ menu:
         fr: Francés
         es: Español
         zh_CN: Chino
+        de: Allemand
+        pl: Polonais
     login: Login
 intro:
     company:

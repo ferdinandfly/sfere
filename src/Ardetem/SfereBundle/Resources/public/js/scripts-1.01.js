@@ -7,9 +7,9 @@ jQuery(window).resize(function() {
 
 
 $(document).ready(function() {
-	
 
 
+	$(".rslides").responsiveSlides();
 var position=0;
 
 	$("#arrow_l").click(function () {
@@ -20,7 +20,7 @@ var position=0;
 		    $("#hide_scroll").scrollLeft( position-=160 );
 		    $("#arrow_r").css("visibility","visible");
 	    }
-	    
+
 	    if(position<=0)
 	    {
 		$("#arrow_l").css("visibility","hidden");
@@ -35,7 +35,6 @@ var position=0;
 		    //$('#product_menu ul').css("marginLeft", position-=160);
 		    $("#hide_scroll").scrollLeft( position+=160 );
 		    $("#arrow_l").css("visibility","visible");
-		
 		}
 		
 		if( position >= ($("#hide_scroll")[0].scrollWidth - $("#hide_scroll").width())  )

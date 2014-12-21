@@ -47,17 +47,25 @@
             {% set frParams = params|merge({'_locale': 'fr'}) %}
             {% set itParams = params|merge({'_locale': 'it'}) %}
             {% set cnParams = params|merge({'_locale': 'zh_CN'}) %}
+            {% set plParams = params|merge({'_locale': 'pl'}) %}
+            {% set deParams = params|merge({'_locale': 'de'}) %}
             <div id="jflanguageselection">
                 <select name="lang" class="jflanguageselection" size="1"
                         onchange="document.location.replace(this.value);">
+                    <option value="{{ path(app.request.attributes.get('_route'), frParams) }}"  {% if app.request.get('_locale') == 'fr' %} selected="selected" {% endif %} >
+                        {{ 'menu.language.fr'| trans }}
+                    </option>
                     <option value="{{ path(app.request.attributes.get('_route'), enParams) }}"   {% if app.request.get('_locale') == 'en' %} selected="selected" {% endif %}>
                         {{ 'menu.language.en' |trans }}
                     </option>
                     <option value="{{ path(app.request.attributes.get('_route'), esParams) }}"   {% if app.request.get('_locale') == 'es' %} selected="selected" {% endif %}>
                         {{ 'menu.language.es' |trans }}
                     </option>
-                    <option value="{{ path(app.request.attributes.get('_route'), frParams) }}"  {% if app.request.get('_locale') == 'fr' %} selected="selected" {% endif %} >
-                        {{ 'menu.language.fr'| trans }}
+                    <option value="{{ path(app.request.attributes.get('_route'), deParams) }}"  {% if app.request.get('_locale') == 'de' %} selected="selected" {% endif %} >
+                        {{ 'menu.language.de'| trans }}
+                    </option>
+                    <option value="{{ path(app.request.attributes.get('_route'), plParams) }}"  {% if app.request.get('_locale') == 'pl' %} selected="selected" {% endif %} >
+                        {{ 'menu.language.pl'| trans }}
                     </option>
                     <option value="{{ path(app.request.attributes.get('_route'), cnParams) }}"  {% if app.request.get('_locale') == 'zh_CN' %} selected="selected" {% endif %} >
                         {{ 'menu.language.zh_CN' | trans }}

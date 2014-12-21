@@ -17,13 +17,12 @@ use Doctrine\ORM\Mapping as ORM;
 class DownloadInfo {
     use ORMBehaviors\Timestampable\Timestampable;
     /**
-     * @var integer $id
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @var integer
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var Profile

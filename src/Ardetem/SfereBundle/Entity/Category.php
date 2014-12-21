@@ -18,13 +18,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Category {
     use ORMBehaviors\Translatable\Translatable;
     /**
-     * @var integer $id
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @var integer
      * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
-
+    protected $id;
     /**
      * @var integer $order
      *

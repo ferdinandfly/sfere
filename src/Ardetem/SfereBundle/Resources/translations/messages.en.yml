@@ -41,6 +41,8 @@ menu:
         es: Spanish
         it: Italien
         zh_CN: Chinese
+        de: Allemand
+        pl: Polonais
     login: Login
     profile: Profil
     companyProfile:

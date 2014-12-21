@@ -41,6 +41,8 @@ menu:
         es: 西班牙语
         it: 意大利语
         zh_CN: 中文
+        de: 德语
+        pl: 波兰语
     login: 登陆
     profile: 个人信息
     companyProfile:
