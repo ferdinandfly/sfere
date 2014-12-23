@@ -1,0 +1,28 @@
+{% extends "SonataAdminBundle::standard_layout.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+    {% if app.security.token and is_granted('ROLE_SUPER_ADMIN') %}
+        var super_admin = true;
+    {% else %}
+        var super_admin = false;
+    {% endif %}
+    </script>
+    <script src="{{ asset('ckeditor/ckeditor.js') }}" type="text/javascript"></script>
+    {% javascripts
+    '@ArdetemSfereBundle/Resources/public/js/custom.js'
+        filter="?yui_js"
+        output='js/admin.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block side_bar_after_nav %}
+
+{% endblock %}

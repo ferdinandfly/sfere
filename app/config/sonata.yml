@@ -15,6 +15,9 @@ sonata_user:
     security_acl: true
     manager_type: orm # can be orm or mongodb
 
+sonata_admin:
+    templates:
+        layout: ArdetemSfereBundle::admin.layout.html.twig
 sonata_block:
     default_contexts: [cms]
     blocks:
