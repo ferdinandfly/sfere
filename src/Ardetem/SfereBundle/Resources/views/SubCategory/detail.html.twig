@@ -1,7 +1,7 @@
 {% extends "ArdetemSfereBundle:Default:detail.layout.html.twig" %}
 {% block page_detail %}
         <h1>{{ subCategory.name }}</h1>
-        <div>{{ subCategory.description }}</div>
+        <div>{{ subCategory.description | raw }}</div>
         <div id="product_list" style="width:100%; float:none;">
             {% for p in subCategory.products %}
                 <div class="browse_separator">
@@ -13,7 +13,7 @@
                                      class="browseProductImage" border="0" title="{{ p.name }}" alt="{{ p.name }}">
                             </div>
                             <div>
-                                {{ p.resume }}
+                                {{ p.resume  | raw}}
                             </div>
                         </a>
                     </div>

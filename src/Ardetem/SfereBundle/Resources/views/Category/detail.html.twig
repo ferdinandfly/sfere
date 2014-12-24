@@ -1,7 +1,7 @@
 {% extends "ArdetemSfereBundle:Default:detail.layout.html.twig" %}
 {% block page_detail %}
         <h1 class="componentheading"> {{ category.name }}</h1>
-        <div>{{ category.description }}</div>
+        <div>{{ category.description |raw }}</div>
         <div id="category_list" >
             {% for subCat in category.subCategories %}
                 <div class="browse_separator">
