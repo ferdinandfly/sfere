@@ -16,7 +16,7 @@
             <h1>{{ product.name }}</h1>
 
             <div class="product_desc">
-               {{ product.resume }}
+               {{ product.resume |raw }}
             </div>
             <div class="product_img"><a
                         href="{{ path("sfere_product_show", {"slug": product.slug}) }}"
@@ -41,7 +41,6 @@
                 {{ product.description | raw }}
             </td>
         </tr>
-
         </tbody>
     </table>
     </div>
