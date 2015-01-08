@@ -1,65 +1,69 @@
 services:
-   kernel_request.listener:
-       class: Ardetem\SfereBundle\Listener\KernelRequestListener
-       tags:
-           - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
-   form.type.document.file:
-       class: Ardetem\SfereBundle\Form\Type\DocumentFile
-       tags:
-           - { name: form.type, alias: admin_document_to_file }
-   ardetem.sfere.admin.news:
-      class: Ardetem\SfereBundle\Admin\NewsAdmin
-      tags:
-        - { name: sonata.admin, manager_type: orm, group: news, label: News}
-      arguments:
-        - ~
-        - Ardetem\SfereBundle\Entity\News
-        - ~
-   ardetem.sfere.admin.product:
-      class: Ardetem\SfereBundle\Admin\ProductAdmin
-      tags:
-        - { name: sonata.admin, manager_type: orm, group: Product, label: Product }
-      arguments:
-        - ~
-        - Ardetem\SfereBundle\Entity\Product
-        - ~
-   ardetem.sfere.admin.document:
-      class: Ardetem\SfereBundle\Admin\DocumentAdmin
-      tags:
-        - { name: sonata.admin, manager_type: orm, group: Document, label: Document }
-      arguments:
-        - ~
-        - Ardetem\SfereBundle\Entity\Document
-        - ~
-   ardetem.sfere.admin.profile:
-      class: Ardetem\SfereBundle\Admin\ProfileAdmin
-      tags:
-        - { name: sonata.admin, manager_type: orm, group: Users, label: Profile }
-      arguments:
-        - ~
-        - Ardetem\SfereBundle\Entity\Profile
-        - ~
-   ardetem.sfere.admin.download:
-      class: Ardetem\SfereBundle\Admin\DownloadInfoAdmin
-      tags:
-        - { name: sonata.admin, manager_type: orm, group: Users, label: Download }
-      arguments:
-        - ~
-        - Ardetem\SfereBundle\Entity\DownloadInfo
-        - ~
-   ardetem.sfere.admin.category:
-      class: Ardetem\SfereBundle\Admin\CategoryAdmin
-      tags:
-        - { name: sonata.admin, manager_type: orm, group: general, label: Category }
-      arguments:
-        - ~
-        - Ardetem\SfereBundle\Entity\Category
-        - ~ #ArdetemSfereBundle:CategoryAdmin
-   ardetem.sfere.admin.subcategory:
-      class: Ardetem\SfereBundle\Admin\SubCategoryAdmin
-      tags:
-        - { name: sonata.admin, manager_type: orm, group: general, label: Sub Category }
-      arguments:
-        - ~
-        - Ardetem\SfereBundle\Entity\SubCategory
-        - ~ #ArdetemSfereBundle:SubCategoryAdmin
+  sonata_user.registration.form.type:
+    class: Application\Sonata\UserBundle\Form\Type\RegistrationFormType
+    tags:
+      - { name: form.type, alias: application_sonata_user_registration }
+  kernel_request.listener:
+    class: Ardetem\SfereBundle\Listener\KernelRequestListener
+    tags:
+       - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+  form.type.document.file:
+    class: Ardetem\SfereBundle\Form\Type\DocumentFile
+    tags:
+       - { name: form.type, alias: admin_document_to_file }
+  ardetem.sfere.admin.news:
+    class: Ardetem\SfereBundle\Admin\NewsAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: news, label: News}
+    arguments:
+      - ~
+      - Ardetem\SfereBundle\Entity\News
+      - ~
+  ardetem.sfere.admin.product:
+    class: Ardetem\SfereBundle\Admin\ProductAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: Product, label: Product }
+    arguments:
+      - ~
+      - Ardetem\SfereBundle\Entity\Product
+      - ~
+  ardetem.sfere.admin.document:
+    class: Ardetem\SfereBundle\Admin\DocumentAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: Document, label: Document }
+    arguments:
+      - ~
+      - Ardetem\SfereBundle\Entity\Document
+      - ~
+  ardetem.sfere.admin.profile:
+    class: Ardetem\SfereBundle\Admin\ProfileAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: Users, label: Profile }
+    arguments:
+      - ~
+      - Ardetem\SfereBundle\Entity\Profile
+      - ~
+  ardetem.sfere.admin.download:
+    class: Ardetem\SfereBundle\Admin\DownloadInfoAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: Users, label: Download }
+    arguments:
+      - ~
+      - Ardetem\SfereBundle\Entity\DownloadInfo
+      - ~
+  ardetem.sfere.admin.category:
+    class: Ardetem\SfereBundle\Admin\CategoryAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: general, label: Category }
+    arguments:
+      - ~
+      - Ardetem\SfereBundle\Entity\Category
+      - ~ #ArdetemSfereBundle:CategoryAdmin
+  ardetem.sfere.admin.subcategory:
+    class: Ardetem\SfereBundle\Admin\SubCategoryAdmin
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: general, label: Sub Category }
+    arguments:
+      - ~
+      - Ardetem\SfereBundle\Entity\SubCategory
+      - ~ #ArdetemSfereBundle:SubCategoryAdmin
