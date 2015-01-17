@@ -22,7 +22,7 @@ class ProductRepository extends EntityRepository {
             ->where('pt.locale = :locale');
 
             $or_cond=$qb->expr()->orx();
-            $searchColumn=array("pt.name","pt.description","pt.resume");
+            $searchColumn=array("p.name","pt.description","pt.resume");
             foreach($searchColumn as $column){
                 $or_cond->add($qb->expr()->like($column,$qb->expr()->literal("%$string%")));
             }
