@@ -168,7 +168,7 @@ box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.19);
 	background-color: white;
 }
 .product_desc {
-	float: left;
+	display:inline-block;
 	width: 55%;
 	min-width: 350px;
 }
@@ -189,7 +189,7 @@ border: solid 1px #D3D3D3;
 .product_img {
 	display: table-cell;
 	text-align: center;
-	float: left;
+	display:inline-block;
 	width: 40%;
 	vertical-align: middle;
 }
