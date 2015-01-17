@@ -168,19 +168,20 @@ box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.19);
 	background-color: white;
 }
 .product_desc {
+	vertical-align: top;
 	display:inline-block;
 	width: 55%;
 	min-width: 350px;
 }
 .product_desc ul {
-position: relative;
-display: inline-block;
-min-width: 343px;
-font: 16px/30px museosans_300;
-background: #F5F5F5;
-padding: 1em 0px;
-margin: 0px 0px 16px 0px;
-border: solid 1px #D3D3D3;
+	position: relative;
+	display: inline-block;
+	min-width: 343px;
+	font: 16px/30px museosans_300;
+	background: #F5F5F5;
+	padding: 1em 0px;
+	margin: 0px 0px 16px 0px;
+	border: solid 1px #D3D3D3;
 }
 .product_desc ul li {
 	display: block;
