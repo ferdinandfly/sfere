@@ -63,7 +63,7 @@ class SubCategoryAdmin extends Admin
             ->addIdentifier('slug')
             ->add('name')
             ->add('resume')
-            ->add('order')
+            ->add('order',null,array('editable' => true))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),
