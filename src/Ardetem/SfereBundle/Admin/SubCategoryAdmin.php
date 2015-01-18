@@ -49,6 +49,7 @@ class SubCategoryAdmin extends Admin
             ->add('category', 'sonata_type_model',array('property' => 'name'))
             ->add('products', 'sonata_type_model', array('property' => 'name','required' => false, 'multiple' => true)
                 )
+            ->add('order')
             ->end();
     }
 
