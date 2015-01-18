@@ -43,6 +43,7 @@ class Category {
 
     /**
      * @ORM\OneToMany(targetEntity="SubCategory", mappedBy="category", cascade={"all"},fetch="EAGER")
+     * @ORM\OrderBy({"order" = "ASC"})
      */
     protected $subCategories;
 

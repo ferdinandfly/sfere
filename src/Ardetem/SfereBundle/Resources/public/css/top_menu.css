@@ -158,7 +158,8 @@ content:"";
 }
 .list_submenu > li {
 	position: relative;
-	float: left;
+	display: inline-block;
+	vertical-align: top;
 	width: 16%;
 	min-width: 200px;
 	margin-bottom: 10px;

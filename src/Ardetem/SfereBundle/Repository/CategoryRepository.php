@@ -21,6 +21,7 @@ class CategoryRepository extends EntityRepository{
             ->innerJoin('sc.translations','sct')
             ->where('ct.locale =:locale')
             ->andWhere("sct.locale = :locale")
+            ->orderBy('c.order','asc')
             ->setParameter('locale',$locale);
         return $qb->getQuery()->getResult();
     }
