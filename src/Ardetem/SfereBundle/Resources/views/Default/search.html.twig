@@ -21,7 +21,7 @@
                                     <div>
                                         <a href=" {{ path('sfere_product_show',{"slug": p.slug}) }}">{{ p.name }}</a>
                                         <br>
-                                        <span>{{ p.subcategory }} / {{ p.subcategory.category }}</span>
+                                        <span>{{ p.subcategory.name }} / {{ p.subcategory.category.name }}</span>
                                     </div>
                                     <div>
                                         {{ p.resume | raw}}
