@@ -9,11 +9,10 @@
                 {{ 'product.norecord'|trans }}
             {% else %}
                 <div class="count">
-                    {{ pagination.getTotalItemCount }}
+                    {{ 'searchCount' | transchoice(pagination.getTotalItemCount)  }}
                 </div>
                 <table class="contentpaneopen">
                     <tbody>
-
                     {% for p in pagination %}
                         <tr>
                             <td>
@@ -23,8 +22,18 @@
                                         <br>
                                         <span>{{ p.subcategory.name }} / {{ p.subcategory.category.name }}</span>
                                     </div>
-                                    <div>
-                                        {{ p.resume | raw}}
+                                    <div class="list-resume">
+                                        <div>
+                                            <a
+                                                    href="{{ path("sfere_product_show", {"slug": p.slug}) }}"
+                                                    title="{{ p.name }}" ><img
+                                                        src="{{ base_url }}{{ p.image }}"
+                                                        alt="{{ p.name }}" width="250px" border="0"></a>
+                                        </div>
+                                        <div>
+                                            {{ p.resume | raw}}
+                                        </div>
+
                                     </div>
                                 </fieldset>
                             </td>

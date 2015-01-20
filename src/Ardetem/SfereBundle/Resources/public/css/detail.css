@@ -7,3 +7,20 @@
     background-color: #efefef;
     color: #5e5e5e;
 }
+
+div.count{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.list-resume>div{
+    display: inline-block;
+    vertical-align: top;
+    max-height: 3em;
+}
+.list-resume>div:first-child{
+    width: 10%;
+    margin-right: 2%;
+}
+.list-resume>div:nth-child(2){
+    width: 87%;
+}

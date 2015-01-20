@@ -77,3 +77,4 @@ form:
   submit: Envoyer
   yes: Oui
   no: Non
+searchCount: "{0} Aucun produit ne correpond à votre recherche |{1} Un produit correspond à votre recherche |]1,Inf] %count% produits correspond à votre recherche"
