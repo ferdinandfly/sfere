@@ -28,3 +28,10 @@ div.count{
 .list-resume img{
     width: 100%;
 }
+.list-title{
+    font-weight: bold;
+}
+.list-title span{
+    padding-left: 5px;
+    display: inline-block;
+}
