@@ -20,7 +20,11 @@ div.count{
 .list-resume>div:first-child{
     width: 10%;
     margin-right: 2%;
+    position: relative;
 }
 .list-resume>div:nth-child(2){
     width: 87%;
+}
+.list-resume img{
+    width: 100%;
 }
