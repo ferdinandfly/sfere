@@ -1,24 +1,24 @@
 intro:
     company:
-        title: La Société
-        name: Entreprise
+        title: Das Unternehmen
+        name: ÜBERSICHT
         info:
-          title: PRESENTATION
+          title: VORSTELLUNG
           text: >
-            <p>SFERE est spécialisée dans l'étude et la construction de modules électroniques pour la mesure et le contrôle de process industriels et réseaux électriques.</p>
-            <p>SFERE c'est également la compétence d'un constructeur, une équipe de spécialistes, ingénieurs et techniciens, motivés par la recherche et l'innovation..</p>
+            <p>SFERE ist spezialisiert auf die Konzeption und den Bau von elektronischen Baugruppen für die Messung und Steuerung von industriellen Prozessen und Stromnetze.</p>
+            <p>SFERE ist es auch in der Verantwortung der Hersteller, ein Team von Spezialisten, Ingenieuren und Technikern, motiviert durch Forschung und Innovation..</p>
 
         where:
-          title: OU NOUS TROUVER
+          title: Wo Sie uns finden
           text: >
             SFERE<br />
             Parc d’activité ARBORA N°2<br />
             69510 SOUCIEU EN JARREST<br />
-            Tel: 04 78 16 04 04<br/>
-            Fax: 04 78 16 04 05<br/>
+            Tel: 0033 4 78 16 04 04<br/>
+            Fax: 0033 4 78 16 04 05<br/>
             Email: info@sfere-net.com<br/>
         presentation:
-          title: PRÉSENTATION DE LA SOCIÉTÉ
+          title: Präsentation des Unternehmens
           text: >
             <p>Reconnue pour sa précision et sa fiabilité, SFERE est une société en innovation permanente dans le secteur de la mesure et du contrôle de process industriels et réseaux électriques.</p>
             <p>Notre siège se situe à LYON. Nous disposons de deux bureaux d’étude en FRANCE, d’une équipe d’ingénieurs expérimentés, et des commerciaux nationaux et internationaux dynamiques, qui sont toujours à l’écoute des besoins des clients.</p>
@@ -27,53 +27,54 @@ intro:
             <p>Nous étudions en détail chaque besoin des clients, et proposons la solution la plus adéquate dans un délai très court.</p>
             <p>Il y a certaines choses dans ce monde qui ne se mesurent pas, pour tout le reste, consultez SFERE.</p>
     category:
-        name: Produits
+        name: Produkte
     news:
-        name: Actualité
+        name: Aktualität
     contact:
-        name: Contact
-see_more:  Voir plus
+        name: Kontakt
+see_more:  Mehr anzeigen
 menu:
     language:
-        title: Choisir une langage
-        en: English
-        fr: Français
-        es: Espagnole
+        title: Wählen Sie eine Sprache
+        en: Englisch
+        fr: Französisch
+        es: Spanisch
         it: Italien
-        zh_CN: Chinois
-        de: Allemand
-        pl: Polonais
-    login: Login
+        zh_CN: Chinese
+        de: Deutsch
+        pl: Polnisch
+    login: Einloggen
     profile: Profil
     companyProfile:
-      modify: Modifier
+      modify: Veränderung
 common:
-    tel: Téléphone
+    tel: Telefon
     fax: Fax
-    email: Email
+    email: E-Mail
 product:
-  search: Recherche
-  norecord: Aucun produit trouvé
-  description: Description
-  download: Téléchargement
-  relative: Rélatives
-  download-link: Télécharger la fiche en PDF
-  download-desc: Fiche neutre en PDF avec les spécifications du produit
+  search: Begehrte
+  norecord: Keine Produkte gefunden
+  description: Beschreibung
+  download: Herunterladen
+  relative: Verbunden
+  download-link: Download PDF Blatt
+  download-desc: Neutral Blatt in PDF Produktspezifikationen
 news:
-  title: Nouvelles
+  title: Nachrichten
 notice:
-  title: Notification
-  complete_profile: Vous devez complétez votre profil.
+  title: Benachrichtigung
+  complete_profile: Sie müssen Ihr Profil vervollständigen.
 form:
   profile:
-    company_name: Nom de la société
-    company_address: Adresse de la société
-    post_code: Code postale
-    city: Ville
-    country: Pays
-    url: Site internet
-    receive_mail: Recevoir des notification
-    mobile: Téléphone mobile
-  submit: Envoyer
-  yes: Oui
-  no: Non
+    company_name: Name Der Firma
+    company_address: Adresse des Unternehmens
+    post_code: PLZ
+    city: Stadt
+    country: Land
+    url: website
+    receive_mail: Erhalten Sie Informationen
+    mobile: Handy
+  submit: Senden
+  yes: Ja
+  no: Nicht
+searchCount: "{0} Keine Produkte entsprechen Ihrer Suche |{1} Ein Produkt für die Suche |]1,Inf] %count% Artikel angegebenen Suchkriterien"

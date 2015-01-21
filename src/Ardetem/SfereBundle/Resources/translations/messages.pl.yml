@@ -1,12 +1,12 @@
 intro:
     company:
-        title: La Société
-        name: Entreprise
+        title: Spółka
+        name: Biznes
         info:
-          title: PRESENTATION
+          title: PRZEGLĄD
           text: >
-            <p>SFERE est spécialisée dans l'étude et la construction de modules électroniques pour la mesure et le contrôle de process industriels et réseaux électriques.</p>
-            <p>SFERE c'est également la compétence d'un constructeur, une équipe de spécialistes, ingénieurs et techniciens, motivés par la recherche et l'innovation..</p>
+            <p>SFERE specjalizuje się w projektowaniu i budowie modułów elektronicznych do pomiaru i kontroli procesów przemysłowych i sieci elektrycznych.</p>
+            <p>SFERE jest to również odpowiedzialność producenta, zespół specjalistów, inżynierów i techników, motywowanych badań naukowych i innowacji.</p>
 
         where:
           title: OU NOUS TROUVER
@@ -14,8 +14,8 @@ intro:
             SFERE<br />
             Parc d’activité ARBORA N°2<br />
             69510 SOUCIEU EN JARREST<br />
-            Tel: 04 78 16 04 04<br/>
-            Fax: 04 78 16 04 05<br/>
+            Tel: 0033 4 78 16 04 04<br/>
+            Fax: 0033 4 78 16 04 05<br/>
             Email: info@sfere-net.com<br/>
         presentation:
           title: PRÉSENTATION DE LA SOCIÉTÉ

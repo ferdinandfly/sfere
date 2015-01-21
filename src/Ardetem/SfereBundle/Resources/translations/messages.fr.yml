@@ -38,7 +38,7 @@ menu:
         title: Choisir une langage
         en: English
         fr: Français
-        es: Espagnole
+        es: Espagnol
         it: Italien
         zh_CN: Chinois
         de: Allemand
@@ -63,7 +63,7 @@ news:
   title: Nouvelles
 notice:
   title: Notification
-  complete_profile: Vous devez complétez votre profil.
+  complete_profile: Vous devez compléter votre profil.
 form:
   profile:
     company_name: Nom de la société
@@ -77,4 +77,3 @@ form:
   submit: Envoyer
   yes: Oui
   no: Non
-searchCount: "{0} Aucun produit ne correpond à votre recherche |{1} Un produit correspond à votre recherche |]1,Inf] %count% produits correspond à votre recherche"

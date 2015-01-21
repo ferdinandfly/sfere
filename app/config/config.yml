@@ -105,7 +105,7 @@ swiftmailer:
     spool:     { type: memory }
 
 a2lix_translation_form:
-    locales: [zh_CN, en, es, fr, pl,de]
+    locales: [zh_CN, en, es, fr, pl,de,it]
 #braincrafted_bootstrap:
 #    less_filter: lessphp
 mopa_bootstrap:
