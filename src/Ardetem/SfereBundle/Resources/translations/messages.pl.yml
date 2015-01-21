@@ -9,7 +9,7 @@ intro:
             <p>SFERE jest to również odpowiedzialność producenta, zespół specjalistów, inżynierów i techników, motywowanych badań naukowych i innowacji.</p>
 
         where:
-          title: OU NOUS TROUVER
+          title: GDZIE JESTEŚMY
           text: >
             SFERE<br />
             Parc d’activité ARBORA N°2<br />
@@ -18,7 +18,7 @@ intro:
             Fax: 0033 4 78 16 04 05<br/>
             Email: info@sfere-net.com<br/>
         presentation:
-          title: PRÉSENTATION DE LA SOCIÉTÉ
+          title: PREZENTACJA FIRMY
           text: >
             <p>Reconnue pour sa précision et sa fiabilité, SFERE est une société en innovation permanente dans le secteur de la mesure et du contrôle de process industriels et réseaux électriques.</p>
             <p>Notre siège se situe à LYON. Nous disposons de deux bureaux d’étude en FRANCE, d’une équipe d’ingénieurs expérimentés, et des commerciaux nationaux et internationaux dynamiques, qui sont toujours à l’écoute des besoins des clients.</p>
@@ -27,53 +27,54 @@ intro:
             <p>Nous étudions en détail chaque besoin des clients, et proposons la solution la plus adéquate dans un délai très court.</p>
             <p>Il y a certaines choses dans ce monde qui ne se mesurent pas, pour tout le reste, consultez SFERE.</p>
     category:
-        name: Produits
+        name: Produkty
     news:
-        name: Actualité
+        name: Aktualność
     contact:
-        name: Contact
-see_more:  Voir plus
+        name: Kontakt
+see_more:  Zobacz więcej
 menu:
     language:
-        title: Choisir une langage
-        en: English
-        fr: Français
-        es: Espagnole
-        it: Italien
-        zh_CN: Chinois
-        de: Allemand
-        pl: Polonais
+        title: Wybierz język
+        en: Angielski
+        fr: Francuski
+        es: Hiszpański
+        it: Włoski
+        zh_CN: Chiński
+        de: Niemiecki
+        pl: Polski
     login: Login
     profile: Profil
     companyProfile:
-      modify: Modifier
+      modify: Zmiana
 common:
-    tel: Téléphone
+    tel: Telefon
     fax: Fax
-    email: Email
+    email: E-mail
 product:
-  search: Recherche
-  norecord: Aucun produit trouvé
-  description: Description
-  download: Téléchargement
-  relative: Rélatives
-  download-link: Télécharger la fiche en PDF
-  download-desc: Fiche neutre en PDF avec les spécifications du produit
+  search: Poszukiwane
+  norecord: Nie znaleziono produktów
+  description: Opis
+  download: Ściąganie
+  relative: Pokrewny
+  download-link: Pobierz kartę w formacie PDF
+  download-desc: Neutralny arkusz w formacie PDF ze specyfikacją produktu
 news:
-  title: Nouvelles
+  title: Aktualności
 notice:
-  title: Notification
-  complete_profile: Vous devez complétez votre profil.
+  title: Zgłoszenie
+  complete_profile: Musisz wypełnić swój profil.
 form:
   profile:
-    company_name: Nom de la société
-    company_address: Adresse de la société
-    post_code: Code postale
-    city: Ville
-    country: Pays
-    url: Site internet
-    receive_mail: Recevoir des notification
-    mobile: Téléphone mobile
-  submit: Envoyer
-  yes: Oui
-  no: Non
+    company_name: Nazwa firmy
+    company_address: Adres przedsiębiorstwa
+    post_code: Kod pocztowy
+    city: Miasto
+    country: Kraj
+    url: website
+    receive_mail: Otrzymuj powiadomienia
+    mobile: Telefon komórkowy
+  submit: Wysłać
+  yes: Tak
+  no: Nie
+searchCount: "{0} Brak produktów spełniających kryteria wyszukiwania |{1} Produkt o poszukiwaniu |]1,Inf] %count% produkty mecze wyszukiwanie"

@@ -85,3 +85,4 @@ form:
   submit: Enviar
   yes: Sí
   no: No
+searchCount: "{0} Ninguno producto encontrado |{1} Un producto encontrado |]1,Inf] %count% productos encontrados"

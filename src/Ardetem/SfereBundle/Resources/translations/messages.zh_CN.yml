@@ -77,3 +77,4 @@ form:
   submit: 发送
   yes: 是
   no: 否
+searchCount: "{0} 没有产品符合搜索条件 |{1} 一个产品符合搜索条件 |]1,Inf] %count% 个产品符合搜索条件"

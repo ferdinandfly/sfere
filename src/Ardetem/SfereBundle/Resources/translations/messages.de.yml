@@ -77,4 +77,4 @@ form:
   submit: Senden
   yes: Ja
   no: Nicht
-searchCount: "{0} Keine Produkte entsprechen Ihrer Suche |{1} Ein Produkt für die Suche |]1,Inf] %count% Artikel angegebenen Suchkriterien"
+searchCount: "{0} Keine Produkte entsprechend Ihrer Suche |{1} Ein Produkt für die Suche |]1,Inf] %count% Artikel angegebenen Suchkriterien"
