@@ -80,7 +80,7 @@ class CategoryAdmin extends Admin{
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-                ->add('name','doctrine_orm_string')
+                ->add('id')
         ;
     }
 
