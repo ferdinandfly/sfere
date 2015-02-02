@@ -11,8 +11,8 @@ intro:
         where:
           title: Wo Sie uns finden
           text: >
-            SFERE<br />
-            Parc d’activité ARBORA N°2<br />
+            Route de Brindas<br />
+            Parc d’activité d'Arbora N°2<br />
             69510 SOUCIEU EN JARREST<br />
             Tel: 0033 4 78 16 04 04<br/>
             Fax: 0033 4 78 16 04 05<br/>
@@ -46,7 +46,7 @@ menu:
     login: Einloggen
     profile: Profil
     companyProfile:
-      modify: Veränderung
+        modify: Veränderung
 common:
     tel: Telefon
     fax: Fax

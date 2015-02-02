@@ -1,9 +1,9 @@
 intro:
     company:
         title: Company
-        name: Entreprise
+        name: Company
         info:
-          title: PRESENTATION
+          title: INTRODUCTION
           text: >
             <p>SFERE specialises in the R&D and manufacturing of electronic modules for the measurement and control of industrial processes and electrical networks. </p>
             <p>SFERE also stands for the know how of a constructor, a team of specialists, engineers and technicians, motivated by research and innovation. </p>
@@ -11,8 +11,8 @@ intro:
         where:
           title: WHERE WE ARE
           text: >
-            SFERE<br />
-            Parc d’activité ARBORA N°2<br />
+            Route de Brindas<br />
+            Parc d’activité d'Arbora N°2<br />
             69510 SOUCIEU EN JARREST<br />
             Phone:<br/>
             Fax:<br/>
@@ -21,7 +21,7 @@ intro:
           title: WHO WE ARE
           text: >
             <p>Well-known for its accuracy and its reliability, SFERE is a permanently innovating company in the field of measure, industrial process control and supervision of electrical networks.</p>
-            <p>Our head office is located in LYON, FRANCE. We have 2 R&D offices in FRANCE, a team of experienced engineers, and a dynamic national and international sales team, always attentive to the needs of our clients.</p>
+            <p>Our head office is located in LYON, FRANCE. We have 2 R&D centres in FRANCE, a team of experienced engineers, and a dynamic national and international sales team, always attentive to the needs of our clients.</p>
             <p>All our products are manufactured in France. We have 2 sales offices, in CHINA and in POLAND. Our distribution network covers 32 countries over 5 continents.</p>
             <p>Our products are used both as well in small industrial projects and in numerous French and foreign state projects, in many different sectors. Our know-how meets the highest expectancies.</p>
             <p>We study in detail each request of our clients, and offer the most appropriate solution within a very short time.</p>
@@ -35,14 +35,14 @@ intro:
 see_more:  See more
 menu:
     language:
-        title: Chose linguage
+        title: Choose language
         en: English
         fr: French
         es: Spanish
-        it: Italien
+        it: Italian
         zh_CN: Chinese
-        de: Allemand
-        pl: Polonais
+        de: German
+        pl: Polish
     login: Login
     profile: Profil
     companyProfile:
@@ -52,14 +52,12 @@ common:
     fax: Fax
     email: Email
 product:
-  search: Search
-  norecord: 0 results found
-  description: Description
-  download: Download
-  relative: Relatives
-  download-link: Download the PDF
-  download-desc: neutral sheet PDF with product specifications
-
+    search: Search
+    description: Description
+    download: Download
+    relative: Related products
+    download-link: Download the PDF
+    download-desc: neutral sheet PDF with product specifications
 news:
   title: News
 notice:

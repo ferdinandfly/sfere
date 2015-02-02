@@ -6,13 +6,13 @@ intro:
           title: PRESENTATION
           text: >
             <p>SFERE est spécialisée dans l'étude et la construction de modules électroniques pour la mesure et le contrôle de process industriels et réseaux électriques.</p>
-            <p>SFERE c'est également la compétence d'un constructeur, une équipe de spécialistes, ingénieurs et techniciens, motivés par la recherche et l'innovation..</p>
-
+            <p>SFERE c'est également la compétence d'un constructeur, une équipe de spécialistes, ingénieurs et techniciens, motivés par la recherche et l'innovation.</p>
         where:
           title: OU NOUS TROUVER
           text: >
             SFERE<br />
-            Parc d’activité ARBORA N°2<br />
+            Route de Brindas<br />
+            Parc d’activité d'Arbora  N°2<br />
             69510 SOUCIEU EN JARREST<br />
             Tel: 04 78 16 04 04<br/>
             Fax: 04 78 16 04 05<br/>
@@ -36,7 +36,7 @@ see_more:  Voir plus
 menu:
     language:
         title: Choisir une langue
-        en: English
+        en: Anglais
         fr: Français
         es: Espagnol
         it: Italien
@@ -52,15 +52,15 @@ common:
     fax: Fax
     email: Email
 product:
-  search: Recherche
-  norecord: Aucun produit trouvé
-  description: Description
-  download: Téléchargement
-  relative: Rélatives
-  download-link: Télécharger la fiche en PDF
-  download-desc: Fiche neutre en PDF avec les spécifications du produit
+    search: Recherche
+    norecord: Aucun produit trouvé
+    description: Description
+    download: Téléchargement
+    relative: Produits associés
+    download-link: Télécharger la fiche en PDF
+    download-desc: Fiche neutre en PDF avec les spécifications du produit
 news:
-  title: Nouvelles
+  title: "Nouveautés, actualités"
 notice:
   title: Notification
   complete_profile: Vous devez compléter votre profil.
@@ -68,13 +68,13 @@ form:
   profile:
     company_name: Nom de la société
     company_address: Adresse de la société
-    post_code: Code postale
+    post_code: Code postal
     city: Ville
     country: Pays
     url: Site internet
-    receive_mail: Recevoir des notification
+    receive_mail: Recevoir des notifications
     mobile: Téléphone mobile
   submit: Envoyer
   yes: Oui
   no: Non
-searchCount: "{0} Aucun produit ne correpond à votre recherche |{1} Un produit correspond à votre recherche |]1,Inf] %count% produits correspond à votre recherche"
+searchCount: "{0} Aucun produit ne correpond à votre recherche |{1} Un produit correspond à votre recherche |]1,Inf] %count% produits correspondent à votre recherche"

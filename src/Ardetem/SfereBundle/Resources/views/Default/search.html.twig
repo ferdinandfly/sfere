@@ -1,49 +1,45 @@
 {% extends "ArdetemSfereBundle::layout.html.twig" %}
 {% block page_content %}
-        <div id="page_style">
-            <div class="componentheading">
-                {{ 'product.search' | trans }}
-            </div>
-            <div style="clear:both"></div>
-            {% if pagination|length <1 %}
-                {{ 'product.norecord'|trans }}
-            {% else %}
-                <div class="count">
-                    {{ 'searchCount' | transchoice(pagination.getTotalItemCount)  }}
-                </div>
-                <table class="contentpaneopen">
-                    <tbody>
-                    {% for p in pagination %}
-                        <tr>
-                            <td>
-                                <fieldset>
-                                    <div class="list-title">
-                                        <a href=" {{ path('sfere_product_show',{"slug": p.slug}) }}">{{ p.name }}</a>
-                                        <span>{{ p.subcategory.name }} / {{ p.subcategory.category.name }}</span>
-                                    </div>
-                                    <div class="list-resume">
-                                        <div>
-                                            <a
-                                                    href="{{ path("sfere_product_show", {"slug": p.slug}) }}"
-                                                    title="{{ p.name }}" ><img
-                                                        src="{{ base_url }}{{ p.image }}"
-                                                        alt="{{ p.name }}" width="250px" border="0"></a>
-                                        </div>
-                                        <div>
-                                            {{ p.resume | raw}}
-                                        </div>
-
-                                    </div>
-                                </fieldset>
-                            </td>
-                        </tr>
-                    {% endfor %}
-
-                    </tbody>
-                </table>
-                <div class="navigation">
-                    {{ knp_pagination_render(pagination) }}
-                </div>
-            {% endif %}
+    <div id="page_style">
+        <div class="componentheading">
+            {{ 'product.search' | trans }}
         </div>
+        <div style="clear:both"></div>
+        <div class="count">
+            {{ 'searchCount' | transchoice(pagination.getTotalItemCount) }}
+        </div>
+        <table class="contentpaneopen">
+            <tbody>
+            {% for p in pagination %}
+                <tr>
+                    <td>
+                        <fieldset>
+                            <div class="list-title">
+                                <a href=" {{ path('sfere_product_show',{"slug": p.slug}) }}">{{ p.name }}</a>
+                                <span>{{ p.subcategory.name }} / {{ p.subcategory.category.name }}</span>
+                            </div>
+                            <div class="list-resume">
+                                <div>
+                                    <a
+                                            href="{{ path("sfere_product_show", {"slug": p.slug}) }}"
+                                            title="{{ p.name }}"><img
+                                                src="{{ base_url }}{{ p.image }}"
+                                                alt="{{ p.name }}" width="250px" border="0"></a>
+                                </div>
+                                <div>
+                                    {{ p.resume | raw }}
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </div>
 {% endblock %}
