@@ -1,13 +1,3 @@
-menu:
-    language:
-        title: Linguas
-        en: Inglese 
-        fr: Francese 
-        es: Spagnolo
-        zh_CN: Cinese
-        de: Allemand
-        pl: Polonais
-    login: Loginintro:
 intro:
     company:
         title: Azienda
@@ -15,8 +5,8 @@ intro:
         info:
           title: PRESENTAZIONE
           text: >
-            <p> SFERE specializzata nella progettazione e costruzione di moduli elettronici per la misurazione e il controllo dei processi industriali e delle reti elettriche. </ p>
-            <p> SFERE è anche la responsabilità di un costruttore, un team di specialisti, ingegneri e tecnici, motivato dalla ricerca e innovazione .. </ p>
+            <p> SFERE è una società specializzata nello studio e la produzione di moduli elettronici per la misura ed il controllo di processi industriali e reti elettriche. </ p>
+            <p> SFERE vuol dire anche competenza di un produttore, un equipe di specialisti, ingegneri e tecnici, motivati nella continua ricerca ed innovazione. </ p>
         where:
           title: DOVE SIAMO
           text: >
@@ -29,19 +19,19 @@ intro:
         presentation:
           title: CHI SIAMO
           text: >
-            <p> Noto per la sua precisione ed affidabilità, SFERE è una società in continua innovazione nel campo della misurazione e il controllo dei processi industriali e delle reti elettriche. </ p>
-            <p> nostra sede a Lione, abbiamo due dinamiche società di consulenza nazionali e internazionali in Francia, un team di esperti ingegneri, e le imprese, che sono sempre sul flusso delle esigenze dei clienti. </ p>
-            <p> Tutti i nostri prodotti sono fabbricati in Francia, abbiamo due uffici vendite in Cina e Polonia, la nostra rete di distribuzione in 32 paesi su 5 continenti. </ p>
-            <p> I nostri prodotti sono utilizzati anche bene in piccoli progetti industriali come in molti progetti statali francesi e stranieri in molti settori diversi, la nostra esperienza soddisfa i più alti requisiti. </ p>
-            <p> Studiamo ogni esigenza del cliente e offre la soluzione più adeguata in un tempo molto breve. </ p>
-            <p> Ci sono alcune cose in questo mondo che non possono essere misurati, per tutto il resto, controllare SFERE. </ p>
+            <p> Nota per la sua precisione ed affidabilità, SFERE è una società in continua innovazione nel campo della misurazione e il controllo dei processi industriali e la supervisione delle reti elettriche. </ p>
+            <p> La nostra sede si trova a Lione, in Francia. Abbiamo 2 uffici di R&S in Francia, un team di ingegneri esperti ed un team di vendita nazionale ed internazionale molto dinamico,  sempre attento alle esigenze dei cliente. </ p>
+            <p> Tutti i nostri prodotti sono fabbricati in Francia, abbiamo due uffici vendite in Cina e Polonia, la nostra rete di distribuzione copre 32 paesi nei 5 continenti. </ p>
+            <p>I nostri prodotti sono adatti sia per piccoli progetti industriali così come per molti progetti statali francesi e stranieri o di natura diversa; la nostra esperienza soddisfa i più alti requisiti. </ p>
+            <p>Studiamo in dettaglio ogni richiesta del cliente e offriamo la soluzione più adeguata con un tempo di risposta molto breve.</ p>
+            <p> Ci sono alcune cose in questo mondo che non possono essere misurati, per tutto il resto, consultare SFERE. </ p>
     category:
         name: Prodotti
     news:
         name: Notizie
     contact:
         name: Contatti
-see_more:  Vedere di più
+see_more:  Vedere più
 menu:
     language:
         title: Scegliere una lingua
@@ -49,8 +39,8 @@ menu:
         fr: Francese
         es: Spagnolo
         it: Italiano
-        zh_CN: Cine
-    login: Login
+        zh_CN: Cinese
+    login: "Loginintro:"
     profile: Profilo
     companyProfile:
       modify: Cambiamento
@@ -63,8 +53,8 @@ product:
   norecord: 0 risultati trovati.
   description: Descrizione
   download: Scaricare
-  relative: Releted
-  download-link: Scarica il PDF
+  relative: prodotti correlati
+  download-link: Scaricare il PDF
   download-desc: PDF foglio neutrale con le specifiche del prodotto
 news:
   title: Notizie
@@ -79,9 +69,9 @@ form:
     city: Città
     country: Nazione
     url: Sito web
-    receive_mail: Ricevi notifiche
+    receive_mail: Ricevire notifiche
     mobile: Telefono
   submit: Inviare
   yes: sì 
-  no: Non
-searchCount: "{0} Keine Produkte entsprechen Ihrer Suche |{1} Ein Produkt für die Suche |]1,Inf] %count% Artikel angegebenen Suchkriterien"
+  no: No
+searchCount: "{0} Nessun prodotto corrisponde alla tua ricerca |{1} Un prodotto per la ricerca |]1,Inf] %count% prodotti partite la ricerca"

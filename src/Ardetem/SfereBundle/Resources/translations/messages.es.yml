@@ -1,47 +1,37 @@
-menu:
-    language:
-        title: Idiomas
-        en: Ing
-        fr: Francés
-        es: Español
-        zh_CN: Chino
-        de: Allemand
-        pl: Polonais
-    login: Login
 intro:
-    company:
-        title: EMPRESA
-        name: EMPRESA
-        info:
-          title: PERFIL DE LA COMPAÑÍA
-          text: >
-            <p>SFERE son especialistas de la construcción de modulos eléctronicos para la medición y el control de procesos industriales y de redes eléctricas. </p>
-            <p>SFERE es también la competencia de un fabricante, un equipo de especialistas, ingenieros y técnicos, motivados por la investigación y la inovación. </p>
+  company:
+      title: EMPRESA
+      name: EMPRESA
+      info:
+        title: PERFIL DE LA COMPAÑÍA
+        text: >
+          <p>SFERE son especialistas de la construcción de modulos eléctronicos para la medición y el control de procesos industriales y de redes eléctricas. </p>
+          <p>SFERE es también la competencia de un fabricante, un equipo de especialistas, ingenieros y técnicos, motivados por la investigación y la inovación. </p>
 
-        where:
-          title: DONTE ESTAMOS
-          text: >
-            SFERE<br />
-            Parc d’activité ARBORA N°2<br />
-            69510 SOUCIEU EN JARREST<br />
-            Tel:<br/>
-            Fax:<br/>
-            Email: info@sfere-net.com<br/>
-        presentation:
-          title: PERFIL DE LA EMPRESA
-          text: >
-            <p>Reconocida por su precisión y su fiabilidad, SFERE es una empresa en constante innovación en el campo de la medición y del control de procesos industriales y redes eléctricas.</p>
-            <p>Nuestra sede está ubicada en Lyon, Francia. Tenemos dos oficinas de estudio FRANCE, un equipo de ingenieros experimentados, y un equipo comercial nacional e internacional dinámico, que están siempre escuchando atentamente las necesidades del cliente.</p>
-            <p>Todos nuestros productos son fabricados en Francia. Tenemos dos oficinas de ventas en China y en Polonia. Nuestra red de distribución está presente en 32 países de los 5 continentes.</p>
-            <p>Nuestros productos se utilizan bien en pequeños proyectos industriales como en muchos proyectos estatales franceses y extranjeros en muchos sectores diferentes. Nuestra experiencia cumple con los requisitos más exigentes.</p>
-            <p>Se estudia en detalle cada necesidad del cliente y ofrecemos la solución más adecuada dentro de un tiempo muy corto.</p>
-            <p>Hay algunas cosas en este mundo que no se pueden medir, para todo lo demás, consulte SFERE.</p>
-    category:
-        name: Productos
-    news:
-        name: Noticias
-    contact:
-        name: Contacto
+      where:
+        title: DONTE ESTAMOS
+        text: >
+          SFERE<br />
+          Parc d’activité ARBORA N°2<br />
+          69510 SOUCIEU EN JARREST<br />
+          Tel: 0033 4 78 16 04 04<br/>
+          Fax: 0033 4 78 16 04 05<br/>
+          Email: info@sfere-net.com<br/>
+      presentation:
+        title: PERFIL DE LA EMPRESA
+        text: >
+          <p>Reconocida por su precisión y su fiabilidad, SFERE es una empresa en constante innovación en el campo de la medición y del control de procesos industriales y redes eléctricas.</p>
+          <p>Nuestra sede está ubicada en Lyon, Francia. Tenemos dos oficinas de estudio FRANCE, un equipo de ingenieros experimentados, y un equipo comercial nacional e internacional dinámico, que están siempre escuchando atentamente las necesidades del cliente.</p>
+          <p>Todos nuestros productos son fabricados en Francia. Tenemos dos oficinas de ventas en China y en Polonia. Nuestra red de distribución está presente en 32 países de los 5 continentes.</p>
+          <p>Nuestros productos se utilizan bien en pequeños proyectos industriales como en muchos proyectos estatales franceses y extranjeros en muchos sectores diferentes. Nuestra experiencia cumple con los requisitos más exigentes.</p>
+          <p>Se estudia en detalle cada necesidad del cliente y ofrecemos la solución más adecuada dentro de un tiempo muy corto.</p>
+          <p>Hay algunas cosas en este mundo que no se pueden medir, para todo lo demás, consulte SFERE.</p>
+  category:
+      name: Productos
+  news:
+      name: Noticias
+  contact:
+      name: Contacto
 see_more:  Ver más
 menu:
     language:
