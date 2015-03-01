@@ -83,30 +83,7 @@ var mouse_is_inside = false;
 	
 	
 /*Acordion 2.0*/
-		
-$( ".download_table .row" )
-  .mouseenter(function() {    
-    if($(this).find('.view_details').length == 0)
-	 $(this ).append("<div class='plus_s'></div>");   
-  })
-  .mouseleave(function() {
-       $(this).children(".plus_s").remove();
-	 $( ".plus_s" ).unbind( "click" );
-  })
-  .click( function() {
-	  if($(this).find('.minus_s').length == 0){
-			$(this).find(".details").addClass(" view_details");
 
-			$(this).append("<div class='minus_s'></div>");
-			$(this).find(".plus_s").remove();
-	  }
-	  else
-	  {
-		$(this).find(".details").removeClass("view_details");
-		$(this).find(".minus_s").remove();
-		$(this).append("<div class='plus_s'></div>");   
-	  }
-  });
 	
 /*CONTENT NAVEGATOR TOP*/	
 /*top_bar*/

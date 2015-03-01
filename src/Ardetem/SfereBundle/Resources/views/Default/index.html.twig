@@ -1,17 +1,14 @@
 {% extends "ArdetemSfereBundle::layout.html.twig" %}
 
 {% block slider %}
-    <div id="slider">
-        <ul class="rslides" id="slider1" style="max-width: 960px;">
-            <li id="rslides1_s0" class=""
-                style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; -webkit-transition: opacity 800ms ease-in-out; transition: opacity 800ms ease-in-out;">
+    <div id="slider" class="owl-carousel">
+
+            <div>
                 <img src="{{ asset('bundles/ardetemsfere/images/bandeau/slide-1-'~ app.request.get('_locale') ~ '.jpg') }}">
-            </li>
-            <li id="rslides1_s1" class="rslides1_on"
-                style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; -webkit-transition: opacity 800ms ease-in-out; transition: opacity 800ms ease-in-out;">
+            </div>
+            <div>
                 <img src="{{ asset('bundles/ardetemsfere/images/bandeau/slide-2-'~ app.request.get('_locale') ~ '.jpg') }}">
-            </li>
-        </ul>
+            </div>
     </div>
 {% endblock %}
 

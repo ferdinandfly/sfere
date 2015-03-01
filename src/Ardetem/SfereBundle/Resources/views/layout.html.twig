@@ -3,7 +3,6 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="robots" content="index, follow"/>
-
     <title>{% block meta_title %} {% endblock %}</title>
     <meta name="keywords"
           content="{% block meta_keywords %} {% endblock %}" />
@@ -15,14 +14,16 @@
     <link href="{{ base_url }}favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     {% stylesheets
     "bundles/ardetemsfere/css/*"
+    "owl-carousel/owl.carousel.css"
+    "owl-carousel/owl.theme.css"
+    "owl-carousel/owl.transitions.css"
     filter='cssrewrite, ?yui_css'
     output='css/core.css' %}
-
     <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
-
     {% block sub_css %}
     {% endblock %}
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
 <body>
 <div id="header">
@@ -179,37 +180,14 @@
 </div>
 {% include 'ArdetemSfereBundle:Default:_footer.html.twig' %}
 
-
-{% javascripts
-
-"bundles/ardetemsfere/js/jquery-126.js"
-"bundles/ardetemsfere/js/jceutilities-212.js"
-"bundles/ardetemsfere/js/mootools.js"
-"bundles/ardetemsfere/js/caption.js"
-filter='?yui_js'
-output="js/core.js" %}
-<script src="{{ asset_url }}"></script>
-{% endjavascripts %}
-
-<script type="text/javascript"
-        src="http://www.visiotech.es/plugins/system/shadowbox/min/index.php?g=sb&ad=base&lan=en&play=img"></script>
-<script type="text/javascript">
-    var jcexhtmlembed = 1;
-    jQuery(document).ready(function () {
-        jceutilities({'popup': {'legacy': 0, 'resize': 1, 'icons': 1, 'overlay': 1, 'overlayopacity': 0.8, 'overlaycolor': "#000000", 'fadespeed': 500, 'scalespeed': 500, 'width': 640, 'height': 480, 'theme': "standard", 'themecustom': "", 'themepath': "plugins/system/jceutilities/themes"}, 'tootlip': {'classname': "tooltip", 'opacity': 1, 'speed': 150, 'position': "br", 'offsets': "{'x': 16, 'y': 16}"}, 'imgpath': "plugins/system/jceutilities/img", 'pngfix': 0, 'wmode': 0});
-    });
-</script>
-<script type="text/javascript">Shadowbox.init();</script>
 {% javascripts
 "bundles/ardetemsfere/js/embed.js"
-"bundles/ardetemsfere/js/jquery-1.10.1.min.js"
 "bundles/ardetemsfere/js/jquery-ui.js"
-"bundles/ardetemsfere/js/responsiveslides.js"
-"bundles/ardetemsfere/js/jQueryRotate.2.2.js"
-"bundles/ardetemsfere/js/scripts-1.01.js"
 "bundles/ardetemsfere/js/new_style.js"
-"bundles/ardetemsfere/js/jquery.custom-scrollbar.js"
 "bundles/ardetemsfere/js/ga.js"
+"owl-carousel/owl.carousel.min.js"
+"bundles/ardetemsfere/js/slider.js"
+"bundles/ardetemsfere/js/scripts-1.01.js"
 filter='?yui_js'
 output="js/core_2.js" %}
 <script src="{{ asset_url }}"></script>
@@ -219,20 +197,6 @@ output="js/core_2.js" %}
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 <script>
-    // You can also use "$(window).load(function() {"
-
-    // Slideshow 1
-    $("#slider1").responsiveSlides({
-        maxwidth: 960,
-        manualControls: '#control_slider',
-        speed: 800
-    });
-    //     jQuery("#scrollbar_products").customScrollbar();   jQuery(document).ready(function () {
-//    });
-
-
-
-
     document.createElement('header');
     document.createElement('hgroup');
     document.createElement('nav');
