@@ -16,12 +16,41 @@ class ProfileFormType extends AbstractType {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('companyName','text')
-            ->add('mobile', 'text')
-            ->add('companyAddress','text')
-            ->add('postCode','text')
-            ->add('city','text')
-            ->add('country','country')
-            ->add('url','text')
+            ->add('activity','text',
+                array(
+                    'required' => false
+                )
+            )
+            ->add('mobile', 'text',
+                array(
+                    'required' => false
+                )
+            )
+            ->add('companyAddress','text',
+                array(
+                    'required' => false
+                )
+            )
+            ->add('postCode','text',
+                array(
+                    'required' => false
+                )
+            )
+            ->add('city','text',
+                array(
+                    'required' => false
+                )
+            )
+            ->add('country','country',
+                array(
+                    'required' => false
+                )
+            )
+            ->add('url','text',
+                array(
+                    'required' => false
+                )
+            )
             ->add('receiveMail','choice',array(
                 'expanded' => true,
                 'choices' => array('1' => 'form.yes','0' => 'form.no')

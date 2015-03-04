@@ -36,37 +36,37 @@ class Profile {
 
     /**
      * @var String
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255,nullable=true)
      */
     protected $mobile;
 
     /**
      * @var String
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255,nullable=true)
      */
     protected $companyName;
 
     /**
      * @var String
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255,nullable=true)
      */
     protected $companyAddress;
 
     /**
      * @var String
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255,nullable=true)
      */
     protected $postCode;
 
     /**
      * @var String
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255,nullable=true)
      */
     protected $city;
 
     /**
      * @var country
-     * @ORM\Column(type="string",length=255)
+     * @ORM\Column(type="string",length=255,nullable=true)
      * @Assert\Country()
      * @Assert\NotBlank()
      * @Assert\Length(min="2", max="255")
@@ -75,25 +75,25 @@ class Profile {
 
     /**
      * @var String
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text",nullable=true)
      */
     protected $url;
 
     /**
      * @var bool
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean",options={"default"=true})
      */
-    protected $receiveMail;
+    protected $receiveMail=true;
 
     /**
      * @var String
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text",nullable=true)
      */
     protected $activity;
 
     /**
      * @var String
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text",nullable=true)
      */
     protected $sector;
     /**

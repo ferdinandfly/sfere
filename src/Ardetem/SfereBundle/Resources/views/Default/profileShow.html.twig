@@ -7,39 +7,70 @@
                     {{ flashMessage }}
                 </div>
             {% endfor %}
-                <div style="margin-bottom: 20px;"><a type="button" class="button">{{ 'menu.companyProfile.modify'|trans }}</a></div>
-                <table class="specs" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tbody>
-                    <tr align="left" valign="middle">
-                        <td height="22" width="30%"><strong>{{ 'form.profile.company_name'| trans }}</strong></td>
-                        <td height="22" width="70%"> {{ profile.companyName }} </td>
-                    </tr>
-                    <tr align="left" valign="middle">
-                        <td height="22"><strong>{{ 'form.profile.company_address' | trans }}</strong></td>
-                        <td height="22">{{ profile.companyAddress }}</td>
-                    </tr>
-                    <tr align="left" valign="middle">
-                        <td height="22"><strong>{{ 'form.profile.post_code' | trans }}</strong></td>
-                        <td height="22">{{ profile.postCode }}</td>
-                    </tr>
-                    <tr align="left" valign="middle">
-                        <td height="22"><strong>{{ 'form.profile.city' | trans }}</strong></td>
-                        <td height="22">{{ profile.city }}</td>
-                    </tr>
-                    <tr align="left" valign="middle">
-                        <td height="22"><strong>{{ 'form.profile.country' | trans }}</strong></td>
-                        <td height="22">{{ profile.country }}</td>
-                    </tr>
-                    <tr align="left" valign="middle">
-                        <td height="22"><strong>{{ 'form.profile.url' | trans }}</strong></td>
-                        <td height="22">{{ profile.url }}</td>
-                    </tr>
-                    <tr align="left" valign="middle">
-                        <td height="22"><strong>{{ 'form.profile.mobile' | trans }}</strong></td>
-                        <td height="22">{{ profile.mobile }}</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <h3> {{ 'User information' | trans }}</h3>
+            <table class="table">
+                <tr>
+                    <td>{{ 'User name' | trans }}</td>
+                    <td>{{ profile.user.username }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'Email' | trans }}</td>
+                    <td>{{ profile.user.email }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'Last login' | trans }}</td>
+                    <td>{{ profile.user.lastLogin |date("m/d/Y") }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'Expires at' |trans }}</td>
+                    <td>{{ profile.user.expiresAt |date("m/d/Y") }}</td>
+                </tr>
+            </table>
+
+            <h3>{{ 'User profile' | trans }}</h3>
+            <table class="specs" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <th width="30%"></th>
+                    <th width="70%"></th>
+                </thead>
+                <tbody>
+                <tr align="left" valign="middle">
+                    <td><strong>{{ 'form.profile.company_name'| trans }}</strong></td>
+                    <td> {{ profile.companyName }} </td>
+                </tr>
+                <tr align="left" valign="middle">
+                    <td ><strong>{{ 'form.profile.activity'| trans }}</strong></td>
+                    <td> {{ profile.activity }} </td>
+                </tr>
+                <tr align="left" valign="middle">
+                    <td><strong>{{ 'form.profile.company_address' | trans }}</strong></td>
+                    <td >{{ profile.companyAddress }}</td>
+                </tr>
+                <tr align="left" valign="middle">
+                    <td ><strong>{{ 'form.profile.post_code' | trans }}</strong></td>
+                    <td ">{{ profile.postCode }}</td>
+                </tr>
+                <tr align="left" valign="middle">
+                    <td ><strong>{{ 'form.profile.city' | trans }}</strong></td>
+                    <td >{{ profile.city }}</td>
+                </tr>
+                <tr align="left" valign="middle">
+                    <td ><strong>{{ 'form.profile.country' | trans }}</strong></td>
+                    <td >{{ profile.country }}</td>
+                </tr>
+                <tr align="left" valign="middle">
+                    <td><strong>{{ 'form.profile.url' | trans }}</strong></td>
+                    <td>{{ profile.url }}</td>
+                </tr>
+                <tr align="left" valign="middle">
+                    <td><strong>{{ 'form.profile.mobile' | trans }}</strong></td>
+                    <td >{{ profile.mobile }}</td>
+                </tr>
+                </tbody>
+            </table>
+            <div style="margin-bottom: 20px;"><a type="button"
+                                                 class="button">{{ 'menu.companyProfile.modify'|trans }}</a></div>
+
         </div>
     </div>
 {% endblock %}
