@@ -52,6 +52,7 @@ common:
     email: Email
 product:
   search: Busca
+  search_title: Busca
   norecord: 0 resultados encontrados.
   description: Descripción
   download: Descargar

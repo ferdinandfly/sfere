@@ -53,7 +53,8 @@ common:
     fax: Fax
     email: Email
 product:
-    search: Recherche
+    search: Rechercher un produit
+    search_title:  Rechercher un produit
     norecord: Aucun produit trouvé
     description: Description
     download: Téléchargement

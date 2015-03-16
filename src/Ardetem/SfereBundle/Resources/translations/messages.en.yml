@@ -53,7 +53,8 @@ common:
     fax: Fax
     email: Email
 product:
-    search: Search
+    search: Search a product
+    search_title:  Search a product
     description: Description
     download: Download
     relative: Related products

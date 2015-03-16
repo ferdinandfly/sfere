@@ -54,6 +54,7 @@ common:
     email: E-Mail
 product:
   search: Begehrte
+  search_title: Begehrte
   norecord: Keine Produkte gefunden
   description: Beschreibung
   download: Herunterladen

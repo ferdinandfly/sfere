@@ -145,8 +145,8 @@
                 <li>
                     <form action="{{ path('sfere_search') }}" method="post">
                         <div class="search">
-                            <input name="searchword" id="search" maxlength="20" placeholder="Rechercher Produit"
-                                   alt="Buscar" class="inputbox" type="text" size="50">
+                            <input name="searchword" id="search" maxlength="20" placeholder="{{ 'product.search' | trans }}"
+                                   alt="{{ 'product.search_title' |trans }}" class="inputbox" type="text" size="50">
                         </div>
                     </form>
                 </li>

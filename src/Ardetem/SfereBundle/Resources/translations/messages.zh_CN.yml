@@ -53,7 +53,8 @@ common:
     fax: 传真
     email: Email
 product:
-  search: 查询
+  search: 查找产品
+  search_title:  查找产品
   norecord: 没有找到符合您搜索条件的结果
   description: 产品详情
   download: 文件下载
