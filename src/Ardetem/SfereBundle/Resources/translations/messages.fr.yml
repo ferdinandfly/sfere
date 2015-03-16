@@ -37,17 +37,17 @@ see_more:  Voir plus
 menu:
     language:
         title: Choisir une langue
-        en: Anglais
+        en: English
         fr: Français
-        es: Espagnol
-        it: Italien
-        zh_CN: Chinois
-        de: Allemand
-        pl: Polonais
+        es: Español
+        it: Italiano
+        zh_CN: 中文
+        de: Deutsch
+        pl: Polski
     login: Login
     profile: Profil
     companyProfile:
-      modify: Modifier
+        modify: Modifier
 common:
     tel: Téléphone
     fax: Fax

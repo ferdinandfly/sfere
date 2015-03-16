@@ -37,13 +37,13 @@ see_more:  Mehr anzeigen
 menu:
     language:
         title: Wählen Sie eine Sprache
-        en: Englisch
-        fr: Französisch
-        es: Spanisch
-        it: Italien
-        zh_CN: Chinese
+        en: English
+        fr: Français
+        es: Español
+        it: Italiano
+        zh_CN: 中文
         de: Deutsch
-        pl: Polnisch
+        pl: Polski
     login: Einloggen
     profile: Profil
     companyProfile:

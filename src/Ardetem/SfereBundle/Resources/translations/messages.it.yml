@@ -36,15 +36,17 @@ see_more:  Vedere più
 menu:
     language:
         title: Scegliere una lingua
-        en: Inglese
-        fr: Francese
-        es: Spagnolo
+        en: English
+        fr: Français
+        es: Español
         it: Italiano
-        zh_CN: Cinese
+        zh_CN: 中文
+        de: Deutsch
+        pl: Polski
     login: "Loginintro:"
     profile: Profilo
     companyProfile:
-      modify: Cambiamento
+        modify: Cambiamento
 common:
     tel: Telefono
     fax: Fax

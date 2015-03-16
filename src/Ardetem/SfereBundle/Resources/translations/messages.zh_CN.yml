@@ -37,17 +37,17 @@ see_more:  查看更多
 menu:
     language:
         title: 语言选择
-        en: 英语
-        fr: 法语
-        es: 西班牙语
-        it: 意大利语
+        en: English
+        fr: Français
+        es: Español
+        it: Italiano
         zh_CN: 中文
-        de: 德语
-        pl: 波兰语
+        de: Deutsch
+        pl: Polski
     login: 登陆
     profile: 个人信息
     companyProfile:
-      modify: 更改
+        modify: 更改
 common:
     tel: 电话
     fax: 传真

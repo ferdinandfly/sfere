@@ -38,16 +38,16 @@ menu:
     language:
         title: Choose language
         en: English
-        fr: French
-        es: Spanish
-        it: Italian
-        zh_CN: Chinese
-        de: German
-        pl: Polish
+        fr: Français
+        es: Español
+        it: Italiano
+        zh_CN: 中文
+        de: Deutsch
+        pl: Polski
     login: Login
     profile: Profil
     companyProfile:
-      modify: Modify
+        modify: Modify
 common:
     tel: Phone
     fax: Fax
