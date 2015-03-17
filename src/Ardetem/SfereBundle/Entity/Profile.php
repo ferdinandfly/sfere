@@ -68,7 +68,6 @@ class Profile {
      * @var country
      * @ORM\Column(type="string",length=255,nullable=true)
      * @Assert\Country()
-     * @Assert\NotBlank()
      * @Assert\Length(min="2", max="255")
      */
     protected $country;

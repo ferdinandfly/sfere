@@ -43,7 +43,9 @@ class ProfileFormType extends AbstractType {
             )
             ->add('country','country',
                 array(
-                    'required' => false
+                    'required' => false,
+                    'empty_value' => 'Choose a country',
+                    'data' => 'FR'
                 )
             )
             ->add('url','text',
