@@ -7,7 +7,6 @@
                     {{ flashMessage }}
                 </div>
             {% endfor %}
-            <div>
                 <form action="{{ path("sfere_profile_edit") }}" method="post" role="form"
                       class="form-horizontal">
                     {{ form_errors(form) }}
@@ -19,7 +18,10 @@
                         </div>
                     </div>
                 </form>
-            </div>
+                <h3>{{  "You can also" | trans }} :</h3>
+                <p>
+                    <a href="{{ path('fos_user_profile_edit_authentication') }}"> {{ 'profile.edit_authentification' | trans }}</a>
+                </p>
         </div>
     </div>
 {% endblock %}

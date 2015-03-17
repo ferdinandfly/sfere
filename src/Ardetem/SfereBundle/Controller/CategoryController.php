@@ -19,19 +19,6 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 class CategoryController extends Controller {
 
     /**
-     * @Route("/menulist",name="sfere_category_menu" ,options={"expose"=true})
-     * @Template()
-     */
-    public function menuListAction( Request $request)
-    {
-        $locale = $request->getLocale();
-        $repository = $this->getDoctrine()
-            ->getRepository('ArdetemSfereBundle:Category');
-        $categories=$repository->findAllByLocale($locale);
-        return array("categories"=> $categories);
-    }
-
-    /**
      * @Route("/sidebar",name="sfere_category_menu_bar" ,options={"expose"=true})
      * @Template()
      */

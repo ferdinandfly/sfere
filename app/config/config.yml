@@ -56,24 +56,24 @@ assetic:
 # Doctrine Configuration
 doctrine:
     orm:
-        default_entity_manager: default
+        default_entity_manager: new_manager
         entity_managers:
-            default:
-                connection: default
+            new_manager:
+                connection: new_connection
                 mappings:
                     ArdetemSfereBundle: ~
                     ApplicationSonataUserBundle: ~
                     SonataUserBundle: ~
                     FOSUserBundle: ~
-            old:
-                connection: old
-                mappings:
-                    ArdetemImportBundle: ~
+#            old_manager:
+#                connection: old_connection
+#                mappings:
+#                    ArdetemImportBundle: ~
         auto_generate_proxy_classes: "%kernel.debug%"
     dbal:
-        default_connection: default
+        default_connection: new_connection
         connections:
-            default:
+            new_connection:
                 driver:   "%database_driver%"
                 host:     "%database_host%"
                 port:     "%database_port%"
@@ -81,7 +81,7 @@ doctrine:
                 user:     "%database_user%"
                 password: "%database_password%"
                 charset:  UTF8
-            old:
+            old_connection:
                 driver:   "%database_driver%"
                 host:     "%database_host%"
                 port:     "%database_port%"

@@ -137,7 +137,7 @@
                 </li>
                 <li>
                     <a>{{ 'intro.category.name'| trans }}</a>
-                    {{ render(controller('ArdetemSfereBundle:Category:menuList')) }}
+                    {{ category_menu() }}
                 </li>
                 <li><a href="{{ path('sfere_news') }}">{{ 'intro.news.name' | trans }}</a></li>
                 <li><a href="{{ path('sfere_contact') }}">{{ 'intro.contact.name' | trans }}</a>

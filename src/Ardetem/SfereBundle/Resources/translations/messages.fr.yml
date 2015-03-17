@@ -80,3 +80,16 @@ form:
   yes: Oui
   no: Non
 searchCount: "{0} Aucun produit ne correpond à votre recherche |{1} Un produit correspond à votre recherche |]1,Inf] %count% produits correspondent à votre recherche"
+profile:
+  edit_authentification: "Modifier votre identifiant"
+optional: facultatif
+Company name: "Nom de la société"
+Activity: "Activité"
+Mobile: Portable
+Company address: "L'adresse de société"
+Post code: Code postale
+City: Ville
+Country: Pays
+Url: Site web
+Receive mail: "Recevoir les notifications par mail?"
+You can also: 'Vous pouvez aussi'

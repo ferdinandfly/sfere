@@ -1,4 +1,11 @@
 services:
+  sfere.menu.category.extension:
+    class: Ardetem\SfereBundle\Twig\Extension\CategoryMenuExtension
+    arguments:
+      - "@service_container"
+      - "@doctrine.orm.entity_manager"
+    tags:
+      - { name: twig.extension}
   sonata_user.registration.form.type:
     class: Application\Sonata\UserBundle\Form\Type\RegistrationFormType
     tags:

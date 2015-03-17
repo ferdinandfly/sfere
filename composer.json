@@ -20,29 +20,26 @@
         "sensio/generator-bundle": "~2.3",
         "leafo/lessphp": "0.4.0",
         "symfony/intl": "2.6.*@dev",
-        "incenteev/composer-parameter-handler": "~2.0",
         "knplabs/doctrine-behaviors": "dev-master",
         "knplabs/knp-paginator-bundle": "dev-master",
         "a2lix/translation-form-bundle": "dev-master",
         "mopa/bootstrap-bundle": "v3.0.0-beta3",
         "twbs/bootstrap": "v3.0.0",
-        "sonata-project/admin-bundle": "dev-master",
-        "sonata-project/core-bundle" : "dev-master",
-        "sonata-project/doctrine-orm-admin-bundle": "dev-master",
+        "sonata-project/doctrine-orm-admin-bundle": "~2.3@dev",
         "sonata-project/easy-extends-bundle": "dev-master",
         "sonata-project/jquery-bundle": "dev-master",
-        "sonata-project/user-bundle": "2.2.4"
+        "sonata-project/user-bundle": "2.2.4",
+        "knplabs/knp-menu": "~1.1",
+        "knplabs/knp-menu-bundle": "~1.1"
     },
     "scripts": {
         "post-install-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
@@ -55,9 +52,6 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
-        "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
-        },
         "branch-alias": {
             "dev-master": "2.4-dev"
         }
