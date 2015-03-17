@@ -74,8 +74,13 @@
             </table>
             <br>
             <p>
-                <a type="button"  class="button">{{ 'profile.edit'|trans }}</a>
+                <a type="button"  class="button" href="{{ path('sfere_profile_edit') }}">{{ 'profile.edit'|trans }}</a>
             <p>
+
+            <h3>
+                {{ "You can also" | trans }} :
+            </h3>
+            <a type="button"  class="button" href="{{ path('sonata_user_security_logout') }}">{{ 'Disconnect' |trans }} </a>
         </div>
     </div>
 {% endblock %}

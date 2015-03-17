@@ -49,7 +49,9 @@ security:
                 use_forward:    false
                 check_path:     fos_user_security_check
                 failure_path:   null
-            logout:             true
+            logout:
+                path: fos_user_security_logout
+                target: sfere_home
             anonymous:          true
     access_control:
         # URL of FOSUserBundle which need to be available to anonymous users
