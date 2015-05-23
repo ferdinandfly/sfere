@@ -3,8 +3,8 @@ parameters:
     database_driver: pdo_mysql
     database_host: 127.0.0.1
     database_port: null
-    database_name: sefere
-    database_user: sefere
+    database_name: sfere
+    database_user: sfere
     database_password: kxkvi1
     mailer_transport: smtp
     mailer_host: 127.0.0.1
