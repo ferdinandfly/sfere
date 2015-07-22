@@ -143,7 +143,7 @@
                 <li><a href="{{ path('sfere_contact') }}">{{ 'intro.contact.name' | trans }}</a>
                 </li>
                 <li>
-                    <form action="{{ path('sfere_search') }}" method="post">
+                    <form action="{{ path('sfere_search') }}" method="get">
                         <div class="search">
                             <input name="searchword" id="search" maxlength="20" placeholder="{{ 'product.search' | trans }}"
                                    alt="{{ 'product.search_title' |trans }}" class="inputbox" type="text" size="50">
