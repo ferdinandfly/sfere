@@ -4,11 +4,7 @@ parameters:
     database_host: 127.0.0.1
     database_port: null
     database_name: sfere
-    database_user: sfere
-    database_password: kxkvi1
-    mailer_transport: smtp
-    mailer_host: 127.0.0.1
-    mailer_user: null
-    mailer_password: null
+    database_user: root
+    database_password: azerty
     locale: fr
     secret: 65493241453985c1e7e6005c4d26f9bcb0e3d98e
