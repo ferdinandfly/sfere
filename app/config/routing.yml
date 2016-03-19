@@ -1,8 +1,10 @@
 _admin_login_check:
     pattern:   /{_locale}/admin/login_check
+    requirements:
         _locale: zh_CN|en|es|fr|pl|de|it
 _admin_login:
     pattern:   /{_locale}/admin/login
+    requirements:
         _locale: zh_CN|en|es|fr|pl|de|it
 _admin_logout:
     pattern:   /{_locale}/admin/logout
