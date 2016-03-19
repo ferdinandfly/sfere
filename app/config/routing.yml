@@ -1,3 +1,17 @@
+_admin_login_check:
+    pattern:   /{_locale}/admin/login_check
+        _locale: zh_CN|en|es|fr|pl|de|it
+_admin_login:
+    pattern:   /{_locale}/admin/login
+        _locale: zh_CN|en|es|fr|pl|de|it
+_admin_logout:
+    pattern:   /{_locale}/admin/logout
+    requirements:
+        _locale: zh_CN|en|es|fr|pl|de|it
+_game_logout:
+    pattern:   /{_locale}/game/logout
+    requirements:
+        _locale: zh_CN|en|es|fr|pl|de|it
 ardetem_import:
     resource: "@ArdetemImportBundle/Resources/config/routing.yml"
     prefix:   /
