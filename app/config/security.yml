@@ -23,9 +23,9 @@ security:
             context:            user
             form_login:
                 provider:       fos_userbundle
-                login_path:     _admin_login
+                login_path:     /admin/login
                 use_forward:    false
-                check_path:     _admin_login_check
+                check_path:     /admin/login_check
                 failure_path:   null
                 use_referer:    true
                 always_use_default_target_path: true
